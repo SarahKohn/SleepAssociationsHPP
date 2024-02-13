@@ -1,5 +1,7 @@
 # SleepAssociationsHPP
 
+Results and figures for paper.
+
 Included in this repo:
 
 * _/descriptive_data:_
