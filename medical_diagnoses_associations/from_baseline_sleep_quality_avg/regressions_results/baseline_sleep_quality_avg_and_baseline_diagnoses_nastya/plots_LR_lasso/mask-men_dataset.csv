@@ -1,0 +1,43 @@
+,Age & BMI,"Sleep Quality at baseline
+"
+Allergy,False,False
+Anal abscess,False,True
+Anal fissure,False,True
+Anemia,False,False
+Anxiety,False,True
+Asthma,False,True
+Atopic dermatitis,False,True
+Attention Deficit Disorder (ADHD),False,True
+B12 deficiency,False,True
+Back pain ,False,False
+Basal Cell Carcinoma,False,True
+COVID-19,False,False
+Chronic sinusitis,False,False
+Depression,False,False
+Episodic Vertigo,False,True
+Fatty Liver Disease,False,False
+Fracture,False,True
+G6PD,False,True
+Gallstone disease,False,True
+Glaucoma,False,True
+Gout,False,True
+Haemorrhoids,False,False
+Headache,False,False
+Hearing loss,False,True
+Heart valve disease,False,True
+Hyperlipidemia,False,False
+Hypertension,False,True
+Hypothyroidism,False,True
+Insomnia,False,False
+Irritable Bowel Syndrome (IBS),False,False
+Migraine,False,True
+Obesity,False,False
+Oral aphthae,False,True
+Osteoarthritis,False,True
+Peptic Dis,False,True
+Peptic Ulcer Disease,False,True
+Prediabetes,False,False
+Psoriasis,False,True
+Sleep Apnea,False,False
+Urinary tract stones,False,True
+Vitiligo,False,True

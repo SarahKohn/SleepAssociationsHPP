@@ -1,0 +1,43 @@
+,Age & BMI,"HRV at baseline
+"
+Allergy,False,False
+Anal abscess,False,True
+Anal fissure,False,False
+Anemia,False,True
+Anxiety,False,False
+Asthma,False,True
+Atopic dermatitis,False,True
+Attention Deficit Disorder (ADHD),False,False
+B12 deficiency,False,True
+Back pain ,False,True
+Basal Cell Carcinoma,False,True
+COVID-19,False,False
+Chronic sinusitis,False,True
+Depression,False,True
+Episodic Vertigo,False,True
+Fatty Liver Disease,False,False
+Fracture,False,True
+G6PD,False,True
+Gallstone disease,False,True
+Glaucoma,False,True
+Gout,False,True
+Haemorrhoids,False,True
+Headache,False,True
+Hearing loss,False,True
+Heart valve disease,False,True
+Hyperlipidemia,False,False
+Hypertension,False,False
+Hypothyroidism,False,True
+Insomnia,False,True
+Irritable Bowel Syndrome (IBS),False,True
+Migraine,False,True
+Obesity,False,False
+Oral aphthae,False,True
+Osteoarthritis,False,True
+Peptic Dis,False,False
+Peptic Ulcer Disease,False,True
+Prediabetes,False,False
+Psoriasis,False,True
+Sleep Apnea,False,False
+Urinary tract stones,False,False
+Vitiligo,False,False

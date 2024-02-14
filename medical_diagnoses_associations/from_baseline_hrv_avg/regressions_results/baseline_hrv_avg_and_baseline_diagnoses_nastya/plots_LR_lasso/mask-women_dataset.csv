@@ -1,0 +1,51 @@
+,Age & BMI,"HRV at baseline
+"
+Allergy,False,True
+Anal fissure,False,True
+Anemia,False,False
+Anxiety,False,False
+Asthma,False,False
+Atopic dermatitis,False,True
+Attention Deficit Disorder (ADHD),False,False
+B12 deficiency,False,True
+Back pain ,False,True
+Basal Cell Carcinoma,False,True
+COVID-19,False,True
+Chronic sinusitis,False,True
+Depression,False,True
+Endometriosis and Adenomyosis,False,True
+Episodic Vertigo,False,True
+Fatty Liver Disease,False,True
+Fibromyalgia,False,True
+Folic Acid Deficiency,False,True
+Fracture,False,True
+G6PD,False,False
+Gallstone disease,False,True
+Glaucoma,False,True
+Haemorrhoids,False,True
+Hashimoto,False,True
+Headache,False,True
+Hearing loss,False,True
+Heart valve disease,False,False
+Hyperlipidemia,False,False
+Hypertension,False,True
+Hyperthyroidism,False,True
+Hypothyroidism,False,True
+Insomnia,False,True
+Irritable Bowel Syndrome (IBS),False,True
+Migraine,False,True
+Obesity,False,True
+Oral aphthae,False,False
+Osteoarthritis,False,True
+Osteopenia,False,True
+Osteoporosis,False,False
+Peptic Dis,False,True
+Peptic Ulcer Disease,False,True
+Polycystic Ovary Disease,False,True
+Prediabetes,False,False
+Primary hypercholesterolaemia,False,True
+Psoriasis,False,True
+Sleep Apnea,False,False
+Urinary tract infection,False,False
+Urinary tract stones,False,True
+Vitiligo,False,True
