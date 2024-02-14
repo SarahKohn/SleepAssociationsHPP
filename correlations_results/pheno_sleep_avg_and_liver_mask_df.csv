@@ -1,0 +1,11 @@
+,liver_sound_speed,gender,bt__alt_gpt,liver_attenuation,bt__alkaline_phosphatase,bt__protein_total,bt__platelets,liver_viscosity,bt__ast_got,bt__albumin,liver_elasticity,bt__bilirubin_total
+AHI,False,False,False,False,False,False,False,False,False,False,False,True
+snore_db_mean,False,False,False,False,False,False,True,False,False,True,False,True
+hrv_time_rmssd_during_night,False,False,False,False,False,True,False,False,False,False,False,False
+variability_between_sleep_stage_percents,False,False,True,True,True,False,False,True,False,True,False,False
+hrv_time_rmssd_during_wake,False,False,True,False,True,False,False,False,True,True,False,False
+saturation_mean,False,False,False,False,False,True,False,False,False,True,True,True
+desaturations_mean_nadir,False,True,False,False,False,True,False,False,True,False,True,True
+total_sleep_time,True,False,False,True,True,False,True,True,False,True,False,False
+percent_of_supine_sleep,True,True,True,True,False,True,False,True,True,False,True,False
+sleep_efficiency,True,False,False,False,False,True,False,True,False,True,True,True

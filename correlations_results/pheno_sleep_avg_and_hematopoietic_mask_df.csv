@@ -1,0 +1,11 @@
+,bt__rdw,bt__mchc,bt__mcv,bt__mch,gender,bt__ferritin,bt__rbc,bt__hct,bt__hemoglobin
+saturation_mean,False,False,True,False,False,False,False,False,False
+AHI,False,False,False,False,False,False,False,False,False
+total_sleep_time,True,False,False,True,False,False,False,False,False
+sleep_efficiency,False,True,False,True,False,False,False,False,False
+desaturations_mean_nadir,False,True,True,False,True,False,False,False,False
+percent_of_supine_sleep,False,True,False,True,False,False,True,True,True
+variability_between_sleep_stage_percents,False,True,True,True,False,False,False,False,False
+hrv_time_rmssd_during_wake,False,True,False,False,False,True,False,False,False
+snore_db_mean,False,False,False,False,False,False,False,False,False
+hrv_time_rmssd_during_night,False,False,True,False,False,False,False,False,False

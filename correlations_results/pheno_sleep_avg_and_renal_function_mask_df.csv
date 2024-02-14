@@ -1,0 +1,11 @@
+,bt__creatinine,gender,bt__urea,bt__sodium,bt__potassium
+saturation_mean,False,False,False,False,False
+total_sleep_time,False,False,False,True,True
+sleep_efficiency,False,False,False,True,False
+AHI,False,False,False,False,False
+hrv_time_rmssd_during_night,False,False,False,False,True
+desaturations_mean_nadir,True,True,True,False,False
+percent_of_supine_sleep,True,False,True,True,True
+snore_db_mean,False,False,False,False,False
+variability_between_sleep_stage_percents,False,False,False,True,True
+hrv_time_rmssd_during_wake,False,False,True,True,True

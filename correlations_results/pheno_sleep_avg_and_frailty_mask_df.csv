@@ -1,0 +1,11 @@
+,height,hand_grip_left,hand_grip_right,body_comp_leg_right_lean_mass,body_comp_leg_left_lean_mass,gender,body_comp_arm_right_lean_mass,body_comp_arm_left_lean_mass
+hrv_time_rmssd_during_night,False,False,False,False,False,False,False,False
+AHI,False,False,False,False,False,False,False,False
+snore_db_mean,False,False,False,False,False,False,False,False
+hrv_time_rmssd_during_wake,False,False,False,False,False,False,False,False
+saturation_mean,False,True,False,False,False,False,False,False
+total_sleep_time,False,False,False,False,False,False,False,False
+sleep_efficiency,False,False,False,False,False,False,False,False
+desaturations_mean_nadir,False,False,False,False,False,True,True,True
+percent_of_supine_sleep,True,False,False,False,False,True,False,False
+variability_between_sleep_stage_percents,False,False,False,False,False,False,False,False

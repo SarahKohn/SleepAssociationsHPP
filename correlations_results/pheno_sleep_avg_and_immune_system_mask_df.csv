@@ -1,0 +1,11 @@
+,gender,bt__monocytes_abs,bt__wbc,bt__neutrophils_abs,bt__lymphocytes_abs,bt__eosinophils_abs,bt__basophils_%,bt__neutrophils_%,bt__lymphocytes_%,bt__basophils_abs,bt__monocytes_%,bt__eosinophils_%
+total_sleep_time,False,False,False,False,True,True,True,False,False,True,True,True
+sleep_efficiency,False,False,False,False,True,False,True,True,False,True,True,True
+saturation_mean,False,False,False,False,False,False,False,False,False,True,True,True
+desaturations_mean_nadir,True,False,False,False,False,False,False,False,False,True,True,True
+AHI,False,False,False,False,False,False,False,False,True,False,False,False
+snore_db_mean,False,False,False,False,False,False,True,True,True,True,True,True
+hrv_time_rmssd_during_night,False,False,True,True,False,True,False,True,False,True,False,False
+percent_of_supine_sleep,False,True,True,True,True,True,True,True,True,True,True,True
+variability_between_sleep_stage_percents,False,True,True,True,True,True,True,True,True,True,True,True
+hrv_time_rmssd_during_wake,False,True,True,True,False,True,True,True,True,True,False,True

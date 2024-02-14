@@ -1,0 +1,10 @@
+,health_satisfaction,high_irritable_state,tired_or_little_energy_fortnight,nerves_anxiety_tension_depression_doctor,nerves_anxiety_tension_depression_psychiatrist,unenjoyment_uninterested_period_duration_weeks,miserable_no_reason,depressed_hopeless_fortnight,mood_swings,financial_situation_satisfaction,depressed_whole_week,fed-up_often,little_interest_or_pleasure_fortnight,troubled_by_guilt,fidgety_or_restless_fortnight,rds_score,depressed_longest_period_weeks,family_relationship_satisfaction,happiness_level,friendships_satisfaction,irritablilty_leading_to_argumens,feeling_lonley_often,risks_taker
+AHI,False,False,False,True,True,True,False,False,False,True,True,True,False,False,False,False,True,True,True,True,True,True,False
+snore_db_mean,False,True,True,True,True,True,True,True,True,True,True,True,True,True,False,False,False,True,True,True,True,False,False
+total_sleep_time,True,False,False,False,False,False,False,False,False,False,False,False,True,True,True,False,True,False,False,True,True,True,True
+saturation_mean,False,True,False,True,True,True,True,True,True,True,True,True,False,False,False,False,True,True,True,True,False,False,True
+hrv_time_rmssd_during_night,False,True,False,True,True,True,False,True,True,True,False,False,True,True,True,True,True,True,False,False,True,True,False
+variability_between_sleep_stage_percents,True,True,True,False,False,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
+sleep_efficiency,False,True,True,True,True,True,True,True,True,False,True,False,True,True,True,True,True,True,True,True,True,True,False
+desaturations_mean_nadir,False,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,False,True
+hrv_time_rmssd_during_wake,False,True,False,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,False,True

@@ -1,0 +1,11 @@
+,gender,age,bmi
+AHI,False,False,False
+snore_db_mean,False,False,False
+saturation_mean,False,False,False
+desaturations_mean_nadir,False,False,False
+percent_of_supine_sleep,False,False,False
+total_sleep_time,False,False,False
+sleep_efficiency,False,False,False
+variability_between_sleep_stage_percents,False,False,False
+hrv_time_rmssd_during_night,False,False,False
+hrv_time_rmssd_during_wake,False,False,False
