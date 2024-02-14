@@ -1,0 +1,91 @@
+,Age & BMI,"HRV
+(measured during sleep)"
+fortified_wine__glasses_week,True,True
+hours_outdoors_winter,True,True
+hours_driving,True,True
+liqueurs_measures_week,True,True
+other_alcoholic_glasses_week,True,True
+physical_activity_maderate_days_a_week,False,False
+vigorous_activity_minutes,False,False
+sleep_hours_in_24H,True,True
+work_hours,False,False
+work_days_a_week,False,True
+hours_using_computer_not_work,False,True
+work_hours_day,False,True
+hours_watching_tv,False,True
+hours_outdoors_summer,True,True
+white_wine_glasses_week,True,True
+walking_minutes_day,False,True
+walking_10min_days_a_week,False,False
+beer_cider_pints_week,True,True
+moderate_activity_minutes,False,False
+drink_alcohol_with_meals_partial,True,True
+drink_alcohol_with_meals_yes,True,True
+mobile_phone_side_of_head_Left,True,True
+mobile_phone_side_of_head_Right,True,True
+drive_faster_often_Never or rarely,True,True
+drive_faster_often_Sometimes,True,True
+drive_faster_often_Usually,True,True
+pet_present_no,True,True
+pet_present_yes,True,True
+mobile_phone_use_duration_per_week_1-3 hours,True,True
+mobile_phone_use_duration_per_week_30-59 minutes,True,True
+mobile_phone_use_duration_per_week_4-6 hours,True,True
+mobile_phone_use_duration_per_week_5-29 minutes,True,True
+mobile_phone_use_duration_per_week_More than 6 hours,True,True
+why_stop_drinking_Other reasons,True,True
+why_stop_drinking_dont know,True,True
+visit_friends_family_times_2-4 times a week,True,True
+visit_friends_family_times_Once a month,True,True
+visit_friends_family_times_Once a week,True,True
+high_exercise_times_a_month_Four to five times a week,True,True
+high_exercise_times_a_month_Once a week,True,True
+high_exercise_times_a_month_Two or three times a week,True,True
+high_exercise_times_a_month_Two or three times in the last month,True,True
+easy_getting_up_Does not wake up easily,True,True
+easy_getting_up_Wakes up pretty easily,True,True
+easy_getting_up_Wakes up very easily,True,True
+manual_physical_work_Sometimes,True,True
+manual_physical_work_no,True,True
+alcohol_drink_1-2 times a week,True,True
+alcohol_drink_1-3 times a month,True,True
+alcohol_drink_In special cases only,True,True
+alcohol_drink_Never,True,True
+high_exercise_duration_Between a quarter of an hour and half an hour,True,True
+high_exercise_duration_Between an hour and an hour and a half,True,True
+high_exercise_duration_Between half an hour and an hour,True,True
+falling_asleep_during_daytime_From time to time,True,True
+falling_asleep_during_daytime_Not or rarely,True,True
+tobacco_past_how_often_I never smoked,True,True
+tobacco_past_how_often_I only tried once or twice,True,True
+tobacco_past_how_often_I smoked most or all days,True,True
+tobacco_past_how_often_I smoked sometimes,True,True
+smoke_tobacco_now_no,True,True
+years_using_mobile_phone_Over 8 years,True,True
+nap_during_day_From time to time,True,True
+nap_during_day_Not or rarely,True,True
+nap_during_day_Usually yes,True,True
+consider_yourself_morning_evening_Im more of a morning man than an evening,True,True
+consider_yourself_morning_evening_Im more of an evening man than a morning,True,True
+consider_yourself_morning_evening_Im totally a morning man,True,True
+consider_yourself_morning_evening_Im totally an evening man,True,True
+consider_yourself_morning_evening_dont know,True,True
+usual_walking_pace_Average,True,True
+usual_walking_pace_Fast,False,False
+usual_walking_pace_Moderate,True,True
+shift_work_Sometimes,True,True
+shift_work_no,True,True
+snoring_dont know,True,True
+snoring_no,False,False
+snoring_yes,False,False
+pet_past_no,True,True
+pet_past_yes,True,True
+smoke_houshold_Yes  one household member smokes,True,True
+smoke_houshold_no,True,True
+trouble_falling_a_sleep_From time to time,True,True
+trouble_falling_a_sleep_Not or rarely,True,True
+trouble_falling_a_sleep_Usually yes,True,True
+climb_staires_tymes_a_day_1-5,True,True
+climb_staires_tymes_a_day_6-10,True,True
+climb_staires_tymes_a_day_More than 20 times,True,True
+climb_staires_tymes_a_day_Zero,True,True

@@ -1,7 +1,7 @@
 import os
 
 # Define if running in DEMO mode (with sample data / no cluster queue management):
-DEMO = False
+DEMO = True
 
 # Define directory for the data
 if DEMO:

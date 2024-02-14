@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from LabData.DataAnalyses.SleepData.globals import *
+from globals import *
 from matplotlib import colors as mcolors
 from matplotlib.colors import Normalize
 from mne.stats import fdr_correction

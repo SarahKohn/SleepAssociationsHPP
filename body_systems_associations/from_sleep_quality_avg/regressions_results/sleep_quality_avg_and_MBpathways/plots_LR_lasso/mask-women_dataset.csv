@@ -1,0 +1,357 @@
+,Age & BMI,"Sleep Quality
+(average of nights)"
+UNMAPPED,True,True
+UNINTEGRATED,True,True
+1CMET2-PWY: folate transformations III (E. coli),True,True
+ALLANTOINDEG-PWY: superpathway of allantoin degradation in yeast,True,True
+ANAEROFRUCAT-PWY: homolactic fermentation,True,True
+ANAGLYCOLYSIS-PWY: glycolysis III (from glucose),True,True
+ARG+POLYAMINE-SYN: superpathway of arginine and polyamine biosynthesis,True,True
+ARGININE-SYN4-PWY: L-ornithine biosynthesis II,True,True
+ARGSYN-PWY: L-arginine biosynthesis I (via L-ornithine),True,True
+ARGSYNBSUB-PWY: L-arginine biosynthesis II (acetyl cycle),True,True
+ARO-PWY: chorismate biosynthesis I,True,True
+ASPASN-PWY: superpathway of L-aspartate and L-asparagine biosynthesis,True,True
+AST-PWY: L-arginine degradation II (AST pathway),True,True
+BIOTIN-BIOSYNTHESIS-PWY: biotin biosynthesis I,True,True
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched chain amino acid biosynthesis,True,True
+CALVIN-PWY: Calvin-Benson-Bassham cycle,True,True
+CENTFERM-PWY: pyruvate fermentation to butanoate,True,True
+CITRULBIO-PWY: L-citrulline biosynthesis,True,True
+COA-PWY-1: superpathway of coenzyme A biosynthesis III (mammals),True,True
+COA-PWY: coenzyme A biosynthesis I (prokaryotic),True,True
+COBALSYN-PWY: superpathway of adenosylcobalamin salvage from cobinamide I,True,True
+COLANSYN-PWY: colanic acid building blocks biosynthesis,True,True
+COMPLETE-ARO-PWY: superpathway of aromatic amino acid biosynthesis,True,True
+CRNFORCAT-PWY: creatinine degradation I,True,True
+DAPLYSINESYN-PWY: L-lysine biosynthesis I,True,True
+DARABCATK12-PWY: D-arabinose degradation I,True,True
+DENOVOPURINE2-PWY: superpathway of purine nucleotides de novo biosynthesis II,True,True
+DTDPRHAMSYN-PWY: dTDP-&beta;-L-rhamnose biosynthesis,True,True
+ECASYN-PWY: enterobacterial common antigen biosynthesis,True,True
+FAO-PWY: fatty acid &beta;-oxidation I (generic),True,True
+FASYN-ELONG-PWY: fatty acid elongation -- saturated,True,True
+FASYN-INITIAL-PWY: superpathway of fatty acid biosynthesis initiation (E. coli),True,True
+FERMENTATION-PWY: mixed acid fermentation,True,True
+FOLSYN-PWY: superpathway of tetrahydrofolate biosynthesis and salvage,True,True
+FUC-RHAMCAT-PWY: superpathway of fucose and rhamnose degradation,True,True
+FUCCAT-PWY: fucose degradation,True,True
+GALACT-GLUCUROCAT-PWY: superpathway of hexuronide and hexuronate degradation,True,True
+GALACTARDEG-PWY: D-galactarate degradation I,True,True
+GALACTITOLCAT-PWY: galactitol degradation,True,True
+GALACTUROCAT-PWY: D-galacturonate degradation I,True,True
+"GLCMANNANAUT-PWY: superpathway of N-acetylglucosamine, N-acetylmannosamine and N-acetylneuraminate degradation",True,True
+GLUCARDEG-PWY: D-glucarate degradation I,True,True
+GLUCARGALACTSUPER-PWY: superpathway of D-glucarate and D-galactarate degradation,True,True
+GLUCONEO-PWY: gluconeogenesis I,True,True
+GLUCOSE1PMETAB-PWY: glucose and glucose-1-phosphate degradation,True,True
+GLUCUROCAT-PWY: superpathway of &beta;-D-glucuronosides degradation,True,True
+GLUDEG-I-PWY: GABA shunt,True,True
+GLUTORN-PWY: L-ornithine biosynthesis I,True,True
+GLYCOCAT-PWY: glycogen degradation I,True,True
+GLYCOGENSYNTH-PWY: glycogen biosynthesis I (from ADP-D-Glucose),True,True
+GLYCOL-GLYOXDEG-PWY: superpathway of glycol metabolism and degradation,True,True
+GLYCOLYSIS-E-D: superpathway of glycolysis and the Entner-Doudoroff pathway,True,True
+"GLYCOLYSIS-TCA-GLYOX-BYPASS: superpathway of glycolysis, pyruvate dehydrogenase, TCA, and glyoxylate bypass",True,True
+GLYCOLYSIS: glycolysis I (from glucose 6-phosphate),True,True
+GLYOXYLATE-BYPASS: glyoxylate cycle,True,True
+"GOLPDLCAT-PWY: superpathway of glycerol degradation to 1,3-propanediol",True,True
+HCAMHPDEG-PWY: 3-phenylpropanoate and 3-(3-hydroxyphenyl)propanoate degradation to 2-hydroxypentadienoate,True,True
+HEME-BIOSYNTHESIS-II-1: heme b biosynthesis V (aerobic),True,True
+HEME-BIOSYNTHESIS-II: heme b biosynthesis I (aerobic),True,True
+HEMESYN2-PWY: heme b biosynthesis II (oxygen-independent),True,True
+HEXITOLDEGSUPER-PWY: superpathway of hexitol degradation (bacteria),True,True
+HISDEG-PWY: L-histidine degradation I,True,True
+HISTSYN-PWY: L-histidine biosynthesis,True,True
+HOMOSER-METSYN-PWY: L-methionine biosynthesis I,True,True
+HSERMETANA-PWY: L-methionine biosynthesis III,True,True
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine),True,True
+KDO-NAGLIPASYN-PWY: superpathway of (Kdo)2-lipid A biosynthesis,True,True
+KETOGLUCONMET-PWY: ketogluconate metabolism,True,True
+LACTOSECAT-PWY: lactose and galactose degradation I,True,True
+MET-SAM-PWY: superpathway of S-adenosyl-L-methionine biosynthesis,True,True
+METH-ACETATE-PWY: methanogenesis from acetate,True,True
+METHGLYUT-PWY: superpathway of methylglyoxal degradation,True,True
+METSYN-PWY: superpathway of L-homoserine and L-methionine biosynthesis,True,True
+NAD-BIOSYNTHESIS-II: NAD salvage pathway III (to nicotinamide riboside),True,True
+NAGLIPASYN-PWY: lipid IVA biosynthesis (E. coli),True,True
+NONMEVIPP-PWY: methylerythritol phosphate pathway I,True,True
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch) I,True,True
+OANTIGEN-PWY: O-antigen building blocks biosynthesis (E. coli),True,True
+ORNDEG-PWY: superpathway of ornithine degradation,True,True
+P105-PWY: TCA cycle IV (2-oxoglutarate decarboxylase),True,True
+P108-PWY: pyruvate fermentation to propanoate I,True,True
+P122-PWY: heterolactic fermentation,True,True
+P124-PWY: Bifidobacterium shunt,True,True
+"P125-PWY: superpathway of (R,R)-butanediol biosynthesis",True,True
+P161-PWY: acetylene degradation (anaerobic),True,True
+P164-PWY: purine nucleobases degradation I (anaerobic),True,True
+P185-PWY: formaldehyde assimilation III (dihydroxyacetone cycle),True,True
+P221-PWY: octane oxidation,True,True
+P23-PWY: reductive TCA cycle I,True,True
+"P4-PWY: superpathway of L-lysine, L-threonine and L-methionine biosynthesis I",True,True
+P41-PWY: pyruvate fermentation to acetate and (S)-lactate I,True,True
+P42-PWY: incomplete reductive TCA cycle,True,True
+P441-PWY: superpathway of N-acetylneuraminate degradation,True,True
+"P461-PWY: hexitol fermentation to lactate, formate, ethanol and acetate",True,True
+PANTO-PWY: phosphopantothenate biosynthesis I,True,True
+PANTOSYN-PWY: superpathway of coenzyme A biosynthesis I (bacteria),True,True
+PENTOSE-P-PWY: pentose phosphate pathway,True,True
+PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing),True,True
+PHOSLIPSYN-PWY: superpathway of phospholipid biosynthesis I (bacteria),True,True
+POLYAMINSYN3-PWY: superpathway of polyamine biosynthesis II,True,True
+POLYAMSYN-PWY: superpathway of polyamine biosynthesis I,True,True
+POLYISOPRENSYN-PWY: polyisoprenoid biosynthesis (E. coli),True,True
+PPGPPMET-PWY: ppGpp metabolism,True,True
+"PRPP-PWY: superpathway of histidine, purine, and pyrimidine biosynthesis",True,True
+PWY-1042: glycolysis IV,True,True
+PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis,True,True
+PWY-1861: formaldehyde assimilation II (assimilatory RuMP Cycle),True,True
+"PWY-241: C4 photosynthetic carbon assimilation cycle, NADP-ME type",True,True
+PWY-2941: L-lysine biosynthesis II,True,True
+PWY-2942: L-lysine biosynthesis III,True,True
+PWY-3001: superpathway of L-isoleucine biosynthesis I,True,True
+PWY-3841: folate transformations II (plants),True,True
+PWY-4041: &gamma;-glutamyl cycle,True,True
+PWY-4984: urea cycle,True,True
+PWY-5004: superpathway of L-citrulline metabolism,True,True
+PWY-5005: biotin biosynthesis II,True,True
+PWY-5022: 4-aminobutanoate degradation V,True,True
+PWY-5030: L-histidine degradation III,True,True
+PWY-5097: L-lysine biosynthesis VI,True,True
+PWY-5100: pyruvate fermentation to acetate and lactate II,True,True
+PWY-5103: L-isoleucine biosynthesis III,True,True
+PWY-5104: L-isoleucine biosynthesis IV,True,True
+PWY-5121: superpathway of geranylgeranyl diphosphate biosynthesis II (via MEP),True,True
+PWY-5130: 2-oxobutanoate degradation I,True,True
+PWY-5136: fatty acid &beta;-oxidation II (plant peroxisome),True,True
+"PWY-5138: fatty acid &beta;-oxidation IV (unsaturated, even number)",True,True
+PWY-5154: L-arginine biosynthesis III (via N-acetyl-L-citrulline),True,True
+PWY-5188: tetrapyrrole biosynthesis I (from glutamate),True,True
+PWY-5189: tetrapyrrole biosynthesis II (from glycine),True,True
+PWY-5345: superpathway of L-methionine biosynthesis (by sulfhydrylation),True,True
+PWY-5347: superpathway of L-methionine biosynthesis (transsulfuration),True,True
+PWY-5367: petroselinate biosynthesis,True,True
+PWY-5384: sucrose degradation IV (sucrose phosphorylase),True,True
+PWY-5484: glycolysis II (from fructose 6-phosphate),True,True
+PWY-5497: purine nucleobases degradation II (anaerobic),True,True
+PWY-5505: L-glutamate and L-glutamine biosynthesis,True,True
+PWY-561: superpathway of glyoxylate cycle and fatty acid degradation,True,True
+PWY-5656: mannosylglycerate biosynthesis I,True,True
+PWY-5659: GDP-mannose biosynthesis,True,True
+PWY-5667: CDP-diacylglycerol biosynthesis I,True,True
+PWY-5675: nitrate reduction V (assimilatory),True,True
+PWY-5676: acetyl-CoA fermentation to butanoate II,True,True
+PWY-5686: UMP biosynthesis I,True,True
+PWY-5690: TCA cycle II (plants and fungi),True,True
+PWY-5695: inosine 5'-phosphate degradation,True,True
+PWY-5705: allantoin degradation to glyoxylate III,True,True
+PWY-5723: Rubisco shunt,True,True
+PWY-5747: 2-methylcitrate cycle II,True,True
+"PWY-5837: 2-carboxy-1,4-naphthoquinol biosynthesis",True,True
+PWY-5838: superpathway of menaquinol-8 biosynthesis I,True,True
+PWY-5840: superpathway of menaquinol-7 biosynthesis,True,True
+PWY-5845: superpathway of menaquinol-9 biosynthesis,True,True
+PWY-5850: superpathway of menaquinol-6 biosynthesis,True,True
+PWY-5855: ubiquinol-7 biosynthesis (early decarboxylation),True,True
+PWY-5860: superpathway of demethylmenaquinol-6 biosynthesis I,True,True
+PWY-5861: superpathway of demethylmenaquinol-8 biosynthesis I,True,True
+PWY-5862: superpathway of demethylmenaquinol-9 biosynthesis,True,True
+PWY-5896: superpathway of menaquinol-10 biosynthesis,True,True
+PWY-5897: superpathway of menaquinol-11 biosynthesis,True,True
+PWY-5898: superpathway of menaquinol-12 biosynthesis,True,True
+PWY-5899: superpathway of menaquinol-13 biosynthesis,True,True
+PWY-5913: partial TCA cycle (obligate autotrophs),True,True
+PWY-5918: superpathway of heme b biosynthesis from glutamate,True,True
+PWY-5920: superpathway of heme b biosynthesis from glycine,True,True
+PWY-5941: glycogen degradation II,True,True
+PWY-5971: palmitate biosynthesis (type II fatty acid synthase),True,True
+PWY-5973: cis-vaccenate biosynthesis,True,True
+PWY-5981: CDP-diacylglycerol biosynthesis III,True,True
+PWY-5989: stearate biosynthesis II (bacteria and plants),True,True
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I,True,True
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II,True,True
+PWY-6123: inosine-5'-phosphate biosynthesis I,True,True
+PWY-6124: inosine-5'-phosphate biosynthesis II,True,True
+PWY-6125: superpathway of guanosine nucleotides de novo biosynthesis II,True,True
+PWY-6126: superpathway of adenosine nucleotides de novo biosynthesis II,True,True
+PWY-6143: CMP-pseudaminate biosynthesis,True,True
+PWY-6147: 6-hydroxymethyl-dihydropterin diphosphate biosynthesis I,True,True
+PWY-6151: S-adenosyl-L-methionine salvage I,True,True
+PWY-6163: chorismate biosynthesis from 3-dehydroquinate,True,True
+PWY-6168: flavin biosynthesis III (fungi),True,True
+PWY-621: sucrose degradation III (sucrose invertase),True,True
+PWY-622: starch biosynthesis,True,True
+PWY-6270: isoprene biosynthesis I,True,True
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis,True,True
+PWY-6282: palmitoleate biosynthesis I (from (5Z)-dodec-5-enoate),True,True
+PWY-6284: superpathway of unsaturated fatty acids biosynthesis (E. coli),True,True
+PWY-6285: superpathway of fatty acids biosynthesis (E. coli),True,True
+PWY-6292: superpathway of L-cysteine biosynthesis (mammalian),True,True
+PWY-6293: superpathway of L-cysteine biosynthesis (fungi),True,True
+PWY-6305: superpathway of putrescine biosynthesis,True,True
+PWY-6317: D-galactose degradation I (Leloir pathway),True,True
+PWY-6353: purine nucleotides degradation II (aerobic),True,True
+PWY-6385: peptidoglycan biosynthesis III (mycobacteria),True,True
+PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing),True,True
+PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing),True,True
+"PWY-6415: L-ascorbate biosynthesis V (euglena, D-galacturonate pathway)",True,True
+PWY-6470: peptidoglycan biosynthesis V (&beta;-lactam resistance),True,True
+PWY-6478: GDP-D-glycero-&alpha;-D-manno-heptose biosynthesis,True,True
+PWY-6507: 4-deoxy-L-threo-hex-4-enopyranuronate degradation,True,True
+PWY-6519: 8-amino-7-oxononanoate biosynthesis I,True,True
+PWY-6527: stachyose degradation,True,True
+PWY-6531: mannitol cycle,True,True
+PWY-6545: pyrimidine deoxyribonucleotides de novo biosynthesis III,True,True
+PWY-6549: L-glutamine biosynthesis III,True,True
+PWY-6572: chondroitin sulfate degradation I (bacterial),True,True
+PWY-6588: pyruvate fermentation to acetone,True,True
+PWY-6590: superpathway of Clostridium acetobutylicum acidogenic fermentation,True,True
+PWY-6595: superpathway of guanosine nucleotides degradation (plants),True,True
+PWY-6606: guanosine nucleotides degradation II,True,True
+PWY-6607: guanosine nucleotides degradation I,True,True
+PWY-6608: guanosine nucleotides degradation III,True,True
+PWY-6609: adenine and adenosine salvage III,True,True
+PWY-6612: superpathway of tetrahydrofolate biosynthesis,True,True
+PWY-6628: superpathway of L-phenylalanine biosynthesis,True,True
+PWY-6630: superpathway of L-tyrosine biosynthesis,True,True
+PWY-6690: cinnamate and 3-hydroxycinnamate degradation to 2-hydroxypentadienoate,True,True
+PWY-6700: queuosine biosynthesis I (de novo),True,True
+PWY-6703: preQ0 biosynthesis,True,True
+PWY-6731: starch degradation III,True,True
+PWY-6749: CMP-legionaminate biosynthesis I,True,True
+PWY-6803: phosphatidylcholine acyl editing,True,True
+PWY-6807: xyloglucan degradation II (exoglucanase),True,True
+PWY-6823: molybdopterin biosynthesis,True,True
+PWY-6859: all-trans-farnesol biosynthesis,True,True
+PWY-6895: superpathway of thiamine diphosphate biosynthesis II,True,True
+PWY-6897: thiamine diphosphate salvage II,True,True
+PWY-6901: superpathway of glucose and xylose degradation,True,True
+PWY-6902: chitin degradation II (Vibrio),True,True
+PWY-6906: chitin derivatives degradation,True,True
+PWY-6922: L-N&delta;-acetylornithine biosynthesis,True,True
+PWY-6936: seleno-amino acid biosynthesis (plants),True,True
+PWY-6953: dTDP-3-acetamido-&alpha;-D-fucose biosynthesis,True,True
+"PWY-6961: L-ascorbate degradation II (bacterial, aerobic)",True,True
+PWY-6969: TCA cycle V (2-oxoglutarate synthase),True,True
+"PWY-6992: 1,5-anhydrofructose degradation",True,True
+"PWY-7013: (S)-propane-1,2-diol degradation",True,True
+PWY-702: L-methionine biosynthesis II,True,True
+PWY-7094: fatty acid salvage,True,True
+PWY-7111: pyruvate fermentation to isobutanol (engineered),True,True
+"PWY-7115: C4 photosynthetic carbon assimilation cycle, NAD-ME type",True,True
+"PWY-7117: C4 photosynthetic carbon assimilation cycle, PEPCK type",True,True
+PWY-7118: chitin deacetylation,True,True
+PWY-7184: pyrimidine deoxyribonucleotides de novo biosynthesis I,True,True
+PWY-7187: pyrimidine deoxyribonucleotides de novo biosynthesis II,True,True
+PWY-7196: superpathway of pyrimidine ribonucleosides salvage,True,True
+PWY-7197: pyrimidine deoxyribonucleotide phosphorylation,True,True
+PWY-7198: pyrimidine deoxyribonucleotides de novo biosynthesis IV,True,True
+PWY-7199: pyrimidine deoxyribonucleosides salvage,True,True
+PWY-7200: superpathway of pyrimidine deoxyribonucleoside salvage,True,True
+PWY-7204: pyridoxal 5'-phosphate salvage II (plants),True,True
+PWY-7208: superpathway of pyrimidine nucleobases salvage,True,True
+PWY-7209: superpathway of pyrimidine ribonucleosides degradation,True,True
+PWY-7210: pyrimidine deoxyribonucleotides biosynthesis from CTP,True,True
+PWY-7211: superpathway of pyrimidine deoxyribonucleotides de novo biosynthesis,True,True
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II,True,True
+PWY-7221: guanosine ribonucleotides de novo biosynthesis,True,True
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II,True,True
+PWY-7228: superpathway of guanosine nucleotides de novo biosynthesis I,True,True
+PWY-7229: superpathway of adenosine nucleotides de novo biosynthesis I,True,True
+PWY-7234: inosine-5'-phosphate biosynthesis III,True,True
+"PWY-7237: myo-, chiro- and scyllo-inositol degradation",True,True
+PWY-7238: sucrose biosynthesis II,True,True
+PWY-7242: D-fructuronate degradation,True,True
+"PWY-724: superpathway of L-lysine, L-threonine and L-methionine biosynthesis II",True,True
+PWY-7254: TCA cycle VII (acetate-producers),True,True
+PWY-7269: mitochondrial NADPH production (yeast),True,True
+PWY-7282: 4-amino-2-methyl-5-diphosphomethylpyrimidine biosynthesis II,True,True
+PWY-7312: dTDP-&beta;-D-fucofuranose biosynthesis,True,True
+PWY-7315: dTDP-N-acetylthomosamine biosynthesis,True,True
+PWY-7316: dTDP-N-acetylviosamine biosynthesis,True,True
+PWY-7323: superpathway of GDP-mannose-derived O-antigen building blocks biosynthesis,True,True
+PWY-7328: superpathway of UDP-glucose-derived O-antigen building blocks biosynthesis,True,True
+PWY-7345: superpathway of anaerobic sucrose degradation,True,True
+PWY-7356: thiamine diphosphate salvage IV (yeast),True,True
+PWY-7357: thiamine phosphate formation from pyrithiamine and oxythiamine (yeast),True,True
+"PWY-7371: 1,4-dihydroxy-6-naphthoate biosynthesis II",True,True
+"PWY-7383: anaerobic energy metabolism (invertebrates, cytosol)",True,True
+"PWY-7385: 1,3-propanediol biosynthesis (engineered)",True,True
+PWY-7392: taxadiene biosynthesis (engineered),True,True
+PWY-7400: L-arginine biosynthesis IV (archaebacteria),True,True
+PWY-7434: terminal O-glycans residues modification (via type 2 precursor disaccharide),True,True
+"PWY-7456: &beta;-(1,4)-mannan degradation",True,True
+PWY-7560: methylerythritol phosphate pathway II,True,True
+PWY-7663: gondoate biosynthesis (anaerobic),True,True
+PWY-7664: oleate biosynthesis IV (anaerobic),True,True
+PWY-7688: dTDP-&alpha;-D-ravidosamine and dTDP-4-acetyl-&alpha;-D-ravidosamine biosynthesis,True,True
+PWY-7761: NAD salvage pathway II (PNC IV cycle),True,True
+PWY-7790: UMP biosynthesis II,True,True
+PWY-7791: UMP biosynthesis III,True,True
+PWY-7851: coenzyme A biosynthesis II (eukaryotic),True,True
+PWY-7858: (5Z)-dodecenoate biosynthesis II,True,True
+PWY-7883: anhydromuropeptides recycling II,True,True
+PWY-7942: 5-oxo-L-proline metabolism,True,True
+PWY-7953: UDP-N-acetylmuramoyl-pentapeptide biosynthesis III (meso-diaminopimelate containing),True,True
+PWY-7977: L-methionine biosynthesis IV,True,True
+PWY-7992: superpathway of menaquinol-8 biosynthesis III,True,True
+PWY-8004: Entner-Doudoroff pathway I,True,True
+PWY-801: homocysteine and cysteine interconversion,True,True
+PWY-8073: lipid IVA biosynthesis (P. putida),True,True
+PWY-8131: 5'-deoxyadenosine degradation II,True,True
+PWY-8178: pentose phosphate pathway (non-oxidative branch) II,True,True
+PWY-8187: L-arginine degradation XIII (reductive Stickland reaction),True,True
+PWY-821: superpathway of sulfur amino acid biosynthesis (Saccharomyces cerevisiae),True,True
+PWY-841: superpathway of purine nucleotides de novo biosynthesis I,True,True
+PWY-I9: L-cysteine biosynthesis VI (from L-methionine),True,True
+PWY0-1061: superpathway of L-alanine biosynthesis,True,True
+PWY0-1241: ADP-L-glycero-&beta;-D-manno-heptose biosynthesis,True,True
+PWY0-1261: anhydromuropeptides recycling I,True,True
+PWY0-1277: 3-phenylpropanoate and 3-(3-hydroxyphenyl)propanoate degradation,True,True
+PWY0-1296: purine ribonucleosides degradation,True,True
+PWY0-1297: superpathway of purine deoxyribonucleosides degradation,True,True
+PWY0-1298: superpathway of pyrimidine deoxyribonucleosides degradation,True,True
+PWY0-1319: CDP-diacylglycerol biosynthesis II,True,True
+PWY0-1337: oleate &beta;-oxidation,True,True
+PWY0-1338: polymyxin resistance,True,True
+PWY0-1415: superpathway of heme b biosynthesis from uroporphyrinogen-III,True,True
+PWY0-1477: ethanolamine utilization,True,True
+PWY0-1479: tRNA processing,True,True
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing),True,True
+PWY0-162: superpathway of pyrimidine ribonucleotides de novo biosynthesis,True,True
+PWY0-166: superpathway of pyrimidine deoxyribonucleotides de novo biosynthesis (E. coli),True,True
+"PWY0-301: L-ascorbate degradation I (bacterial, anaerobic)",True,True
+PWY0-42: 2-methylcitrate cycle I,True,True
+PWY0-781: aspartate superpathway,True,True
+PWY0-845: superpathway of pyridoxal 5'-phosphate biosynthesis and salvage,True,True
+PWY0-862: (5Z)-dodecenoate biosynthesis I,True,True
+PWY1ZNC-1: assimilatory sulfate reduction IV,True,True
+PWY3O-4107: NAD salvage pathway V (PNC V cycle),True,True
+PWY490-3: nitrate reduction VI (assimilatory),True,True
+PWY4FS-7: phosphatidylglycerol biosynthesis I (plastidic),True,True
+PWY4FS-8: phosphatidylglycerol biosynthesis II (non-plastidic),True,True
+PWY4LZ-257: superpathway of fermentation (Chlamydomonas reinhardtii),True,True
+PWY66-389: phytol degradation,True,True
+PWY66-391: fatty acid &beta;-oxidation VI (mammalian peroxisome),True,True
+PWY66-399: gluconeogenesis III,True,True
+PWY66-409: superpathway of purine nucleotide salvage,True,True
+PWY66-429: fatty acid biosynthesis initiation (mitochondria),True,True
+PYRIDNUCSAL-PWY: NAD salvage pathway I (PNC VI cycle),True,True
+PYRIDNUCSYN-PWY: NAD de novo biosynthesis I (from aspartate),True,True
+PYRIDOXSYN-PWY: pyridoxal 5'-phosphate biosynthesis I,True,True
+REDCITCYC: TCA cycle VI (Helicobacter),True,True
+RHAMCAT-PWY: L-rhamnose degradation I,True,True
+RIBOSYN2-PWY: flavin biosynthesis I (bacteria and plants),True,True
+RUMP-PWY: formaldehyde oxidation I,True,True
+SALVADEHYPOX-PWY: adenosine nucleotides degradation II,True,True
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I,True,True
+SO4ASSIM-PWY: assimilatory sulfate reduction I,True,True
+SULFATE-CYS-PWY: superpathway of sulfate assimilation and cysteine biosynthesis,True,True
+TCA-GLYOX-BYPASS: superpathway of glyoxylate bypass and TCA,True,True
+TCA: TCA cycle I (prokaryotic),True,True
+THISYNARA-PWY: superpathway of thiamine diphosphate biosynthesis III (eukaryotes),True,True
+THRESYN-PWY: superpathway of L-threonine biosynthesis,True,True
+TRNA-CHARGING-PWY: tRNA charging,True,True
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I,True,True
+VALSYN-PWY: L-valine biosynthesis,True,True

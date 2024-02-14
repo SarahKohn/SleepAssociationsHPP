@@ -1,0 +1,6 @@
+,Age & BMI,"HRV
+(measured during sleep)"
+bt__creatinine,True,True
+bt__sodium,True,True
+bt__potassium,True,True
+bt__urea,False,True

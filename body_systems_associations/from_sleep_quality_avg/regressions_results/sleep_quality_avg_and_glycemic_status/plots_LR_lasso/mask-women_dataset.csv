@@ -1,0 +1,53 @@
+,Age & BMI,"Sleep Quality
+(average of nights)"
+index,True,True
+adrr,False,False
+COGI,True,True
+cv,False,False
+ea1c,True,True
+gmi,True,True
+grade,True,True
+grade_eugly,False,False
+grade_hyper,False,False
+grade_hypo,False,False
+hbgi,True,True
+lbgi,False,False
+hyper_index,True,True
+hypo_index,False,False
+igc,False,False
+iqr,False,False
+j_index,False,False
+m_value,True,True
+MAD,False,False
+mage,False,True
+above_140,False,False
+above_180,True,True
+below_54,False,False
+below_70,False,False
+in_range_63_140,True,True
+in_range_70_180,False,False
+range,False,False
+sd,False,False
+Min.,False,False
+1st Qu.,False,False
+Median,False,False
+Mean,False,False
+3rd Qu.,False,False
+Max.,False,False
+Conga,False,False
+GVP,True,True
+MODD,False,False
+SD.Roc,True,True
+CV_Measures_Mean,False,False
+CV_Measures_SD,True,True
+AUC,False,False
+MAG,False,False
+SdW,False,False
+SdHHMM,False,False
+SdWSH,False,False
+SdDM,True,True
+SdB,False,False
+SdBDM,False,False
+above_200,True,True
+bt__hba1c,False,False
+bt__glucose,False,False

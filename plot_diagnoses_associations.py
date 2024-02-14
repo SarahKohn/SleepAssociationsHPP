@@ -85,7 +85,5 @@ if __name__ == '__main__':
         'hrv_avg',
     ]
     body_system_target = 'baseline_diagnoses_nastya'
-
     create_figure_for_paper(my_dir + special_folder, body_system_target)
-
-    print('<<<')
+    print('<<< Done')

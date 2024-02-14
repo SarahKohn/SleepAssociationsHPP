@@ -1,0 +1,10 @@
+,Age & BMI,"HRV
+(measured during sleep)"
+bt__hct,False,False
+bt__rbc,True,True
+bt__ferritin,False,False
+bt__rdw,False,False
+bt__mcv,False,False
+bt__mchc,True,True
+bt__hemoglobin,False,True
+bt__mch,False,True

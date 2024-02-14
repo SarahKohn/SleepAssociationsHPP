@@ -1,7 +1,7 @@
 # Setup
 import math
 import joblib
-from LabData.DataAnalyses.SleepData.utils import *
+from utils import *
 from matplotlib.gridspec import GridSpec
 from matplotlib.ticker import MultipleLocator
 from scipy.stats import ttest_rel
@@ -521,7 +521,5 @@ if __name__ == '__main__':
                 print(f'<< Done processing: {task}')
     
     plot_figures_for_paper(datasets, task_path_dict)
-
     plot_age_bmi_predictions(['sleep_quality_avg', 'hrv_avg'])
-
     print('<<< Done')

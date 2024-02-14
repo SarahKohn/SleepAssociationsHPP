@@ -170,6 +170,7 @@ def plot_correlations_donut(body_systems: list):
     cb.ax.set_yticklabels([-0.6, 0, 0.6])
     plt.savefig(os.path.join(RESULTS_PATH, 'nested_pie_cbar-correlations.png'), dpi=300)
     plt.close()
+    print(f'Figure saved in {RESULTS_PATH}')
     pass
 
 
@@ -211,4 +212,4 @@ if __name__ == '__main__':
         'blood_lipids'
     ]
     plot_correlations_donut(body_systems)
-    print('Done')
+    print('<<< Done')

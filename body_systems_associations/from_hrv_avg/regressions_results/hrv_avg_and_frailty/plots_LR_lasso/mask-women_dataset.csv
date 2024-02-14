@@ -1,0 +1,9 @@
+,Age & BMI,"HRV
+(measured during sleep)"
+body_comp_leg_right_lean_mass,False,False
+body_comp_arm_right_lean_mass,False,False
+body_comp_arm_left_lean_mass,False,False
+body_comp_leg_left_lean_mass,False,False
+height,False,False
+hand_grip_left,False,False
+hand_grip_right,False,False

@@ -1,0 +1,53 @@
+,Age & BMI,"HRV
+(measured during sleep)"
+index,True,True
+adrr,False,True
+COGI,True,True
+cv,False,True
+ea1c,True,True
+gmi,True,True
+grade,True,True
+grade_eugly,False,True
+grade_hyper,False,False
+grade_hypo,False,True
+hbgi,True,True
+lbgi,False,True
+hyper_index,True,True
+hypo_index,False,True
+igc,False,True
+iqr,False,False
+j_index,False,False
+m_value,True,True
+MAD,False,False
+mage,False,True
+above_140,False,False
+above_180,True,True
+below_54,False,True
+below_70,False,True
+in_range_63_140,True,True
+in_range_70_180,False,True
+range,False,True
+sd,False,False
+Min.,False,True
+1st Qu.,False,True
+Median,False,True
+Mean,False,True
+3rd Qu.,False,True
+Max.,False,True
+Conga,False,False
+GVP,True,True
+MODD,False,False
+SD.Roc,True,True
+CV_Measures_Mean,False,False
+CV_Measures_SD,True,True
+AUC,False,True
+MAG,False,False
+SdW,False,False
+SdHHMM,False,False
+SdWSH,False,False
+SdDM,True,True
+SdB,False,False
+SdBDM,False,False
+above_200,True,True
+bt__hba1c,False,False
+bt__glucose,False,True

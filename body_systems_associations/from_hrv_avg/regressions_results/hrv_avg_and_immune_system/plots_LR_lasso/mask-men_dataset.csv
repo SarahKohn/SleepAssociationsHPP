@@ -1,0 +1,13 @@
+,Age & BMI,"HRV
+(measured during sleep)"
+bt__monocytes_abs,True,True
+bt__wbc,False,False
+bt__lymphocytes_abs,False,False
+bt__monocytes_%,False,True
+bt__neutrophils_abs,False,False
+bt__basophils_%,True,True
+bt__lymphocytes_%,False,True
+bt__basophils_abs,True,True
+bt__eosinophils_%,True,True
+bt__eosinophils_abs,True,True
+bt__neutrophils_%,False,True
