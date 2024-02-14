@@ -10,14 +10,14 @@ def create_figure_for_paper(path: str, target: str):
     diffs_men = pd.DataFrame()
     diffs_women = pd.DataFrame()
     for dir in dir_list:
-        tmp = pd.read_csv(os.path.join(path, dir, 'body_systems_associations',
+        tmp = pd.read_csv(os.path.join(path, dir, 'regressions_results',
                                        dir.replace('from_', '') + f'_and_{target}',
                                        f'plots_LR_lasso/median_scores_filtered-men_dataset.csv'), index_col=0)
         diff = tmp.iloc[:, 1] - tmp.iloc[:, 0]
         diffs_men = pd.concat([diffs_men, diff], axis=1)
         men_result = tmp.iloc[:, 1]
         all_results_men = pd.concat([all_results_men, men_result], axis=1)
-        tmp = pd.read_csv(os.path.join(path, dir, 'body_systems_associations',
+        tmp = pd.read_csv(os.path.join(path, dir, 'regressions_results',
                                        dir.replace('from_', '') + f'_and_{target}',
                                        f'plots_LR_lasso/median_scores_filtered-women_dataset.csv'), index_col=0)
         diff = tmp.iloc[:, 1] - tmp.iloc[:, 0]

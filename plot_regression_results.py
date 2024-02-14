@@ -343,7 +343,7 @@ def plot_age_bmi_predictions(tasks: list):
             ax = axs[s, i]
             file = f'{MODEL_TYPE}_{sex}scores_df.csv'
             tmp_dict = {f'{ds}_and_Age_Gender_BMI': DICT_FOR_BARPLOT[ds] for ds in tasks}
-            path = [os.path.join(MY_DIR, 'all regressions-final', f'from_{ds}', 'regressions_results' + TAG,
+            path = [os.path.join(MY_DIR, 'body_systems_associations', f'from_{ds}', 'regressions_results' + TAG,
                                  f'{ds}_and_Age_Gender_BMI') for ds in tasks]
             scores_per_target = pd.concat([pd.read_csv(os.path.join(p, f'{df_prefix}_{file}'),
                                                        index_col=0)[target] for p, df_prefix in
@@ -385,7 +385,7 @@ def plot_age_bmi_predictions(tasks: list):
     axs[0, 0].set_ylabel(f'Predictive power\nfor male', fontsize=tick_fontsize)
 
     plt.tight_layout()
-    plt.savefig(os.path.join(MY_DIR, 'plots', 'Fig-Age_BMI_predictions.png'), dpi=200)
+    plt.savefig(os.path.join(MY_DIR, 'descriptive_data_and_figures', 'Fig-Age_BMI_predictions.png'), dpi=200)
     plt.show()
 
     # Second option for plot
@@ -400,7 +400,7 @@ def plot_age_bmi_predictions(tasks: list):
         for s, sex in enumerate(['men', 'women']):
             file = f'{MODEL_TYPE}_{sex}scores_df.csv'
             tmp_dict = {f'{ds}_and_Age_Gender_BMI': DICT_FOR_BARPLOT[ds] for ds in tasks}
-            path = [os.path.join(MY_DIR, 'all regressions-final', f'from_{ds}', 'regressions_results' + TAG,
+            path = [os.path.join(MY_DIR, 'body_systems_associations', f'from_{ds}', 'regressions_results' + TAG,
                                  f'{ds}_and_Age_Gender_BMI') for ds in tasks]
             scores_per_target = pd.concat([pd.read_csv(os.path.join(p, f'{df_prefix}_{file}'),
                                                        index_col=0)[target] for p, df_prefix in
@@ -444,7 +444,7 @@ def plot_age_bmi_predictions(tasks: list):
     ax.set_yticklabels('')
     ax.set_ylabel('')
     plt.tight_layout()
-    plt.savefig(os.path.join(MY_DIR, 'plots', f'Fig-Age_BMI_predictions2_barplot.png'), dpi=200)
+    plt.savefig(os.path.join(MY_DIR, 'descriptive_data_and_figures', f'Fig-Age_BMI_predictions2_barplot.png'), dpi=200)
     plt.show()
     a=1
 
@@ -520,6 +520,6 @@ if __name__ == '__main__':
                 q.wait(ticket_list)
                 print(f'<< Done processing: {task}')
     
-    plot_figures_for_paper(datasets, task_path_dict)
+    # plot_figures_for_paper(datasets, task_path_dict)
     plot_age_bmi_predictions(['sleep_quality_avg', 'hrv_avg'])
     print('<<< Done')
