@@ -1,5 +1,5 @@
 ,Age & BMI,"HRV
-(measured during sleep)"
+(average of nights)"
 index,True,True
 adrr,False,True
 COGI,True,True

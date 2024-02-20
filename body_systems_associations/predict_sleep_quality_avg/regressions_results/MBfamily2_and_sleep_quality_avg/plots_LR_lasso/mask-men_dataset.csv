@@ -24,7 +24,7 @@ number_of_apnea_hypopnea_events,False,True
 number_of_central_apnea_hypopnea_events,False,True
 number_of_desaturation_events,False,True
 number_of_obstructive_apnea_hypopnea_events,False,False
-number_of_transitions_nrem_to_rem,False,False
+number_of_transitions_nrem_to_rem,False,True
 number_of_transitions_nrem_to_wake,False,True
 number_of_transitions_rem_to_nrem,False,True
 number_of_transitions_rem_to_wake,True,True

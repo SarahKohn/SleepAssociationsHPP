@@ -2,24 +2,22 @@
 (average of nights)"
 from_l_thigh_to_l_ankle_pwv,False,False
 l_brachial_index,True,True
-from_l_thigh_to_l_ankle_distance,False,False
 l_ankle_index,True,True
 from_r_thigh_to_r_ankle_pwv,False,False
 r_abi,True,True
 r_brachial_index,True,True
 l_brachial_pressure,False,True
 r_ankle_index,True,True
-r_brachial_pressure,False,True
+r_brachial_pressure,False,False
 from_r_thigh_to_r_ankle_transit_time,False,True
 from_l_thigh_to_l_ankle_transit_time,False,True
 r_ankle_pressure,False,False
-from_r_thigh_to_r_ankle_distance,True,True
 l_ankle_pressure,False,True
 l_abi,True,True
 sitting_blood_pressure_pulse_rate,False,False
 sitting_blood_pressure_diastolic,False,False
 lying_blood_pressure_diastolic,False,False
-lying_blood_pressure_systolic,False,True
+lying_blood_pressure_systolic,False,False
 standing_one_min_blood_pressure_systolic,False,True
 standing_three_min_blood_pressure_systolic,False,True
 lying_blood_pressure_pulse_rate,False,False
@@ -56,7 +54,7 @@ Artery_Squared_curvature_tortuosity,True,True
 Artery_Distance_tortuosity,True,True
 Artery_Tortuosity_density,True,True
 Cup_height,True,True
-Vein_Average_width,False,True
+Vein_Average_width,False,False
 r_mv_V4,False,True
 t_mv_V6,True,True
 p_mv_V4,True,True
@@ -77,7 +75,7 @@ j_mv_aVR,True,True
 r_mv_V5,False,True
 t_mv_III,True,True
 q_mv_I,True,True
-r_mv_aVF,False,True
+r_mv_aVF,False,False
 p_mv_V3,True,True
 s_mv_I,True,True
 r_ms_V1,False,True
@@ -86,8 +84,8 @@ p_mv_III,True,True
 st_mv_III,True,True
 p_mv_V6,True,True
 hr_bpm,False,False
-r_ms_III,False,True
-r_mv_aVL,False,True
+r_ms_III,False,False
+r_mv_aVL,False,False
 r_ms_V6,False,False
 j_mv_V3,True,True
 r_ms_V5,False,False
@@ -114,7 +112,7 @@ p_mv_I,True,True
 r_mv_I,False,False
 p_mv_V1,True,True
 t_mv_aVL,True,True
-r_ms_aVF,False,False
+r_ms_aVF,False,True
 qrs_axis,True,True
 t_mv_aVF,True,True
 t_axis,False,True
@@ -140,7 +138,7 @@ st_mv_V4,True,True
 qrs_ms,False,True
 r_ms_aVL,False,True
 t_mv_II,True,True
-r_mv_V6,False,True
+r_mv_V6,False,False
 t_mv_V1,True,True
 r_ms_II,False,True
 t_mv_V5,True,True

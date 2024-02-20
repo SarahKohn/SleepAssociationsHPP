@@ -1,5 +1,5 @@
 ,Age & BMI,"HRV
-(measured during sleep)"
+(average of nights)"
 total_scan_sat_area,False,False
 total_scan_sat_mass,False,False
 total_scan_sat_volume,False,False

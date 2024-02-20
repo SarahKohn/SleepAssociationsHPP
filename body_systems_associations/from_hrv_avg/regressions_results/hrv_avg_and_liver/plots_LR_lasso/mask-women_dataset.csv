@@ -1,5 +1,5 @@
 ,Age & BMI,"HRV
-(measured during sleep)"
+(average of nights)"
 liver_viscosity,True,True
 liver_elasticity,True,True
 liver_attenuation,True,True

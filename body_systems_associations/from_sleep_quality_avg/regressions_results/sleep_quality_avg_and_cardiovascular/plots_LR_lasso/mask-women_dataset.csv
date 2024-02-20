@@ -2,7 +2,6 @@
 (average of nights)"
 from_l_thigh_to_l_ankle_pwv,False,False
 l_brachial_index,True,True
-from_l_thigh_to_l_ankle_distance,False,False
 l_ankle_index,True,True
 from_r_thigh_to_r_ankle_pwv,False,False
 r_abi,True,True
@@ -13,7 +12,6 @@ r_brachial_pressure,False,False
 from_r_thigh_to_r_ankle_transit_time,False,True
 from_l_thigh_to_l_ankle_transit_time,False,False
 r_ankle_pressure,False,False
-from_r_thigh_to_r_ankle_distance,False,False
 l_ankle_pressure,False,False
 l_abi,True,True
 sitting_blood_pressure_pulse_rate,False,False
@@ -35,7 +33,7 @@ intima_media_th_mm_1_window_width,True,True
 intima_media_th_1_fit,False,False
 intima_media_th_2_fit,False,False
 Disc_height,False,True
-Artery_Average_width,False,True
+Artery_Average_width,False,False
 Vessel_density,True,True
 Tortuosity_density,True,True
 Vein_Tortuosity_density,True,True
@@ -72,7 +70,7 @@ q_mv_aVL,True,True
 j_mv_aVF,True,True
 j_mv_V2,True,True
 st_mv_V1,True,True
-q_ms_aVR,False,True
+q_ms_aVR,False,False
 p_ms,False,True
 j_mv_II,True,True
 j_mv_aVR,True,True
@@ -92,7 +90,7 @@ r_ms_III,False,True
 r_mv_aVL,True,True
 r_ms_V6,False,True
 j_mv_V3,True,True
-r_ms_V5,False,False
+r_ms_V5,False,True
 st_mv_V6,True,True
 s_mv_V1,True,True
 s_mv_III,True,True
@@ -108,7 +106,7 @@ s_mv_V3,True,True
 q_mv_aVR,True,True
 st_mv_I,True,True
 s_mv_aVR,True,True
-pr_ms,False,True
+pr_ms,False,False
 p_mv_aVR,True,True
 st_mv_aVL,True,True
 t_mv_V3,True,True
@@ -132,7 +130,7 @@ t_mv_V4,True,True
 st_mv_V5,True,True
 j_mv_V6,True,True
 st_mv_II,True,True
-r_ms_I,False,False
+r_ms_I,False,True
 j_mv_aVL,True,True
 q_ms_aVL,False,True
 r_ms_aVR,True,True

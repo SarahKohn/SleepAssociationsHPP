@@ -1,5 +1,5 @@
 ,Age & BMI,"HRV
-(measured during sleep)"
+(average of nights)"
 fBin__100,True,True
 fBin__102,False,True
 fBin__103,True,True
@@ -128,7 +128,7 @@ fBin__489,True,True
 fBin__490,True,True
 fBin__491,True,True
 fBin__497,True,True
-fBin__503,False,False
+fBin__503,False,True
 fBin__504,False,False
 fBin__508,True,True
 fBin__513,True,True

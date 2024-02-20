@@ -1,5 +1,5 @@
 ,Age & BMI,"HRV
-(measured during sleep)"
+(average of nights)"
 body_arm_left_area,False,False
 body_arm_left_bmc,False,False
 body_arm_left_bmd,True,True

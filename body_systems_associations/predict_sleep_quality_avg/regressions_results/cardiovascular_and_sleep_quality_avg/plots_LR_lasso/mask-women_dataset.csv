@@ -93,4 +93,4 @@ total_valid_apnea_central_sleep_time,False,False
 total_valid_apnea_sleep_time,False,False
 total_wake_time,False,False
 total_wake_time_after_sleep_onset,False,False
-variability_between_sleep_stage_percents,False,True
+variability_between_sleep_stage_percents,False,False

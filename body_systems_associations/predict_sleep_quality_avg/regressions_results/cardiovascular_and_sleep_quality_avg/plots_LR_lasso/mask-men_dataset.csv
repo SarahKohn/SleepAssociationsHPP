@@ -24,7 +24,7 @@ number_of_apnea_hypopnea_events,False,False
 number_of_central_apnea_hypopnea_events,False,False
 number_of_desaturation_events,False,False
 number_of_obstructive_apnea_hypopnea_events,False,False
-number_of_transitions_nrem_to_rem,False,True
+number_of_transitions_nrem_to_rem,False,False
 number_of_transitions_nrem_to_wake,False,True
 number_of_transitions_rem_to_nrem,False,True
 number_of_transitions_rem_to_wake,True,True
@@ -40,7 +40,7 @@ odi_during_rem,False,False
 odi_during_right,False,False
 odi_during_supine,False,False
 percent_of_deep_sleep_time,False,False
-percent_of_left_sleep,False,False
+percent_of_left_sleep,False,True
 percent_of_light_sleep_time,False,True
 percent_of_non_supine_sleep,False,False
 percent_of_prone_sleep,False,True
@@ -67,7 +67,7 @@ saturation_mean,False,False
 saturation_min_value,False,True
 sleep_efficiency,False,True
 sleep_latency,False,True
-snore_above_40db,False,False
+snore_above_40db,False,True
 snore_above_45db,False,False
 snore_above_50db,False,False
 snore_above_60db,False,True

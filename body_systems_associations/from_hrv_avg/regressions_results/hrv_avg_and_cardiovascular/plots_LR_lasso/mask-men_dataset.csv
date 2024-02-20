@@ -1,5 +1,5 @@
 ,Age & BMI,"HRV
-(measured during sleep)"
+(average of nights)"
 from_l_thigh_to_l_ankle_pwv,False,False
 l_brachial_index,True,True
 from_l_thigh_to_l_ankle_distance,False,False

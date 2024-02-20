@@ -1,7 +1,7 @@
 ,Age & BMI,"Sleep Quality
 (average of nights)"
 fBin__100,True,True
-fBin__102,False,True
+fBin__102,False,False
 fBin__103,True,True
 fBin__104,True,True
 fBin__106,True,True
@@ -29,7 +29,7 @@ fBin__257,False,True
 fBin__262,False,True
 fBin__263,False,True
 fBin__27,True,True
-fBin__270,False,True
+fBin__270,False,False
 fBin__273,True,True
 fBin__274,True,True
 fBin__275,True,True
