@@ -31,7 +31,8 @@ def create_figure_for_paper(path: str, target: str):
     diffs_women['max'] = diffs_women.max(axis=1)
     all_results_women = pd.concat([all_results_women, diffs_women['max']], axis=1).sort_values(by='max',
                                                                                                ascending=False)
-    all_results_women.rename(index={'Attention Deficit Disorder (ADHD)': 'ADHD'}, inplace=True)
+    all_results_women.rename(index={'Attention Deficit Disorder (ADHD)': 'ADHD',
+                                    'G6PD': 'G6PD deficiency'}, inplace=True)
 
     # Figure
     title = f'AUCs for predicting medical diagnoses'
@@ -69,7 +70,7 @@ def create_figure_for_paper(path: str, target: str):
     ax2.set_yticklabels(ax2.get_yticklabels(), rotation=0, ha='right', fontsize=12)
     plt.suptitle(title)
     plt.tight_layout()
-    plt.savefig(os.path.join(path, title + '.png'), dpi=200)
+    plt.savefig(os.path.join(path, title + '.png'), dpi=DPI)
     plt.show()
     print(f'Figure saved in {path}')
 

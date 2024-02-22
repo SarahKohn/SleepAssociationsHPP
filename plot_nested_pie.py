@@ -15,6 +15,7 @@ def plot_correlations_donut(body_systems: list):
     scale = (-0.6, 0.6)
 
     ## Create a concatenated dataframe
+    all_associations = pd.DataFrame()
     dfs = pd.DataFrame()
     top_corr_values = pd.Series(dtype='float64')
     for body_system in body_systems:
@@ -36,14 +37,16 @@ def plot_correlations_donut(body_systems: list):
         df[mask] = np.nan
         df.dropna(how='all', axis=1, inplace=True)
         targets = df.index.to_list()
+        associations = df.transpose()
+        all_associations = pd.concat([all_associations, associations])
         if 'AHI' in targets:
             top_features = df.abs().transpose().sort_values(by='AHI', ascending=False)[0:10].index.to_list()
             df = df[top_features].transpose()
             top_corr_values[body_system] = df['AHI'].iloc[0]
         else:
-            top_features = df.abs().transpose().sort_values(by='desaturations_mean_nadir', ascending=False)[0:10].index.to_list()
+            top_features = df.abs().transpose().sort_values(by='saturation_mean', ascending=False)[0:10].index.to_list()
             df = df[top_features].transpose()
-            top_corr_values[body_system] = df['desaturations_mean_nadir'][0]
+            top_corr_values[body_system] = df['saturation_mean'][0]
         df['body_system'] = body_system
         if body_system == 'diet':
             df.index = df.index.str.cat([' intake'] * len(df.index), sep='')
@@ -52,8 +55,15 @@ def plot_correlations_donut(body_systems: list):
         dfs = pd.concat([dfs, df])
     category_order = top_corr_values.abs().sort_values(ascending=False).index.to_list()[::-1]
     dfs['body_system'] = pd.Categorical(dfs['body_system'], categories=category_order, ordered=True)
-    dfs = dfs.sort_values(by=['body_system', 'AHI', 'desaturations_mean_nadir'], ascending=False)
-    dfs.to_csv(os.path.join(RESULTS_PATH, 'results.csv'))
+    dfs = dfs.sort_values(by=['body_system', 'AHI', 'saturation_mean'], ascending=False)
+    dfs.to_csv(os.path.join(RESULTS_PATH, 'top10_results.csv'))
+    all_associations.to_csv(os.path.join(RESULTS_PATH, 'all_results.csv'))
+    all_associations = all_associations.drop(columns=[# 'saturation_mean',
+                                                      'desaturations_mean_nadir',
+                                                      'percent_of_supine_sleep',
+                                                      'variability_between_sleep_stage_percents',
+                                                      'hrv_time_rmssd_during_wake'])
+    print('Number of significant correlations found for the 6 key features:', all_associations.count().sum())
 
     ## Create the nested pie chart:
     df = pd.DataFrame()
@@ -70,7 +80,8 @@ def plot_correlations_donut(body_systems: list):
     group_sizes.pop()
     group_sizes.extend([blank_len])
     df = df.drop(columns=['body_system',
-                          'saturation_mean',
+                          # 'saturation_mean',
+                          'desaturations_mean_nadir',
                           'percent_of_supine_sleep',
                           'variability_between_sleep_stage_percents',
                           'hrv_time_rmssd_during_wake'])
@@ -139,14 +150,15 @@ def plot_correlations_donut(body_systems: list):
                            fontsize=label_fontsize, frameon=False)
         legend.get_title().set_fontsize(str(title_fontsize))
     # Save figure
-    plt.savefig(os.path.join(RESULTS_PATH, 'nested_pie-correlations.png'), dpi=300, bbox_inches='tight')
+    plt.savefig(os.path.join(RESULTS_PATH, 'nested_pie-correlations.png'), dpi=DPI, bbox_inches='tight')
     plt.show()
 
     ## Create circles legend:
     fig, axes = plt.subplots(len(df.columns), 1, figsize=(8, 5))
     legend_names = {
         'snore_db_mean': 'Snoring level',
-        'desaturations_mean_nadir': 'SpO2 nadir',
+        # 'desaturations_mean_nadir': 'SpO2 nadir',
+        'saturation_mean': 'Mean SpO2',
         'total_sleep_time': 'Sleep time',
         'sleep_efficiency': 'Sleep efficiency',
         'hrv_time_rmssd_during_night': 'HRV (during sleep time)'
@@ -157,7 +169,7 @@ def plot_correlations_donut(body_systems: list):
         ax.text(0, 0.1, legend, fontsize=title_fontsize)
         ax.axis('off')
     fig.tight_layout()
-    plt.savefig(os.path.join(RESULTS_PATH, 'nested_pie_legend-correlations.png'), dpi=300)
+    plt.savefig(os.path.join(RESULTS_PATH, 'nested_pie_legend-correlations.png'), dpi=DPI)
     plt.close()
 
     ## Create color bar:
@@ -169,21 +181,23 @@ def plot_correlations_donut(body_systems: list):
     cb.ax.tick_params(labelsize=title_fontsize)
     cb.ax.set_yticklabels([scale[0], 0, scale[1]])
     cb.ax.set_ylim([-0.99, 1.0])
-    plt.savefig(os.path.join(RESULTS_PATH, 'nested_pie_cbar-correlations.png'), dpi=300)
+    plt.savefig(os.path.join(RESULTS_PATH, 'nested_pie_cbar-correlations.png'), dpi=DPI)
     plt.close()
     print(f'Figure saved in {RESULTS_PATH}')
     pass
 
 
 def get_qualitative_colors_without_reds_and_blues() -> list:
-    original_colors = plt.get_cmap('tab20c')
-    keep_indices = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]  # remove blues and reds
+    # original_colors = plt.get_cmap('tab20c')
+    # keep_indices = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+    original_colors = plt.get_cmap('tab20')
+    keep_indices = [4, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
     new_colors_1 = [original_colors(i) for i in keep_indices]
     original_colors = plt.get_cmap('Accent')
-    keep_indices = [3, 5, 6]  # remove blues and reds
+    keep_indices = [3, 5]  # 6
     new_colors_2 = [original_colors(i) for i in keep_indices]
     original_colors = plt.get_cmap('Set2')
-    keep_indices = [3, 5]  # remove blues and reds
+    keep_indices = [5]  # 3
     new_colors_3 = [original_colors(i) for i in keep_indices]
     colors = new_colors_1 + new_colors_2 + new_colors_3
     random.shuffle(colors)

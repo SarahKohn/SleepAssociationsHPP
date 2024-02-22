@@ -121,7 +121,7 @@ def features_renaming_dict() -> dict:
         'Plateletaggregationinhibitorsexclheparin': 'Anti platlets',
         'Betablockingagentsselective': 'Beta blockers',
         'AngiotensinIIreceptorblockersARBsandcalciumchannelblockers':
-            'Combination drug - ARBs plus calcium channel blockers',
+            'Combination drug - ARBs & calcium channel blockers',
         'ACEinhibitorsplain': 'ACE Inhibitors',
         'HMGCoAreductaseinhibitorsplainlipidmodifyingdrugs': 'Statins',
         'bmi': 'BMI',

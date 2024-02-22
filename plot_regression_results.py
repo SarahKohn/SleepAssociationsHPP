@@ -38,7 +38,7 @@ def plot_features_importance(path: str,
     plt.yticks(rotation=45)
     plt.title(f"{dataset_name}\nFeature Importances in {model_name} fitting")
     fig_dir = mkdirifnotexists(os.path.join(path, f'plots_{model_name}', 'feature_importances'))
-    plt.savefig(os.path.join(fig_dir, f'{model_file}_feature_importances'), dpi=200)
+    plt.savefig(os.path.join(fig_dir, f'{model_file}_feature_importances'), dpi=DPI)
     plt.close()  # show()
     pass
 
@@ -83,7 +83,7 @@ def plot_regression_scores_heatmap(name: str,
     head, tail = os.path.split(head)
     sample_size = sample_sizes.loc[f'{tail}_{name}']
     plt.title(f'{tail}_{name} N={sample_size}\nPearson corr btw predicted and actual values')
-    plt.savefig(os.path.join(path_for_fig, f'{name}_Regressions_score_TTest_rel'), dpi=200)
+    plt.savefig(os.path.join(path_for_fig, f'{name}_Regressions_score_TTest_rel'), dpi=DPI)
     plt.close()
     pass
 
@@ -122,7 +122,7 @@ def find_significant_predictions(name: str, path: str, file: str, datasets_dict:
             plt.axvline(x=median_scores.loc[target, 'Age & BMI'], color='black', linestyle='--')
             plt.xlabel('pearson correlation prediction vs actual')
             plt.title(f'Ability to predict {target} - {name} dataset')
-            plt.savefig(os.path.join(fig_dir, f'Regressions_scores_for_{target}-{name}_dataset.png'), dpi=200)
+            plt.savefig(os.path.join(fig_dir, f'Regressions_scores_for_{target}-{name}_dataset.png'), dpi=DPI)
             plt.close()  # plt.show()
         # Perform a t-test to the body systems with significantly better results:
         for i in scores_per_target.columns:
@@ -191,19 +191,21 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
                 float('-inf') if pd.isna(np.median(diff_dataset[x])) else np.median(diff_dataset[x])), reverse=True)
 
             label_fontsize = 20
-            tick_fontsize = 15
+            tick_fontsize = 18
             ticks_interval = 0.05
             markers_size = 4
             palette = 'tab10'
             colors = plt.get_cmap('tab20')
-            custom_palette = {col: sns.color_palette([colors((idx % 10) * 2 + 1), colors((idx % 10) * 2)]) for idx, col in
-                              enumerate(body_systems)}
-            fig = plt.figure(figsize=(14, 12))  # 16, 15))
-            gs = GridSpec(2 * NO_OF_DS_SELECTION, 12, wspace=10., hspace=2.)
+            custom_palette = {col: sns.color_palette([colors((idx % 10) * 2 + 1), colors((idx % 10) * 2)])
+                              for idx, col in enumerate(body_systems)}
+            width = 15
+            fig = plt.figure(figsize=(width, 12))
+            mid_section = width-7
+            gs = GridSpec(2 * NO_OF_DS_SELECTION, width, wspace=10., hspace=2.)
 
             # Figure A:
             # Plot boxplots with the difference btw predictive power of each dataset vs baseline
-            top_boxplots = fig.add_subplot(gs[:NO_OF_DS_SELECTION - 1, :6])
+            top_boxplots = fig.add_subplot(gs[:NO_OF_DS_SELECTION - 1, :mid_section])
             df = pd.DataFrame({key: pd.Series(value) for key, value in diff_dataset.items()})
             # sns.violinplot(data=df, order=sorted_categories, palette=palette, orient='v', ax=top_boxplots)
             sns.swarmplot(data=df, order=sorted_categories, palette=palette, orient='v', size=markers_size,
@@ -218,7 +220,7 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
             top_boxplots.yaxis.set_major_locator(MultipleLocator(ticks_interval))
             top_boxplots.set_ylabel('Predictive power difference\nfrom baseline model\n', fontsize=tick_fontsize)
             # Plot boxplots with the predictive power of each dataset:
-            bottom_boxplots = fig.add_subplot(gs[NO_OF_DS_SELECTION:-1, :6])
+            bottom_boxplots = fig.add_subplot(gs[NO_OF_DS_SELECTION:-1, :mid_section])
             df = pd.DataFrame({key: pd.Series(value) for key, value in predictive_power_dataset.items()})
             filtered_column_map = {key: value for key, value in DATASET_TO_NAME.items() if key in df.columns}
             df.rename(columns=filtered_column_map, inplace=True)
@@ -233,7 +235,7 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
                                             fontsize=tick_fontsize, rotation=45, ha='right')
             bottom_boxplots.tick_params(axis='y', which='both', left=False, right=False, labelsize=tick_fontsize)
             bottom_boxplots.yaxis.set_major_locator(MultipleLocator(2 * ticks_interval))
-            bottom_boxplots.set_ylabel(f'Predictive power\n',  # (Pearson R between predicted and actual values)\n',
+            bottom_boxplots.set_ylabel(f'Predictive power\n(Pearson $\\rho$)\n',
                                        fontsize=tick_fontsize)
             # if sex == 'men':
             #     bottom_boxplots.set_ylim(0, 0.7)
@@ -244,7 +246,7 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
             x_max = 0.0
             mbfamily_names = mbfamily_to_name()
             for i, picked_dataset in enumerate(picked_datasets):
-                axs[i] = fig.add_subplot(gs[2 * i:2 * i + 2, 8:])
+                axs[i] = fig.add_subplot(gs[2 * i:2 * i + 2, (width-4):])
                 if picked_dataset == 'medications' and USE_XGB_FOR_MEDICATION:
                     model_type = 'XGB'
                 else:
@@ -277,9 +279,9 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
                 sns.barplot(tmp, orient='h', errorbar='sd', palette=custom_palette[picked_dataset], ax=axs[i])
                 sns.despine()
                 axs[i].bar_label(axs[i].containers[0], fmt='%.3f', color=custom_palette[picked_dataset][0],
-                                 fontsize=tick_fontsize - 2, padding=3)
+                                 fontsize=tick_fontsize - 2, padding=10)
                 axs[i].bar_label(axs[i].containers[1], fmt='%.3f', color=custom_palette[picked_dataset][1],
-                                 fontsize=tick_fontsize - 2, padding=3)
+                                 fontsize=tick_fontsize - 2, padding=10)
                 axs[i].tick_params(axis='y', which='both', left=False, right=False, labelsize=tick_fontsize)
                 axs[i].tick_params(axis='x', which='both', top=False, bottom=False, labelsize=tick_fontsize)
                 if (picked_dataset == 'diet') and ('from' in task):
@@ -313,15 +315,15 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
                 axs[i].xaxis.set_major_locator(MultipleLocator(ticks_interval))
                 axs[i].set_xticklabels(axs[i].get_xticklabels(), fontsize=tick_fontsize)
                 if i == NO_OF_DS_SELECTION - 1:
-                    axs[i].set_xlabel(f'Predictive power', fontsize=tick_fontsize)
+                    axs[i].set_xlabel(f'Predictive power\n(Pearson $\\rho$)', fontsize=tick_fontsize)
                 else:
                     axs[i].get_xaxis().set_visible(False)
 
             plt.tight_layout()
             if USE_XGB_FOR_MEDICATION:
-                plt.savefig(os.path.join(task_path_dict[task], f'Fig-{task}_{sex}.png'), dpi=200)
+                plt.savefig(os.path.join(task_path_dict[task], f'Fig-{task}_{sex}.png'), dpi=DPI)
             else:
-                plt.savefig(os.path.join(task_path_dict[task], f'Fig-{task}_{sex}_{MODEL_TYPE}.png'), dpi=200)
+                plt.savefig(os.path.join(task_path_dict[task], f'Fig-{task}_{sex}_{MODEL_TYPE}.png'), dpi=DPI)
             plt.show()
             print(f'Figure saved in {task_path_dict[task]}')
     pass
@@ -381,11 +383,11 @@ def plot_age_bmi_predictions(tasks: list):
             else:
                 axs[k, i].set_xticklabels(axs[k, i].get_xticklabels(), rotation=45, ha='right', fontsize=tick_fontsize)
 
-    axs[1, 0].set_ylabel(f'Predictive power\nfor female', fontsize=tick_fontsize)
-    axs[0, 0].set_ylabel(f'Predictive power\nfor male', fontsize=tick_fontsize)
+    axs[1, 0].set_ylabel(f'Predictive power\nfor females', fontsize=tick_fontsize)
+    axs[0, 0].set_ylabel(f'Predictive power\nfor males', fontsize=tick_fontsize)
 
     plt.tight_layout()
-    plt.savefig(os.path.join(MY_DIR, 'descriptive_data_and_figures', 'Fig-Age_BMI_predictions.png'), dpi=200)
+    plt.savefig(os.path.join(MY_DIR, 'descriptive_data_and_figures', 'Fig-Age_BMI_predictions.png'), dpi=DPI)
     plt.show()
 
     # Second option for plot
@@ -428,14 +430,14 @@ def plot_age_bmi_predictions(tasks: list):
         #             legend=legend_flag, ax=ax)
         sns.despine()
         ax.bar_label(ax.containers[0], fmt='%.3f', color=custom_palette['male'],
-                     fontsize=tick_fontsize - 2, padding=3)
+                     fontsize=tick_fontsize, padding=3)
         ax.bar_label(ax.containers[1], fmt='%.3f', color=custom_palette['female'],
-                     fontsize=tick_fontsize - 2, padding=3)
+                     fontsize=tick_fontsize, padding=3)
         ax.set_ylim(0.25, vmax)
         ax.yaxis.set_major_locator(MultipleLocator(0.1))
         ax.set_yticklabels(ax.get_yticklabels(), fontsize=tick_fontsize)
         ax.set_xlabel('')
-        ax.set_ylabel('Predictive power', fontsize=tick_fontsize)
+        ax.set_ylabel('Predictive power\n(Pearson $\\rho$)', fontsize=tick_fontsize)
         xtick_labels = [text.get_text().split('(')[0].strip() for text in ax.get_xticklabels()]
         ax.set_xticklabels(xtick_labels, #rotation=45, ha='right',
                            fontsize=tick_fontsize)
@@ -444,7 +446,7 @@ def plot_age_bmi_predictions(tasks: list):
     ax.set_yticklabels('')
     ax.set_ylabel('')
     plt.tight_layout()
-    plt.savefig(os.path.join(MY_DIR, 'descriptive_data_and_figures', f'Fig-Age_BMI_predictions2_barplot.png'), dpi=200)
+    plt.savefig(os.path.join(MY_DIR, 'descriptive_data_and_figures', f'Fig-Age_BMI_predictions2_barplot.png'), dpi=DPI)
     plt.show()
     pass
 
@@ -479,37 +481,37 @@ if __name__ == '__main__':
     task_path_dict = {dir_name: os.path.join(MY_DIR, 'body_systems_associations', dir_name, 'regressions_results' + TAG)
                       for dir_name in tasks}
 
-    # Loop over the different prediction tasks and datasets to find significant associations:
-    for task in tasks:
-        # Overall Analysis & Graphs per dataset:
-        print('>>> Regression score distribution Vs baseline')
-        suffixes = ['men', 'women']
-        ticket_list = []
-        for dataset in datasets:
-            if dataset == 'medications' and USE_XGB_FOR_MEDICATION:
-                model_type = 'XGB'
-            else:
-                model_type = MODEL_TYPE
-            model_score_files = {suffix: f'{model_type}_{suffix}scores_df.csv' for suffix in suffixes}
-            if 'from' in task:
-                from_dataset = task[len('from_'):]
-                predict_dataset = dataset
-                target_group = None
-            elif 'predict' in task:
-                from_dataset = dataset
-                predict_dataset = task[len('predict_'):]
-            else:
-                raise ValueError('Please define the features and target datasets')
-            if predict_dataset != 'Age_Gender_BMI' and from_dataset != 'Age_Gender_BMI' and \
-                    predict_dataset != from_dataset:
-                print(f'{from_dataset}_and_{predict_dataset}')
-                dir_path = os.path.join(task_path_dict[task], f'{from_dataset}_and_{predict_dataset}')
-                tmp_dict = {f'Age_Gender_BMI_and_{predict_dataset}': DATASET_TO_NAME['Age_Gender_BMI'],
-                            f'{from_dataset}_and_{predict_dataset}': DATASET_TO_NAME[from_dataset]}
-                for name, file in model_score_files.items():
-                    find_significant_predictions(name, dir_path, file, tmp_dict, target_group, task)
-        print(f'<< Done processing: {task}')
+    # # Loop over the different prediction tasks and datasets to find significant associations:
+    # for task in tasks:
+    #     # Overall Analysis & Graphs per dataset:
+    #     print('>>> Regression score distribution Vs baseline')
+    #     suffixes = ['men', 'women']
+    #     ticket_list = []
+    #     for dataset in datasets:
+    #         if dataset == 'medications' and USE_XGB_FOR_MEDICATION:
+    #             model_type = 'XGB'
+    #         else:
+    #             model_type = MODEL_TYPE
+    #         model_score_files = {suffix: f'{model_type}_{suffix}scores_df.csv' for suffix in suffixes}
+    #         if 'from' in task:
+    #             from_dataset = task[len('from_'):]
+    #             predict_dataset = dataset
+    #             target_group = None
+    #         elif 'predict' in task:
+    #             from_dataset = dataset
+    #             predict_dataset = task[len('predict_'):]
+    #         else:
+    #             raise ValueError('Please define the features and target datasets')
+    #         if predict_dataset != 'Age_Gender_BMI' and from_dataset != 'Age_Gender_BMI' and \
+    #                 predict_dataset != from_dataset:
+    #             print(f'{from_dataset}_and_{predict_dataset}')
+    #             dir_path = os.path.join(task_path_dict[task], f'{from_dataset}_and_{predict_dataset}')
+    #             tmp_dict = {f'Age_Gender_BMI_and_{predict_dataset}': DATASET_TO_NAME['Age_Gender_BMI'],
+    #                         f'{from_dataset}_and_{predict_dataset}': DATASET_TO_NAME[from_dataset]}
+    #             for name, file in model_score_files.items():
+    #                 find_significant_predictions(name, dir_path, file, tmp_dict, target_group, task)
+    #     print(f'<< Done processing: {task}')
     
     plot_figures_for_paper(datasets, task_path_dict)
-    plot_age_bmi_predictions(['sleep_quality_avg', 'hrv_avg'])
+    # plot_age_bmi_predictions(['sleep_quality_avg', 'hrv_avg'])
     print('<<< Done')
