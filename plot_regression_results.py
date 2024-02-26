@@ -481,37 +481,37 @@ if __name__ == '__main__':
     task_path_dict = {dir_name: os.path.join(MY_DIR, 'body_systems_associations', dir_name, 'regressions_results' + TAG)
                       for dir_name in tasks}
 
-    # # Loop over the different prediction tasks and datasets to find significant associations:
-    # for task in tasks:
-    #     # Overall Analysis & Graphs per dataset:
-    #     print('>>> Regression score distribution Vs baseline')
-    #     suffixes = ['men', 'women']
-    #     ticket_list = []
-    #     for dataset in datasets:
-    #         if dataset == 'medications' and USE_XGB_FOR_MEDICATION:
-    #             model_type = 'XGB'
-    #         else:
-    #             model_type = MODEL_TYPE
-    #         model_score_files = {suffix: f'{model_type}_{suffix}scores_df.csv' for suffix in suffixes}
-    #         if 'from' in task:
-    #             from_dataset = task[len('from_'):]
-    #             predict_dataset = dataset
-    #             target_group = None
-    #         elif 'predict' in task:
-    #             from_dataset = dataset
-    #             predict_dataset = task[len('predict_'):]
-    #         else:
-    #             raise ValueError('Please define the features and target datasets')
-    #         if predict_dataset != 'Age_Gender_BMI' and from_dataset != 'Age_Gender_BMI' and \
-    #                 predict_dataset != from_dataset:
-    #             print(f'{from_dataset}_and_{predict_dataset}')
-    #             dir_path = os.path.join(task_path_dict[task], f'{from_dataset}_and_{predict_dataset}')
-    #             tmp_dict = {f'Age_Gender_BMI_and_{predict_dataset}': DATASET_TO_NAME['Age_Gender_BMI'],
-    #                         f'{from_dataset}_and_{predict_dataset}': DATASET_TO_NAME[from_dataset]}
-    #             for name, file in model_score_files.items():
-    #                 find_significant_predictions(name, dir_path, file, tmp_dict, target_group, task)
-    #     print(f'<< Done processing: {task}')
+    # Loop over the different prediction tasks and datasets to find significant associations:
+    for task in tasks:
+        # Overall Analysis & Graphs per dataset:
+        print('>>> Regression score distribution Vs baseline')
+        suffixes = ['men', 'women']
+        ticket_list = []
+        for dataset in datasets:
+            if dataset == 'medications' and USE_XGB_FOR_MEDICATION:
+                model_type = 'XGB'
+            else:
+                model_type = MODEL_TYPE
+            model_score_files = {suffix: f'{model_type}_{suffix}scores_df.csv' for suffix in suffixes}
+            if 'from' in task:
+                from_dataset = task[len('from_'):]
+                predict_dataset = dataset
+                target_group = None
+            elif 'predict' in task:
+                from_dataset = dataset
+                predict_dataset = task[len('predict_'):]
+            else:
+                raise ValueError('Please define the features and target datasets')
+            if predict_dataset != 'Age_Gender_BMI' and from_dataset != 'Age_Gender_BMI' and \
+                    predict_dataset != from_dataset:
+                print(f'{from_dataset}_and_{predict_dataset}')
+                dir_path = os.path.join(task_path_dict[task], f'{from_dataset}_and_{predict_dataset}')
+                tmp_dict = {f'Age_Gender_BMI_and_{predict_dataset}': DATASET_TO_NAME['Age_Gender_BMI'],
+                            f'{from_dataset}_and_{predict_dataset}': DATASET_TO_NAME[from_dataset]}
+                for name, file in model_score_files.items():
+                    find_significant_predictions(name, dir_path, file, tmp_dict, target_group, task)
+        print(f'<< Done processing: {task}')
     
     plot_figures_for_paper(datasets, task_path_dict)
-    # plot_age_bmi_predictions(['sleep_quality_avg', 'hrv_avg'])
+    plot_age_bmi_predictions(['sleep_quality_avg', 'hrv_avg'])
     print('<<< Done')
