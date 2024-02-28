@@ -2,42 +2,42 @@
 "
 Allergy,False,False
 Anal abscess,False,True
-Anal fissure,False,False
+Anal fissure,False,True
 Anemia,False,True
-Anxiety,False,False
+Anxiety,False,True
 Asthma,False,True
-Atopic dermatitis,False,True
-Attention Deficit Disorder (ADHD),False,False
+Atopic dermatitis,False,False
+Attention Deficit Disorder (ADHD),False,True
 B12 deficiency,False,True
 Back pain ,False,True
-Basal Cell Carcinoma,False,True
+Basal Cell Carcinoma,False,False
 COVID-19,False,False
 Chronic sinusitis,False,True
 Depression,False,True
 Episodic Vertigo,False,True
-Fatty Liver Disease,False,False
+Fatty Liver Disease,False,True
 Fracture,False,True
-G6PD,False,True
-Gallstone disease,False,True
+G6PD,False,False
+Gallstone disease,False,False
 Glaucoma,False,True
 Gout,False,True
 Haemorrhoids,False,True
-Headache,False,True
-Hearing loss,False,True
+Headache,False,False
+Hearing loss,False,False
 Heart valve disease,False,True
 Hyperlipidemia,False,False
 Hypertension,False,False
 Hypothyroidism,False,True
 Insomnia,False,True
-Irritable Bowel Syndrome (IBS),False,True
+Irritable Bowel Syndrome (IBS),False,False
 Migraine,False,True
-Obesity,False,False
+Obesity,False,True
 Oral aphthae,False,True
 Osteoarthritis,False,True
-Peptic Dis,False,False
+Peptic Dis,False,True
 Peptic Ulcer Disease,False,True
-Prediabetes,False,False
+Prediabetes,False,True
 Psoriasis,False,True
-Sleep Apnea,False,False
-Urinary tract stones,False,False
+Sleep Apnea,False,True
+Urinary tract stones,False,True
 Vitiligo,False,False

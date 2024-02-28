@@ -1,14 +1,17 @@
 ,Age & BMI,"HRV at baseline
 "
-Sleep Apnea,0.5,0.5263157894736842
-Osteoporosis,0.5,0.5073629916183108
-Anxiety,0.5,0.5050643979676237
-Hyperlipidemia,0.5035334615182313,0.5084789050126529
-Asthma,0.5,0.5035635093845483
-Anemia,0.5,0.5021408310200238
-Prediabetes,0.5,0.5016220192253287
-Attention Deficit Disorder (ADHD),0.5,0.5014038461538461
-Urinary tract infection,0.5,0.5008742255918848
+Anxiety,0.5,0.5107739572255701
+Hyperlipidemia,0.5035334615182313,0.5131227828201066
+Osteoporosis,0.5,0.5075757575757576
+Prediabetes,0.5,0.5043809188508392
+Fatty Liver Disease,0.5,0.504347079642901
+Asthma,0.5,0.5033452640768223
+Irritable Bowel Syndrome (IBS),0.5,0.5026203314732376
+Attention Deficit Disorder (ADHD),0.5,0.5022067307692307
+Urinary tract infection,0.5,0.5015784324049211
+Fibromyalgia,0.5,0.5
 G6PD,0.5,0.5
-Heart valve disease,0.5,0.5
-Oral aphthae,0.5,0.5
+Glaucoma,0.5,0.5
+Peptic Dis,0.5,0.5
+Primary hypercholesterolaemia,0.5,0.5
+Sleep Apnea,0.5,0.5

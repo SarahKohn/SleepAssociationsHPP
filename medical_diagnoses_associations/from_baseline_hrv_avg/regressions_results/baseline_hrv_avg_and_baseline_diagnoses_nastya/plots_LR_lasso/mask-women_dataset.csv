@@ -2,7 +2,7 @@
 "
 Allergy,False,True
 Anal fissure,False,True
-Anemia,False,False
+Anemia,False,True
 Anxiety,False,False
 Asthma,False,False
 Atopic dermatitis,False,True
@@ -15,35 +15,35 @@ Chronic sinusitis,False,True
 Depression,False,True
 Endometriosis and Adenomyosis,False,True
 Episodic Vertigo,False,True
-Fatty Liver Disease,False,True
-Fibromyalgia,False,True
+Fatty Liver Disease,False,False
+Fibromyalgia,False,False
 Folic Acid Deficiency,False,True
 Fracture,False,True
 G6PD,False,False
 Gallstone disease,False,True
-Glaucoma,False,True
+Glaucoma,False,False
 Haemorrhoids,False,True
 Hashimoto,False,True
 Headache,False,True
 Hearing loss,False,True
-Heart valve disease,False,False
+Heart valve disease,False,True
 Hyperlipidemia,False,False
 Hypertension,False,True
 Hyperthyroidism,False,True
 Hypothyroidism,False,True
 Insomnia,False,True
-Irritable Bowel Syndrome (IBS),False,True
+Irritable Bowel Syndrome (IBS),False,False
 Migraine,False,True
 Obesity,False,True
-Oral aphthae,False,False
+Oral aphthae,False,True
 Osteoarthritis,False,True
 Osteopenia,False,True
 Osteoporosis,False,False
-Peptic Dis,False,True
+Peptic Dis,False,False
 Peptic Ulcer Disease,False,True
 Polycystic Ovary Disease,False,True
 Prediabetes,False,False
-Primary hypercholesterolaemia,False,True
+Primary hypercholesterolaemia,False,False
 Psoriasis,False,True
 Sleep Apnea,False,False
 Urinary tract infection,False,False

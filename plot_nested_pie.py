@@ -5,8 +5,7 @@ from utils import *
 
 # Define directories path:
 RESULTS_PATH = os.path.join(MY_DIR, 'correlations_results')
-random.seed(10)
-
+random.seed(SEED)
 
 def plot_correlations_donut(body_systems: list):
     print('> Create a nested pie chart for correlations')
@@ -161,7 +160,7 @@ def plot_correlations_donut(body_systems: list):
         'saturation_mean': 'Mean SpO2',
         'total_sleep_time': 'Sleep time',
         'sleep_efficiency': 'Sleep efficiency',
-        'hrv_time_rmssd_during_night': 'HRV (during sleep time)'
+        'hrv_time_rmssd_during_night': 'HRV (during night)'
     }
     df = df.rename(columns=legend_names)
     for i, legend in enumerate(df.columns):
