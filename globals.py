@@ -1,9 +1,9 @@
 import os
 import numpy as np
+import seaborn as sns
 
 # Define directory for the data
 MY_DIR = os.getcwd()
-PATH_FOR_CSV = os.path.join(MY_DIR, 'sample_data')
 
 # Fix seed for random processes
 SEED = 18
