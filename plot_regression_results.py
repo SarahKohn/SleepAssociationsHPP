@@ -1,4 +1,5 @@
 # Setup
+import warnings
 import math
 import joblib
 from utils import *
@@ -9,8 +10,8 @@ from scipy.stats import ttest_rel
 
 # Define directories path:
 TAG = ''  # '_low_BMI', '_high_AHIvariability', '_low_AHIvariability'
-MODEL_TYPE = 'LR_lasso'
-USE_XGB_FOR_MEDICATION = False
+MODEL_TYPE = 'LR_Lasso' #  or 'LGBM'
+CHOOSE_BEST_MODEL_TYPE = True
 DATASET_TO_NAME = load_dataset_to_name()
 DICT_FOR_BARPLOT = DATASET_TO_NAME.copy()
 DICT_FOR_BARPLOT['MBpathways'] = f'Gut MB metabolic\npathways'
@@ -97,10 +98,7 @@ def find_significant_predictions(name: str, path: str, file: str, datasets_dict:
                                            ).median(axis=0) for df_prefix in datasets_dict.keys()], axis=1)
     median_scores.columns = datasets_dict.values()
     # Create directory with the results
-    if 'medications' in path and USE_XGB_FOR_MEDICATION:
-        model_type = 'XGB'
-    else:
-        model_type = MODEL_TYPE
+    model_type = MODEL_TYPE
     fig_dir = mkdirifnotexists(os.path.join(path, f'plots_{model_type}'))
     median_scores.to_csv(os.path.join(fig_dir, f'median_scores-{name}_dataset.csv'))
     median_scores = median_scores.dropna()
@@ -156,11 +154,44 @@ def find_significant_predictions(name: str, path: str, file: str, datasets_dict:
     pass
 
 
+
+def check_significance_for_all_datasets_per_model_type(datasets: list, task_path_dict: dict, tasks: list,
+                                                       model_type: str, target_group: list=None):
+    """ Script to Loop over the different prediction tasks and datasets to find significant associations"""
+    for task in tasks:
+        # Overall Analysis & Graphs per dataset:
+        print('>>> Regression score distribution Vs baseline')
+        suffixes = ['men', 'women']
+        ticket_list = []
+        for dataset in datasets:
+            model_score_files = {suffix: f'{model_type}_{suffix}scores_df.csv' for suffix in suffixes}
+            if 'from' in task:
+                from_dataset = task[len('from_'):]
+                predict_dataset = dataset
+                targets = None
+            elif 'predict' in task:
+                from_dataset = dataset
+                predict_dataset = task[len('predict_'):]
+                targets = target_group
+            else:
+                raise ValueError('Please define the features and target datasets')
+            if predict_dataset != 'Age_Gender_BMI' and from_dataset != 'Age_Gender_BMI' and \
+                    predict_dataset != from_dataset:
+                print(f'{from_dataset}_and_{predict_dataset}')
+                dir_path = os.path.join(task_path_dict[task], f'{from_dataset}_and_{predict_dataset}')
+                tmp_dict = {f'Age_Gender_BMI_and_{predict_dataset}': DATASET_TO_NAME['Age_Gender_BMI'],
+                            f'{from_dataset}_and_{predict_dataset}': DATASET_TO_NAME[from_dataset]}
+                for name, file in model_score_files.items():
+                    find_significant_predictions(name, dir_path, file, tmp_dict, target_group, task)
+        print(f'<< Done processing: {task}')
+
+
 def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
     """ Script to create the figures in the paper related to the regression results
      - Boxplots condensing all significant regression results
      - Performance of specific target predictions
      """
+    best_models = pd.DataFrame()
     for task in task_path_dict.keys():
         no_of_features = pd.DataFrame(index=body_systems,
                                       columns=['no_of_features_significantly_predicted', 'total_features'])
@@ -168,28 +199,52 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
             # Create datasets for plots:
             predictive_power_dataset = {}
             diff_dataset = {}
+            best_model = {}
             for name in body_systems:
-                if name == 'medications' and USE_XGB_FOR_MEDICATION:
-                    model_type = 'XGB'
-                else:
-                    model_type = MODEL_TYPE
                 if 'from' in task:
                     from_dataset = task[len('from_'):]
                     predict_dataset = name
                 elif 'predict' in task:
                     from_dataset = name
                     predict_dataset = task[len('predict_'):]
-                dir_path = os.path.join(task_path_dict[task], f'{from_dataset}_and_{predict_dataset}', f'plots_{model_type}')
-                median_scores_filtered = pd.read_csv(os.path.join(dir_path, f'median_scores_filtered-{sex}_dataset.csv'),
-                                                     index_col=0)
-                no_of_features.loc[name, 'total_features'] = pd.read_csv(os.path.join(
-                    dir_path, f'median_scores-{sex}_dataset.csv'), index_col=0).shape[0]
-                no_of_features.loc[name, 'no_of_features_significantly_predicted'] = median_scores_filtered.shape[0]
-                predictive_power_dataset[name] = median_scores_filtered.iloc[:, 1].values
-                diff_dataset[name] = median_scores_filtered.iloc[:, 1].values - median_scores_filtered.iloc[:, 0].values
-            sorted_categories = sorted(diff_dataset.keys(), key=lambda x: (
-                float('-inf') if pd.isna(np.median(diff_dataset[x])) else np.median(diff_dataset[x])), reverse=True)
+                path = os.path.join(task_path_dict[task], f'{from_dataset}_and_{predict_dataset}')  #
+                if CHOOSE_BEST_MODEL_TYPE:
+                    # check in which model the results are better and save the best one
+                    dir_list = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
+                else:
+                    # take the results from the specified model type
+                    dir_list = [f'plots_{MODEL_TYPE}']
+                median_scores_filtered = pd.DataFrame()
+                for dir_name in dir_list:
+                    dir_path = os.path.join(path, dir_name)
+                    tmp = pd.read_csv(os.path.join(dir_path, f'median_scores_filtered-{sex}_dataset.csv'),
+                                      index_col=0)
+                    if not median_scores_filtered.empty:
+                        if not (tmp.shape[0] > median_scores_filtered.shape[0] or \
+                                (tmp.shape[0] == median_scores_filtered.shape[0] and tmp.iloc[:, 1].max() > median_scores_filtered.iloc[:, 1].max()) or \
+                                (tmp.shape[0] == median_scores_filtered.shape[0] and tmp.iloc[:, 1].median() > median_scores_filtered.iloc[:, 1].median())):
+                            continue
+                    median_scores_filtered = tmp
+                    no_of_features.loc[name, 'total_features'] = pd.read_csv(os.path.join(
+                        dir_path, f'median_scores-{sex}_dataset.csv'), index_col=0).shape[0]
+                    if 'from_l_thigh_to_l_ankle_distance' in median_scores_filtered.index:
+                        median_scores_filtered.drop('from_l_thigh_to_l_ankle_distance', inplace=True)
+                        no_of_features.loc[name, 'total_features'] -= 1
+                    no_of_features.loc[name, 'no_of_features_significantly_predicted'] = median_scores_filtered.shape[0]
+                    predictive_power_dataset[name] = median_scores_filtered.iloc[:, 1].values
+                    diff_dataset[name] = median_scores_filtered.iloc[:, 1].values - median_scores_filtered.iloc[:, 0].values
+                    best_model[name] = dir_name[len('plots_'):]
 
+            # sort categories for plot A:
+            sorted_categories = sorted(diff_dataset.keys(), key=lambda x: (
+                float('-inf') if not diff_dataset[x].any() else np.median(diff_dataset[x])), reverse=True)
+            # sort categories for plot B:
+            categories_with_max_diff = sorted(diff_dataset.keys(), key=lambda x: (
+                float('-inf') if not diff_dataset[x].any() else np.max(diff_dataset[x])), reverse=True)
+            # save best_model dictionary into a table:
+            best_models[task+'_'+sex] = pd.DataFrame.from_dict(best_model, orient='index')
+
+            # create the figures
             label_fontsize = 20
             tick_fontsize = 18
             ticks_interval = 0.05
@@ -241,16 +296,13 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
             #     bottom_boxplots.set_ylim(0, 0.7)
 
             # Figure B: Deep dive into the performance of the most significant predicted target for each of the following datasets
-            picked_datasets = sorted_categories[:NO_OF_DS_SELECTION]
+            picked_datasets = categories_with_max_diff[:NO_OF_DS_SELECTION]
             axs = [0] * NO_OF_DS_SELECTION
             x_max = 0.0
             mbfamily_names = mbfamily_to_name()
             for i, picked_dataset in enumerate(picked_datasets):
                 axs[i] = fig.add_subplot(gs[2 * i:2 * i + 2, (width-4):])
-                if picked_dataset == 'medications' and USE_XGB_FOR_MEDICATION:
-                    model_type = 'XGB'
-                else:
-                    model_type = MODEL_TYPE
+                model_type = best_model[picked_dataset]
                 if 'from' in task:
                     predict_dataset = picked_dataset
                 else:  # 'predict' in task
@@ -275,7 +327,9 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
                 tmp = scores_per_target.copy()
                 for col_name in list(tmp):
                     if col_name != 'Age & BMI':
-                        tmp.rename(columns={col_name: f'Age, BMI \n& {col_name}'}, inplace=True)
+                        # in col_name: Change 'Quality' to 'Test', and 'HRV' to 'PRV'
+                        renamed_col_name = col_name.replace('Quality', 'Test').replace('HRV', 'PRV')
+                        tmp.rename(columns={col_name: f'Age, BMI \n& {renamed_col_name}'}, inplace=True)
                 sns.barplot(tmp, orient='h', errorbar='sd', palette=custom_palette[picked_dataset], ax=axs[i])
                 sns.despine()
                 axs[i].bar_label(axs[i].containers[0], fmt='%.3f', color=custom_palette[picked_dataset][0],
@@ -291,12 +345,27 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
                 elif picked_dataset == 'MBfamily2' and ('fBin' in target):
                     target = f'MB family: {mbfamily_names[target]}'
                 elif picked_dataset == 'sleep_quality_avg' or ('predict_sleep' in task):
-                    target = target.replace('ahi', 'AHI')
-                    target = target.replace('odi', 'ODI')
-                    target = target.replace('rdi', 'RDI')
+                    target = target.replace('ahi', 'pAHI')
+                    target = target.replace('odi', 'pODI')
+                    target = target.replace('rdi', 'pRDI')
+                    target = target.replace('rem', 'REM')
+                elif picked_dataset == 'glycemic_status' and ('from' in task):
+                    target = target.replace('Min.', 'min glucose level (CGM)')
+                    target = target.replace('Max.', 'max glucose level (CGM)')
+                    target = target.replace('Mean', 'mean glucose level (CGM)')
+                    target = target.replace('Median', 'median glucose level (CGM)')
+                    target = target.replace('Range', 'glucose level range (CGM)')
+                    target = target.replace('SD', 'glucose level SD (CGM)')
+                    target = target.replace('MODD', 'MODD (CGM)')
+                elif picked_dataset == 'cardiovascular' and ('from' in task):
+                    target = target.replace('r_r_ms', 'RR interval [ms]')
+                    target = target.replace('hr_bpm', 'heart rate [bpm]')
+                elif picked_dataset == 'MBpathways' and ('from' in task):
+                    target = target.replace('PWY622starchbiosynthesis', 'starch biosynthesis pathway (PWY622)')
                 target = target.replace('_', ' ')
                 target = target.replace('bt ', 'BT')
                 target = target.replace('rds', 'RDS')
+                target = target.replace('lonley', 'lonely')
                 axs[i].set_title(f'{target}', fontsize=tick_fontsize)
                 if np.floor(i) == np.floor(len(picked_datasets) / 2):
                     axs[i].set_ylabel('Model based on', fontsize=label_fontsize)
@@ -320,12 +389,16 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
                     axs[i].get_xaxis().set_visible(False)
 
             plt.tight_layout()
-            if USE_XGB_FOR_MEDICATION:
+            if CHOOSE_BEST_MODEL_TYPE:
                 plt.savefig(os.path.join(task_path_dict[task], f'Fig-{task}_{sex}.png'), dpi=DPI)
             else:
                 plt.savefig(os.path.join(task_path_dict[task], f'Fig-{task}_{sex}_{MODEL_TYPE}.png'), dpi=DPI)
             plt.show()
             print(f'Figure saved in {task_path_dict[task]}')
+
+    # Save best models as csv file in parent folder of task_path_dict[task]
+    if CHOOSE_BEST_MODEL_TYPE:
+        best_models.to_csv(os.path.join(os.path.dirname(os.path.dirname(task_path_dict[task])), 'best_models.csv'))
     pass
 
 
@@ -452,9 +525,9 @@ def plot_age_bmi_predictions(tasks: list):
 
 
 if __name__ == '__main__':
+    warnings.filterwarnings('ignore')
 
     # Explore data associations with:
-    target_group = None
     datasets = [
         'hematopoietic',
         'immune_system',
@@ -479,39 +552,14 @@ if __name__ == '__main__':
         'predict_sleep_quality_avg'
     ]
     task_path_dict = {dir_name: os.path.join(MY_DIR, 'body_systems_associations', dir_name, 'regressions_results' + TAG)
-                      for dir_name in tasks}
+                            for dir_name in tasks}
 
-    # Loop over the different prediction tasks and datasets to find significant associations:
-    for task in tasks:
-        # Overall Analysis & Graphs per dataset:
-        print('>>> Regression score distribution Vs baseline')
-        suffixes = ['men', 'women']
-        ticket_list = []
-        for dataset in datasets:
-            if dataset == 'medications' and USE_XGB_FOR_MEDICATION:
-                model_type = 'XGB'
-            else:
-                model_type = MODEL_TYPE
-            model_score_files = {suffix: f'{model_type}_{suffix}scores_df.csv' for suffix in suffixes}
-            if 'from' in task:
-                from_dataset = task[len('from_'):]
-                predict_dataset = dataset
-                target_group = None
-            elif 'predict' in task:
-                from_dataset = dataset
-                predict_dataset = task[len('predict_'):]
-            else:
-                raise ValueError('Please define the features and target datasets')
-            if predict_dataset != 'Age_Gender_BMI' and from_dataset != 'Age_Gender_BMI' and \
-                    predict_dataset != from_dataset:
-                print(f'{from_dataset}_and_{predict_dataset}')
-                dir_path = os.path.join(task_path_dict[task], f'{from_dataset}_and_{predict_dataset}')
-                tmp_dict = {f'Age_Gender_BMI_and_{predict_dataset}': DATASET_TO_NAME['Age_Gender_BMI'],
-                            f'{from_dataset}_and_{predict_dataset}': DATASET_TO_NAME[from_dataset]}
-                for name, file in model_score_files.items():
-                    find_significant_predictions(name, dir_path, file, tmp_dict, target_group, task)
-        print(f'<< Done processing: {task}')
-    
+    # # analysis per model_type:
+    # check_significance_for_all_datasets_per_model_type(datasets, task_path_dict, tasks,
+    #                                                    model_type=MODEL_TYPE, target_group=None)
+    # plot_age_bmi_predictions(['sleep_quality_avg', 'hrv_avg'])
+
+    # analysis per model_type only if CHOOSE_BEST_MODEL_TYPE is False:
     plot_figures_for_paper(datasets, task_path_dict)
-    plot_age_bmi_predictions(['sleep_quality_avg', 'hrv_avg'])
+
     print('<<< Done')

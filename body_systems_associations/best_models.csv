@@ -6,7 +6,7 @@ lifestyle,LGBM,LGBM,LGBM,LR_lasso,LR_lasso,LR_lasso
 mental,LGBM,LGBM,LGBM,LGBM,LGBM,LR_lasso
 frailty,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso
 liver,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso
-renal_function,LGBM,LR_lasso,LGBM,LGBM,LGBM,LR_lasso
+renal_function,LR_lasso,LR_lasso,LGBM,LR_lasso,LGBM,LR_lasso
 cardiovascular,LR_lasso,LR_lasso,LR_lasso,LGBM,LR_lasso,LR_lasso
 body_composition,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso
 bone_density,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso
@@ -14,4 +14,4 @@ blood_lipids,LGBM,LGBM,LGBM,LR_lasso,LR_lasso,LR_lasso
 MBfamily2,LGBM,LGBM,LGBM,LGBM,LR_lasso,LR_lasso
 MBpathways,LGBM,LGBM,LGBM,LGBM,LGBM,LR_lasso
 diet,LGBM,LGBM,LGBM,LGBM,LGBM,LGBM
-medications,LGBM,LGBM,LGBM,LGBM,LGBM,LGBM
+medications,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LGBM,LGBM
