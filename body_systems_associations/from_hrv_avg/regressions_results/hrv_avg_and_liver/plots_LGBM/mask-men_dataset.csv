@@ -1,0 +1,13 @@
+,Age & BMI,"HRV
+(average of nights)"
+liver_viscosity,False,False
+liver_elasticity,False,False
+liver_attenuation,False,True
+liver_sound_speed,False,True
+bt__albumin,False,True
+bt__bilirubin_total,False,True
+bt__protein_total,False,True
+bt__alkaline_phosphatase,False,True
+bt__alt_gpt,False,True
+bt__platelets,False,False
+bt__ast_got,True,True

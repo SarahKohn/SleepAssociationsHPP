@@ -1,0 +1,89 @@
+,Age & BMI,"Sleep Quality
+(average of nights)"
+fortified_wine__glasses_week,True,True
+hours_outdoors_winter,False,True
+hours_driving,False,False
+liqueurs_measures_week,True,True
+other_alcoholic_glasses_week,True,True
+physical_activity_maderate_days_a_week,False,True
+vigorous_activity_minutes,False,False
+sleep_hours_in_24H,False,False
+work_hours,False,True
+work_days_a_week,False,True
+hours_using_computer_not_work,False,False
+work_hours_day,False,True
+hours_watching_tv,False,True
+hours_outdoors_summer,False,True
+white_wine_glasses_week,False,False
+walking_minutes_day,False,False
+walking_10min_days_a_week,False,True
+beer_cider_pints_week,True,True
+moderate_activity_minutes,False,True
+drink_alcohol_with_meals_no,True,True
+drink_alcohol_with_meals_partial,False,True
+drink_alcohol_with_meals_yes,False,True
+mobile_phone_side_of_head_Equal on both sides,False,True
+mobile_phone_side_of_head_Left,False,True
+mobile_phone_side_of_head_Right,False,True
+drive_faster_often_Never or rarely,False,True
+drive_faster_often_Sometimes,False,False
+drive_faster_often_Usually,False,True
+pet_present_no,False,True
+pet_present_yes,False,True
+mobile_phone_use_duration_per_week_1-3 hours,True,True
+mobile_phone_use_duration_per_week_30-59 minutes,True,True
+mobile_phone_use_duration_per_week_4-6 hours,False,True
+mobile_phone_use_duration_per_week_5-29 minutes,False,False
+mobile_phone_use_duration_per_week_More than 6 hours,False,True
+why_stop_drinking_Other reasons,False,True
+why_stop_drinking_dont know,False,True
+visit_friends_family_times_2-4 times a week,False,True
+visit_friends_family_times_Once a month,True,True
+visit_friends_family_times_Once a week,False,False
+high_exercise_times_a_month_Four to five times a week,False,True
+high_exercise_times_a_month_Once a week,True,True
+high_exercise_times_a_month_Two or three times a week,True,True
+high_exercise_times_a_month_Two or three times in the last month,False,True
+easy_getting_up_Does not wake up easily,False,True
+easy_getting_up_Wakes up pretty easily,True,True
+easy_getting_up_Wakes up very easily,False,True
+manual_physical_work_Sometimes,True,True
+manual_physical_work_no,False,True
+alcohol_drink_1-2 times a week,False,True
+alcohol_drink_1-3 times a month,False,True
+alcohol_drink_3-4 times a week,True,True
+alcohol_drink_In special cases only,False,True
+high_exercise_duration_Between a quarter of an hour and half an hour,False,True
+high_exercise_duration_Between an hour and an hour and a half,False,True
+high_exercise_duration_Between half an hour and an hour,False,False
+falling_asleep_during_daytime_From time to time,False,False
+falling_asleep_during_daytime_Not or rarely,False,True
+tobacco_past_how_often_I never smoked,False,True
+tobacco_past_how_often_I only tried once or twice,False,True
+tobacco_past_how_often_I smoked most or all days,False,True
+tobacco_past_how_often_I smoked sometimes,False,True
+smoke_tobacco_now_no,False,True
+years_using_mobile_phone_Over 8 years,False,False
+nap_during_day_From time to time,True,True
+nap_during_day_Not or rarely,False,True
+consider_yourself_morning_evening_Im more of a morning man than an evening,False,True
+consider_yourself_morning_evening_Im more of an evening man than a morning,False,True
+consider_yourself_morning_evening_Im totally a morning man,True,True
+consider_yourself_morning_evening_Im totally an evening man,False,True
+consider_yourself_morning_evening_dont know,False,True
+usual_walking_pace_Average,False,False
+usual_walking_pace_Fast,False,True
+shift_work_Sometimes,False,False
+shift_work_no,False,True
+snoring_no,False,False
+snoring_yes,False,False
+pet_past_no,True,True
+pet_past_yes,False,False
+smoke_houshold_no,False,True
+trouble_falling_a_sleep_From time to time,False,True
+trouble_falling_a_sleep_Not or rarely,False,False
+trouble_falling_a_sleep_Usually yes,False,False
+climb_staires_tymes_a_day_1-5,False,True
+climb_staires_tymes_a_day_6-10,False,False
+climb_staires_tymes_a_day_More than 20 times,False,False
+climb_staires_tymes_a_day_Zero,False,True

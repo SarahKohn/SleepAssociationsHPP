@@ -1,0 +1,27 @@
+,Number of individuals,Number of samples,Number of features
+diet,10832,13545,317
+sleep_quality_avg,6410,6990,100
+medications,11386,15347,61
+sleep_quality_avg,6410,6990,100
+lifestyle,10602,15398,162
+sleep_quality_avg,6410,6990,100
+mental,10511,15267,36
+sleep_quality_avg,6410,6990,100
+frailty,9606,11326,8
+sleep_quality_avg,6410,6990,100
+liver,9292,11171,12
+sleep_quality_avg,6410,6990,100
+hematopoietic,10579,13539,9
+sleep_quality_avg,6410,6990,100
+glycemic_status,7577,7577,53
+sleep_quality_avg,6410,6990,100
+immune_system,10575,13556,12
+sleep_quality_avg,6410,6990,100
+renal_function,9019,10349,5
+sleep_quality_avg,6410,6990,100
+body_composition,9606,11326,120
+sleep_quality_avg,6410,6990,100
+bone_density,9606,11327,183
+sleep_quality_avg,6410,6990,100
+cardiovascular,10802,13803,160
+sleep_quality_avg,6410,6990,100

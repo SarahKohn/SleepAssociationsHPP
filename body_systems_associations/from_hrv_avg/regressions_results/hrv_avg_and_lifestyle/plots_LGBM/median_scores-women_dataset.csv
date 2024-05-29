@@ -1,0 +1,138 @@
+,Age & BMI,"HRV
+(average of nights)"
+fortified_wine__glasses_week,-0.0218116948918313,-0.0040830989320413
+hours_outdoors_winter,-0.028395710854300198,0.04250801273409035
+hours_driving,0.054608302117903004,0.0317382979731037
+liqueurs_measures_week,-0.0062222305876265,-0.00871529252349695
+other_alcoholic_glasses_week,0.013132437374189,0.032449755470842
+physical_activity_maderate_days_a_week,0.13794631041064334,0.1377124403493435
+vigorous_activity_minutes,0.09510750874212505,0.146722111937314
+sleep_hours_in_24H,-0.020451555546538748,0.10642096641791521
+work_hours,0.2591804668063027,0.2012648812234307
+work_days_a_week,0.17499945066872824,0.1114977460828504
+hours_using_computer_not_work,0.0927082883383482,0.04825530820887185
+work_hours_day,0.3288045757751408,0.22681694426167245
+hours_watching_tv,0.11127046755418374,0.08080404597151765
+hours_outdoors_summer,-0.04644246940657695,0.02822567656801065
+white_wine_glasses_week,0.0766431615982074,0.03006882547850915
+walking_minutes_day,0.040981022471125644,0.0323853937497205
+walking_10min_days_a_week,0.1037644584053546,0.06895681872326981
+beer_cider_pints_week,-0.0102793166450834,0.0005431729220894785
+moderate_activity_minutes,0.07527709623587765,0.041468804210987295
+drink_alcohol_with_meals_partial,0.0829695223316815,0.06882140546972335
+drink_alcohol_with_meals_yes,0.009003982871135699,-0.00152022379000435
+mobile_phone_side_of_head_Left,0.0064415958185974,-0.014962641331356451
+mobile_phone_side_of_head_Right,0.10024278315942475,0.039279789766810694
+drive_faster_often_Neverorrarely,0.0016408074743131502,
+drive_faster_often_Sometimes,0.01834949973928425,0.0041169904209888
+drive_faster_often_Usually,0.0246038216800167,0.01175752712055885
+pet_present_no,0.1266038550441979,0.07189775978143485
+pet_present_yes,0.15058126610346473,0.0937055974513138
+mobile_phone_use_duration_per_week_13hours,0.04619425597107685,
+mobile_phone_use_duration_per_week_3059minutes,0.023389105810189097,
+mobile_phone_use_duration_per_week_46hours,0.01584541513517045,
+mobile_phone_use_duration_per_week_529minutes,0.016886980958611353,
+mobile_phone_use_duration_per_week_Morethan6hours,0.06080232618799905,
+why_stop_drinking_Otherreasons,0.0703940599487517,
+why_stop_drinking_dontknow,-0.0032562256623381997,
+visit_friends_family_times_24timesaweek,0.04720994303444015,
+visit_friends_family_times_Onceamonth,0.00841307471448025,
+visit_friends_family_times_Onceaweek,0.05856106203793935,
+high_exercise_times_a_month_Fourtofivetimesaweek,0.0124518723140661,
+high_exercise_times_a_month_Onceaweek,0.01761100992077605,
+high_exercise_times_a_month_Twoorthreetimesaweek,0.00875386170147185,
+high_exercise_times_a_month_Twoorthreetimesinthelastmonth,0.032734559487964845,
+easy_getting_up_Doesnotwakeupeasily,0.06608197820639815,
+easy_getting_up_Wakesupprettyeasily,0.01249934609085995,
+easy_getting_up_Wakesupveryeasily,0.123276601321666,
+manual_physical_work_Sometimes,0.0121370781122151,0.01547857806240875
+manual_physical_work_no,0.16635899063697834,0.10379735868448645
+alcohol_drink_12timesaweek,0.022790354879814248,
+alcohol_drink_13timesamonth,0.07128051240450581,
+alcohol_drink_Inspecialcasesonly,-0.001676270113731,
+alcohol_drink_Never,0.02206718356782655,0.0088122059966554
+high_exercise_duration_Betweenaquarterofanhourandhalfanhour,0.01091471088319905,
+high_exercise_duration_Betweenanhourandanhourandahalf,-0.0218061146127504,
+high_exercise_duration_Betweenhalfanhourandanhour,-0.0112830971485101,
+falling_asleep_during_daytime_Fromtimetotime,0.008259854493009599,
+falling_asleep_during_daytime_Notorrarely,0.009134533237701251,
+tobacco_past_how_often_Ineversmoked,0.049943748331681345,
+tobacco_past_how_often_Ionlytriedonceortwice,-0.0168537202784169,
+tobacco_past_how_often_Ismokedmostoralldays,0.052617410600188194,
+tobacco_past_how_often_Ismokedsometimes,0.02169733629186035,
+smoke_tobacco_now_no,0.021700857292731898,0.11242074012761724
+years_using_mobile_phone_Over8years,0.07671964335373925,
+nap_during_day_Fromtimetotime,0.0207547757346088,
+nap_during_day_Notorrarely,0.043542596665293753,
+nap_during_day_Usuallyyes,0.03463906328950035,
+consider_yourself_morning_evening_Immoreofamorningmanthananevening,0.06623562545391855,
+consider_yourself_morning_evening_Immoreofaneveningmanthanamorning,0.0238126542260521,
+consider_yourself_morning_evening_Imtotallyamorningman,0.0423530824126492,
+consider_yourself_morning_evening_Imtotallyaneveningman,0.0028234461017946,
+consider_yourself_morning_evening_dontknow,-0.004288089042900151,
+usual_walking_pace_Average,0.06999122914057446,0.01201690003276485
+usual_walking_pace_Fast,0.19233949010823043,0.14053008277875784
+usual_walking_pace_Moderate,0.10334808387396566,0.0532365443057577
+shift_work_Sometimes,0.020284129966140048,4.119454034549343e-05
+shift_work_no,0.1474170934299251,0.04380071079274825
+snoring_dontknow,0.030453634500643652,
+snoring_no,0.24284366139459815,0.13031079652435185
+snoring_yes,0.21220749991011895,0.1584090301628892
+pet_past_no,-0.015729530559262052,-0.0037658745815364
+pet_past_yes,0.0136223642199827,-0.0109274054048826
+smoke_houshold_Yesonehouseholdmembersmokes,0.044170149739333545,
+smoke_houshold_no,0.01593285901333525,0.059337926691714796
+trouble_falling_a_sleep_Fromtimetotime,-0.023812664523849253,
+trouble_falling_a_sleep_Notorrarely,0.05895499663073185,
+trouble_falling_a_sleep_Usuallyyes,0.05141400553441715,
+climb_staires_tymes_a_day_15,0.01932632507575025,
+climb_staires_tymes_a_day_610,-0.00325012400023165,
+climb_staires_tymes_a_day_Morethan20times,0.0320132424722674,
+climb_staires_tymes_a_day_Zero,0.008177874324366199,0.024517283279732648
+drive_faster_often_Never or rarely,,-0.03166129500174985
+mobile_phone_use_duration_per_week_1-3 hours,,0.013028082971757851
+mobile_phone_use_duration_per_week_30-59 minutes,,0.01474294671108315
+mobile_phone_use_duration_per_week_4-6 hours,,-0.011322897262791
+mobile_phone_use_duration_per_week_5-29 minutes,,0.017729736512140548
+mobile_phone_use_duration_per_week_More than 6 hours,,-0.00021222864490070008
+why_stop_drinking_Other reasons,,-0.0046423525099618
+why_stop_drinking_dont know,,-0.0283718795509959
+visit_friends_family_times_2-4 times a week,,0.018263814850889
+visit_friends_family_times_Once a month,,0.04013197219978355
+visit_friends_family_times_Once a week,,0.02153681764231545
+high_exercise_times_a_month_Four to five times a week,,0.04334970247019505
+high_exercise_times_a_month_Once a week,,-0.0026785556347514
+high_exercise_times_a_month_Two or three times a week,,0.011328329836343999
+high_exercise_times_a_month_Two or three times in the last month,,0.005737121764576
+easy_getting_up_Does not wake up easily,,0.07172758596039461
+easy_getting_up_Wakes up pretty easily,,-0.0248991120736684
+easy_getting_up_Wakes up very easily,,0.05419427903189285
+alcohol_drink_1-2 times a week,,-0.0262795003703511
+alcohol_drink_1-3 times a month,,0.02485937017308255
+alcohol_drink_In special cases only,,0.01569150634885695
+high_exercise_duration_Between a quarter of an hour and half an hour,,0.0382290577595103
+high_exercise_duration_Between an hour and an hour and a half,,0.00174928032719155
+high_exercise_duration_Between half an hour and an hour,,0.0193441824485421
+falling_asleep_during_daytime_From time to time,,-0.0312284920869353
+falling_asleep_during_daytime_Not or rarely,,-0.03555895125608615
+tobacco_past_how_often_I never smoked,,0.08600956149570925
+tobacco_past_how_often_I only tried once or twice,,-0.01212122832136655
+tobacco_past_how_often_I smoked most or all days,,0.00311360694265135
+tobacco_past_how_often_I smoked sometimes,,-0.02333480503611455
+years_using_mobile_phone_Over 8 years,,-0.00784355224407955
+nap_during_day_From time to time,,0.0416354693142499
+nap_during_day_Not or rarely,,0.07984616365081701
+nap_during_day_Usually yes,,0.04303061944269105
+consider_yourself_morning_evening_Im more of a morning man than an evening,,-0.0204960878242649
+consider_yourself_morning_evening_Im more of an evening man than a morning,,0.045894902775768145
+consider_yourself_morning_evening_Im totally a morning man,,-0.0004147269590277
+consider_yourself_morning_evening_Im totally an evening man,,-0.0057452206021855
+consider_yourself_morning_evening_dont know,,0.0298876401833368
+snoring_dont know,,0.0087834313410121
+smoke_houshold_Yes  one household member smokes,,0.04912867139316815
+trouble_falling_a_sleep_From time to time,,0.02378492968245305
+trouble_falling_a_sleep_Not or rarely,,0.11262336274722955
+trouble_falling_a_sleep_Usually yes,,0.0699304026235042
+climb_staires_tymes_a_day_1-5,,0.020860887394005448
+climb_staires_tymes_a_day_6-10,,0.01729892911179345
+climb_staires_tymes_a_day_More than 20 times,,-0.02070268977289295

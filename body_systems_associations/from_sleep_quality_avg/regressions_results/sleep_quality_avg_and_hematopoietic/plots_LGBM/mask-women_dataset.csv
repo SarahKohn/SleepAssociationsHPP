@@ -1,0 +1,10 @@
+,Age & BMI,"Sleep Quality
+(average of nights)"
+bt__hct,False,True
+bt__rbc,False,True
+bt__ferritin,False,True
+bt__rdw,False,True
+bt__mcv,False,True
+bt__mchc,True,True
+bt__hemoglobin,False,True
+bt__mch,False,True

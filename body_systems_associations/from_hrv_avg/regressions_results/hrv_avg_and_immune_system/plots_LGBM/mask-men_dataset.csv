@@ -1,0 +1,8 @@
+,Age & BMI,"HRV
+(average of nights)"
+bt__monocytes_abs,False,True
+bt__wbc,False,True
+bt__lymphocytes_abs,False,True
+bt__neutrophils_abs,False,True
+bt__basophils_abs,False,True
+bt__eosinophils_abs,False,False

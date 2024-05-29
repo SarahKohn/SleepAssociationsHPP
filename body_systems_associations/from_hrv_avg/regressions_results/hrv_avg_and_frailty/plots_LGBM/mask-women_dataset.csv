@@ -1,0 +1,9 @@
+,Age & BMI,"HRV
+(average of nights)"
+body_comp_leg_right_lean_mass,False,True
+body_comp_arm_right_lean_mass,False,True
+body_comp_arm_left_lean_mass,False,True
+body_comp_leg_left_lean_mass,False,True
+height,False,True
+hand_grip_left,False,True
+hand_grip_right,False,True

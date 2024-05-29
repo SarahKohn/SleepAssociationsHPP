@@ -1,0 +1,37 @@
+,Age & BMI,"HRV
+(average of nights)"
+depressed_hopeless_fortnight,False,True
+depressed_longest_period_weeks,True,True
+depressed_whole_week,True,True
+depressed_whole_week_periods,False,True
+family_relationship_satisfaction,True,True
+feeling_lonley_often,False,False
+fidgety_or_restless_fortnight,False,True
+financial_situation_satisfaction,False,True
+friendships_satisfaction,False,True
+happiness_level,False,False
+health_satisfaction,False,True
+high_irritable_longest_period_duration,False,False
+high_irritable_state,False,True
+high_irritable_state_caused_problems,True,True
+hyper_least_two_days,True,True
+irritable_person,False,True
+irritablilty_leading_to_argumens,False,True
+little_interest_or_pleasure_fortnight,False,True
+miserable_no_reason,False,False
+mood_swings,False,True
+nerves_anxiety_tension_depression_doctor,True,True
+nerves_anxiety_tension_depression_psychiatrist,True,True
+nervous_person,False,True
+risks_taker,True,True
+suffer_nerves,False,True
+tense_or_highly_strung,False,True
+tired_or_little_energy_fortnight,False,True
+troubled_by_guilt,False,True
+unenjoyment_uninterested_period_duration_weeks,False,True
+unenjoyment_uninterested_periods_number,True,True
+unenjoyment_uninterested_whole_week,True,True
+work_satisfaction,False,True
+worrier,False,False
+worry_long_after_embarrassment,False,True
+rds_score,False,True

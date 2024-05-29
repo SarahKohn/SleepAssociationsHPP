@@ -1,0 +1,17 @@
+,from_sleep_quality_avg_men,from_sleep_quality_avg_women,from_hrv_avg_men,from_hrv_avg_women,predict_sleep_quality_avg_men,predict_sleep_quality_avg_women
+hematopoietic,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+immune_system,LGBM,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+glycemic_status,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+lifestyle,LGBM,LGBM,LGBM,LR_lasso,LR_lasso,LR_lasso
+mental,LGBM,LGBM,LGBM,LGBM,LGBM,LR_lasso
+frailty,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+liver,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+renal_function,LGBM,LR_lasso,LGBM,LGBM,LGBM,LR_lasso
+cardiovascular,LR_lasso,LR_lasso,LR_lasso,LGBM,LR_lasso,LR_lasso
+body_composition,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+bone_density,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+blood_lipids,LGBM,LGBM,LGBM,LR_lasso,LR_lasso,LR_lasso
+MBfamily2,LGBM,LGBM,LGBM,LGBM,LR_lasso,LR_lasso
+MBpathways,LGBM,LGBM,LGBM,LGBM,LGBM,LR_lasso
+diet,LGBM,LGBM,LGBM,LGBM,LGBM,LGBM
+medications,LGBM,LGBM,LGBM,LGBM,LGBM,LGBM
