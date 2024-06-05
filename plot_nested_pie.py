@@ -62,7 +62,7 @@ def plot_correlations_donut(body_systems: list):
                                                       'percent_of_supine_sleep',
                                                       'variability_between_sleep_stage_percents',
                                                       'hrv_time_rmssd_during_wake'])
-    print('Number of significant correlations found for the 6 key features:', all_associations.count().sum())
+    print('Number of significant correlations found for the 6 key features:', all_associations.count().sum() / all_associations.size)
 
     ## Create the nested pie chart:
     df = pd.DataFrame()
@@ -155,12 +155,14 @@ def plot_correlations_donut(body_systems: list):
     ## Create circles legend:
     fig, axes = plt.subplots(len(df.columns), 1, figsize=(8, 5))
     legend_names = {
-        'snore_db_mean': 'Snoring level',
+        'AHI': 'pAHI',
+        'snore_db_mean': 'Mean snoring level',
         # 'desaturations_mean_nadir': 'SpO2 nadir',
+        ''
         'saturation_mean': 'Mean SpO2',
         'total_sleep_time': 'Sleep time',
         'sleep_efficiency': 'Sleep efficiency',
-        'hrv_time_rmssd_during_night': 'HRV (during night)'
+        'hrv_time_rmssd_during_night': 'PRV (during night)'
     }
     df = df.rename(columns=legend_names)
     for i, legend in enumerate(df.columns):

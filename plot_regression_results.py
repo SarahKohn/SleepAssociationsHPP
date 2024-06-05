@@ -96,11 +96,15 @@ def find_significant_predictions(name: str, path: str, file: str, datasets_dict:
     # Create a dataframe with all median scores
     median_scores = pd.concat([pd.read_csv(os.path.join(path, f'{df_prefix}_{file}'), index_col=0
                                            ).median(axis=0) for df_prefix in datasets_dict.keys()], axis=1)
+    std_scores = pd.concat([pd.read_csv(os.path.join(path, f'{df_prefix}_{file}'), index_col=0
+                                        ).std(axis=0) for df_prefix in datasets_dict.keys()], axis=1)
     median_scores.columns = datasets_dict.values()
+    std_scores.columns = datasets_dict.values()
     # Create directory with the results
     model_type = MODEL_TYPE
     fig_dir = mkdirifnotexists(os.path.join(path, f'plots_{model_type}'))
     median_scores.to_csv(os.path.join(fig_dir, f'median_scores-{name}_dataset.csv'))
+    std_scores.to_csv(os.path.join(fig_dir, f'std_scores-{name}_dataset.csv'))
     median_scores = median_scores.dropna()
     if target_group is None:
         target_group = median_scores.index.to_list()
@@ -230,10 +234,17 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
                     if 'from_l_thigh_to_l_ankle_distance' in median_scores_filtered.index:
                         median_scores_filtered.drop('from_l_thigh_to_l_ankle_distance', inplace=True)
                         no_of_features.loc[name, 'total_features'] -= 1
+                    if 'bmi' in median_scores_filtered.index:
+                        median_scores_filtered.drop('bmi', inplace=True)
+                        no_of_features.loc[name, 'total_features'] -= 1
                     no_of_features.loc[name, 'no_of_features_significantly_predicted'] = median_scores_filtered.shape[0]
                     predictive_power_dataset[name] = median_scores_filtered.iloc[:, 1].values
                     diff_dataset[name] = median_scores_filtered.iloc[:, 1].values - median_scores_filtered.iloc[:, 0].values
                     best_model[name] = dir_name[len('plots_'):]
+                if predictive_power_dataset[name].any():
+                    # print range of predictive power
+                    print(f'Predictive power range for {task} - {name} - {sex}: '
+                          f'{np.min(predictive_power_dataset[name]):.2f} - {np.max(predictive_power_dataset[name]):.2f}')
 
             # sort categories for plot A:
             sorted_categories = sorted(diff_dataset.keys(), key=lambda x: (
@@ -316,6 +327,8 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
                 else:
                     df['diff'] = df.iloc[:, 1] - df.iloc[:, 0]
                     target = df.sort_values(by='diff', ascending=False).index[0]
+                    if picked_dataset == 'glycemic_status' and ('Min' in target):
+                        target = df.sort_values(by='diff', ascending=False).index[2]
 
                 tmp_dict = {f'Age_Gender_BMI_and_{predict_dataset}': DICT_FOR_BARPLOT['Age_Gender_BMI'],
                             f'{from_dataset}_and_{predict_dataset}': DICT_FOR_BARPLOT[from_dataset]}
@@ -554,7 +567,7 @@ if __name__ == '__main__':
     task_path_dict = {dir_name: os.path.join(MY_DIR, 'body_systems_associations', dir_name, 'regressions_results' + TAG)
                             for dir_name in tasks}
 
-    # # analysis per model_type:
+    # analysis per model_type:
     # check_significance_for_all_datasets_per_model_type(datasets, task_path_dict, tasks,
     #                                                    model_type=MODEL_TYPE, target_group=None)
     # plot_age_bmi_predictions(['sleep_quality_avg', 'hrv_avg'])

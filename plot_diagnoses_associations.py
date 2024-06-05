@@ -29,11 +29,15 @@ def create_figure_for_paper(path: str, target: str):
     all_results_men = pd.concat([all_results_men, diffs_men['max']], axis=1).sort_values(by='max', ascending=False)
     all_results_men.rename(index={'Attention Deficit Disorder (ADHD)': 'ADHD',
                                   'Irritable Bowel Syndrome (IBS)': 'IBS'}, inplace=True)
+    all_results_men.rename(columns={'Sleep Quality at baseline\n': 'Sleep test measures at baseline',
+                                    'HRV at baseline\n': 'PRV at baseline'}, inplace=True)
     diffs_women['max'] = diffs_women.max(axis=1)
     all_results_women = pd.concat([all_results_women, diffs_women['max']], axis=1).sort_values(by='max',
                                                                                                ascending=False)
     all_results_women.rename(index={'Attention Deficit Disorder (ADHD)': 'ADHD',
                                     'G6PD': 'G6PD deficiency'}, inplace=True)
+    all_results_women.rename(columns={'Sleep Quality at baseline\n': 'Sleep test measures at baseline',
+                                      'HRV at baseline\n': 'PRV at baseline'}, inplace=True)
 
     # Figure
     title = f'AUCs for predicting medical diagnoses'
@@ -81,7 +85,6 @@ if __name__ == '__main__':
     special_folder = '/medical_diagnoses_associations'
     datasets_to_run = ['_women', '_men']  # choose from : '_women', '_men', '_all'
     models_to_run = ['Logit']
-    dataset_filenames = load_dataset_filenames_dict()
     body_systems = [
         'sleep_quality_avg',
         'hrv_avg',
