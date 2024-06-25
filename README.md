@@ -19,7 +19,7 @@ Linux: CentOS 7(core)
 Mac OS: Monterey 12.5.1  
 
 ## Python Dependencies
-Make sure your interpreter is set to Python 3.9 and include the packages specified in the requirements.txt file.
+Make sure your interpreter is set to Python 3.9 and include the packages specified in the [requirements.txt](./requirements.txt) file.
 The code may work properly on other python and packages versions but tested only on these ones.
 
 # Instructions for use
@@ -30,4 +30,4 @@ The run may take few seconds up to few minutes depending on the number of featur
 ## Demo
 Run file plot_nested_pie.py as it is.
 You'll get the following picture as an output:
-![Alt text](/correlations_results/nested_pie-correlations.png)
+![Alt text](./correlations_results/nested_pie-correlations.png)
