@@ -1,4 +1,4 @@
-,Age & BMI,Diet
+,"Age, BMI & VAT",Diet
 AHI,False,True
 ahi_4_percent,False,True
 ahi_central,False,True
@@ -42,12 +42,12 @@ odi_during_supine,False,True
 percent_of_deep_sleep_time,False,True
 percent_of_left_sleep,False,True
 percent_of_light_sleep_time,False,True
-percent_of_non_supine_sleep,False,False
+percent_of_non_supine_sleep,False,True
 percent_of_prone_sleep,False,True
 percent_of_rem_sleep_time,False,True
 percent_of_right_sleep,False,True
 percent_of_sleep_time,False,True
-percent_of_supine_sleep,False,False
+percent_of_supine_sleep,False,True
 percent_of_wake_time,False,True
 rdi,False,True
 rdi_during_left,False,True
@@ -62,7 +62,7 @@ saturation_below_80,False,True
 saturation_below_85,False,True
 saturation_below_90,False,True
 saturation_below_or_equal_88,False,True
-saturation_max_value,True,True
+saturation_max_value,False,True
 saturation_mean,False,True
 saturation_min_value,False,True
 sleep_efficiency,False,True
@@ -83,7 +83,7 @@ total_deep_sleep_time,False,True
 total_left_sleep_time,False,True
 total_light_sleep_time,False,True
 total_non_supine_sleep_time,False,True
-total_prone_sleep_time,False,True
+total_prone_sleep_time,False,False
 total_rem_sleep_time,False,True
 total_right_sleep_time,False,True
 total_sleep_time,False,False

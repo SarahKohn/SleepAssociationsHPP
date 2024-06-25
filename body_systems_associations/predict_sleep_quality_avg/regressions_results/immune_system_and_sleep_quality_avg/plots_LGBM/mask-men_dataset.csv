@@ -1,4 +1,4 @@
-,Age & BMI,Immune system
+,"Age, BMI & VAT",Immune system
 AHI,False,True
 ahi_4_percent,False,True
 ahi_central,False,True
@@ -24,7 +24,7 @@ number_of_apnea_hypopnea_events,False,True
 number_of_central_apnea_hypopnea_events,False,True
 number_of_desaturation_events,False,True
 number_of_obstructive_apnea_hypopnea_events,False,True
-number_of_transitions_nrem_to_rem,False,False
+number_of_transitions_nrem_to_rem,False,True
 number_of_transitions_nrem_to_wake,False,True
 number_of_transitions_rem_to_nrem,False,True
 number_of_transitions_rem_to_wake,True,True
@@ -43,7 +43,7 @@ percent_of_deep_sleep_time,False,True
 percent_of_left_sleep,False,False
 percent_of_light_sleep_time,False,True
 percent_of_non_supine_sleep,False,True
-percent_of_prone_sleep,False,True
+percent_of_prone_sleep,True,True
 percent_of_rem_sleep_time,False,True
 percent_of_right_sleep,False,True
 percent_of_sleep_time,False,True
@@ -72,25 +72,25 @@ snore_above_45db,False,True
 snore_above_50db,False,True
 snore_above_60db,False,True
 snore_db_mean,False,True
-time_to_transition_nrem_to_rem,False,False
+time_to_transition_nrem_to_rem,True,True
 time_to_transition_nrem_to_wake,False,True
 time_to_transition_rem_to_nrem,False,True
 time_to_transition_rem_to_wake,False,True
 time_to_transition_wake_to_nrem,False,True
 time_to_transition_wake_to_rem,False,False
-total_arousal_sleep_time,False,True
+total_arousal_sleep_time,True,True
 total_deep_sleep_time,False,True
-total_left_sleep_time,False,False
+total_left_sleep_time,False,True
 total_light_sleep_time,False,True
 total_non_supine_sleep_time,False,True
 total_prone_sleep_time,True,True
-total_rem_sleep_time,False,False
+total_rem_sleep_time,False,True
 total_right_sleep_time,False,True
-total_sleep_time,False,True
+total_sleep_time,True,True
 total_supine_sleep_time,False,True
-total_time_in_bed,False,True
-total_valid_apnea_central_sleep_time,False,True
+total_time_in_bed,True,True
+total_valid_apnea_central_sleep_time,True,True
 total_valid_apnea_sleep_time,False,True
-total_wake_time,False,True
+total_wake_time,False,False
 total_wake_time_after_sleep_onset,False,True
 variability_between_sleep_stage_percents,False,True

@@ -1,18 +1,18 @@
-,Age & BMI,"Sleep Quality
+,"Age, BMI & VAT","Sleep Quality
 (average of nights)"
 index,True,True
-adrr,True,True
+adrr,False,False
 COGI,False,False
 cv,False,True
 ea1c,False,False
 gmi,False,False
 grade,False,True
-grade_eugly,False,True
+grade_eugly,False,False
 grade_hyper,False,True
 grade_hypo,False,False
-hbgi,False,False
+hbgi,False,True
 lbgi,False,False
-hyper_index,False,False
+hyper_index,False,True
 hypo_index,False,True
 igc,False,True
 iqr,False,True
@@ -21,33 +21,32 @@ m_value,False,True
 MAD,False,True
 mage,False,True
 above_140,False,True
-above_180,True,True
-below_54,True,True
+above_180,False,True
+below_54,False,True
 below_70,False,True
 in_range_63_140,False,True
 in_range_70_180,False,True
 range,False,True
 sd,False,True
-Min.,False,False
-1st Qu.,False,False
+Min,False,False
+1stQu,False,False
 Median,False,False
 Mean,False,False
-3rd Qu.,False,False
-Max.,False,True
+3rdQu,False,False
+Max,False,True
 Conga,False,True
 GVP,False,False
 MODD,False,True
-SD.Roc,False,True
-CV_Measures_Mean,False,True
-CV_Measures_SD,False,True
+SDRoc,False,False
+CV_Measures_Mean,False,False
+CV_Measures_SD,True,True
 AUC,False,False
-MAG,False,True
+MAG,False,False
 SdW,False,True
 SdHHMM,False,True
 SdWSH,False,False
-SdDM,True,True
+SdDM,False,True
 SdB,False,True
 SdBDM,False,True
-above_200,True,True
 bt__hba1c,False,True
 bt__glucose,False,True

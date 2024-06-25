@@ -1,4 +1,4 @@
-,Age & BMI,"Sleep Quality
+,"Age, BMI & VAT","Sleep Quality
 (average of nights)"
 from_l_thigh_to_l_ankle_pwv,False,False
 l_brachial_index,True,True
@@ -40,7 +40,7 @@ Vein_Tortuosity_density,True,True
 Fractal_dimension,True,True
 CDR_vertical,True,True
 Vein_Vessel_density,True,True
-Disc_width,False,True
+Disc_width,True,True
 Vein_Squared_curvature_tortuosity,False,True
 Artery_Fractal_dimension,True,True
 Distance_tortuosity,True,True
@@ -62,9 +62,9 @@ t_mv_V6,True,True
 p_mv_V4,True,True
 p_mv_V5,True,True
 q_ms_I,True,True
-qt_ms,False,True
+qt_ms,False,False
 s_mv_aVF,True,True
-r_ms_V4,False,False
+r_ms_V4,False,True
 j_mv_I,True,True
 q_mv_aVL,True,True
 j_mv_aVF,True,True
@@ -87,7 +87,7 @@ st_mv_III,True,True
 p_mv_V6,True,True
 hr_bpm,False,False
 r_ms_III,False,True
-r_mv_aVL,True,True
+r_mv_aVL,False,False
 r_ms_V6,False,True
 j_mv_V3,True,True
 r_ms_V5,False,True
@@ -106,12 +106,12 @@ s_mv_V3,True,True
 q_mv_aVR,True,True
 st_mv_I,True,True
 s_mv_aVR,True,True
-pr_ms,False,False
+pr_ms,False,True
 p_mv_aVR,True,True
 st_mv_aVL,True,True
 t_mv_V3,True,True
 p_mv_I,True,True
-r_mv_I,True,True
+r_mv_I,False,False
 p_mv_V1,True,True
 t_mv_aVL,True,True
 r_ms_aVF,False,True
@@ -121,7 +121,7 @@ t_axis,False,False
 p_mv_aVL,True,True
 r_mv_V2,True,True
 r_r_ms,False,False
-r_ms_V2,False,False
+r_ms_V2,False,True
 st_mv_V2,True,True
 j_mv_V5,True,True
 r_mv_V1,True,True
@@ -149,7 +149,7 @@ st_mv_aVF,True,True
 p_axis,False,True
 p_mv_V2,True,True
 qtc_ms,False,True
-r_ms_V3,False,False
+r_ms_V3,False,True
 s_mv_II,True,True
 p_mv_aVF,True,True
 j_mv_III,True,True

@@ -1,8 +1,8 @@
-,Age & BMI,Mental health
+,"Age, BMI & VAT",Mental health
 AHI,False,True
 ahi_4_percent,False,True
 ahi_central,False,True
-ahi_central_during_nrem,False,True
+ahi_central_during_nrem,False,False
 ahi_central_during_rem,False,True
 ahi_during_left,False,True
 ahi_during_non_supine,False,True
@@ -14,7 +14,6 @@ ahi_during_supine,False,True
 ahi_obstructive,False,True
 ahi_obstructive_during_nrem,False,True
 ahi_obstructive_during_rem,False,True
-desaturations_above_20,False,True
 desaturations_mean_nadir,False,True
 desaturations_of_10_20,False,True
 desaturations_of_4_9,False,True
@@ -24,12 +23,12 @@ number_of_apnea_hypopnea_events,False,True
 number_of_central_apnea_hypopnea_events,False,True
 number_of_desaturation_events,False,True
 number_of_obstructive_apnea_hypopnea_events,False,True
-number_of_transitions_nrem_to_rem,False,False
+number_of_transitions_nrem_to_rem,False,True
 number_of_transitions_nrem_to_wake,False,True
-number_of_transitions_rem_to_nrem,False,True
+number_of_transitions_rem_to_nrem,False,False
 number_of_transitions_rem_to_wake,False,True
 number_of_transitions_wake_to_nrem,False,True
-number_of_transitions_wake_to_rem,True,True
+number_of_transitions_wake_to_rem,False,False
 number_of_wakes,False,True
 odi,False,True
 odi_during_left,False,True
@@ -40,7 +39,7 @@ odi_during_rem,False,True
 odi_during_right,False,True
 odi_during_supine,False,True
 percent_of_deep_sleep_time,False,True
-percent_of_left_sleep,True,True
+percent_of_left_sleep,False,False
 percent_of_light_sleep_time,False,True
 percent_of_non_supine_sleep,False,True
 percent_of_prone_sleep,False,True
@@ -75,21 +74,21 @@ snore_db_mean,False,True
 time_to_transition_nrem_to_rem,False,True
 time_to_transition_nrem_to_wake,False,True
 time_to_transition_rem_to_nrem,False,True
-time_to_transition_rem_to_wake,True,True
+time_to_transition_rem_to_wake,False,False
 time_to_transition_wake_to_nrem,False,True
-time_to_transition_wake_to_rem,False,False
+time_to_transition_wake_to_rem,False,True
 total_arousal_sleep_time,False,False
 total_deep_sleep_time,False,True
-total_left_sleep_time,True,True
-total_light_sleep_time,False,True
+total_left_sleep_time,False,False
+total_light_sleep_time,False,False
 total_non_supine_sleep_time,False,True
 total_prone_sleep_time,False,True
-total_rem_sleep_time,True,True
+total_rem_sleep_time,False,True
 total_right_sleep_time,False,True
 total_sleep_time,False,False
-total_supine_sleep_time,False,False
+total_supine_sleep_time,False,True
 total_time_in_bed,False,False
-total_valid_apnea_central_sleep_time,False,False
+total_valid_apnea_central_sleep_time,True,True
 total_valid_apnea_sleep_time,False,False
 total_wake_time,False,False
 total_wake_time_after_sleep_onset,False,False

@@ -1,4 +1,4 @@
-,Age & BMI,Gut MB metabolic pathways
+,"Age, BMI & VAT",Gut MB metabolic pathways
 AHI,False,True
 ahi_4_percent,False,True
 ahi_central,False,True
@@ -14,7 +14,7 @@ ahi_during_supine,False,True
 ahi_obstructive,False,True
 ahi_obstructive_during_nrem,False,True
 ahi_obstructive_during_rem,False,True
-desaturations_above_20,False,True
+desaturations_above_20,False,False
 desaturations_mean_nadir,False,True
 desaturations_of_10_20,False,True
 desaturations_of_4_9,False,True

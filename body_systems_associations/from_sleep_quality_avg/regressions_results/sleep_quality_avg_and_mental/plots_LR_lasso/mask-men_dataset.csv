@@ -1,13 +1,13 @@
-,Age & BMI,"Sleep Quality
+,"Age, BMI & VAT","Sleep Quality
 (average of nights)"
 depressed_hopeless_fortnight,True,True
-depressed_longest_period_weeks,True,True
+depressed_longest_period_weeks,False,True
 depressed_whole_week,True,True
 depressed_whole_week_periods,True,True
 family_relationship_satisfaction,True,True
-fed-up_often,True,True
+fedup_often,True,True
 feeling_lonley_often,True,True
-fidgety_or_restless_fortnight,False,False
+fidgety_or_restless_fortnight,False,True
 financial_situation_satisfaction,True,True
 friendships_satisfaction,True,True
 happiness_level,True,True
@@ -27,7 +27,7 @@ nervous_person,True,True
 risks_taker,True,True
 suffer_nerves,True,True
 tense_or_highly_strung,True,True
-tired_or_little_energy_fortnight,False,False
+tired_or_little_energy_fortnight,False,True
 troubled_by_guilt,True,True
 unenjoyment_uninterested_period_duration_weeks,True,True
 unenjoyment_uninterested_periods_number,True,True
@@ -35,4 +35,4 @@ unenjoyment_uninterested_whole_week,True,True
 work_satisfaction,False,True
 worrier,True,True
 worry_long_after_embarrassment,True,True
-rds_score,False,False
+rds_score,False,True

@@ -1,4 +1,4 @@
-,Age & BMI,"Sleep Quality
+,"Age, BMI & VAT","Sleep Quality
 (average of nights)"
 total_scan_sat_area,False,True
 total_scan_sat_mass,False,True
@@ -32,7 +32,7 @@ body_comp_total_diff_total_mass,False,True
 body_comp_arm_right_total_mass,False,True
 body_comp_total_diff_bone_mass,False,True
 body_comp_arms_diff_bone_mass,False,True
-body_comp_trunk_diff_lean_mass,True,True
+body_comp_trunk_diff_lean_mass,False,True
 body_comp_arm_left_fat_mass,False,True
 body_comp_trunk_left_fat_mass,False,True
 body_comp_leg_left_lean_mass,False,True
@@ -47,17 +47,17 @@ body_comp_total_left_fat_mass,False,True
 body_comp_legs_tissue_mass,False,True
 body_comp_android_fat_free_mass,False,True
 body_comp_total_fat_mass,False,True
-body_comp_trunk_diff_tissue_mass,False,True
+body_comp_trunk_diff_tissue_mass,True,True
 body_comp_total_tissue_mass,False,True
 body_comp_total_left_bone_mass,False,True
-body_comp_legs_diff_lean_mass,False,True
+body_comp_legs_diff_lean_mass,True,True
 body_comp_trunk_right_tissue_mass,False,True
 body_comp_arm_left_total_mass,False,True
 body_comp_leg_right_fat_mass,False,True
 body_comp_total_diff_lean_mass,False,True
 body_comp_arms_fat_mass,False,True
 body_comp_total_diff_tissue_mass,False,True
-body_comp_trunk_diff_total_mass,False,True
+body_comp_trunk_diff_total_mass,True,True
 body_comp_trunk_left_total_mass,False,True
 body_comp_total_diff_fat_free_mass,False,True
 body_comp_gynoid_fat_mass,False,True
@@ -82,7 +82,7 @@ body_comp_trunk_diff_fat_free_mass,False,True
 body_comp_android_fat_mass,False,True
 body_comp_total_fat_free_mass,False,True
 body_comp_trunk_left_fat_free_mass,False,True
-body_comp_legs_diff_fat_mass,True,True
+body_comp_legs_diff_fat_mass,False,True
 body_comp_leg_right_total_mass,False,True
 body_comp_legs_lean_mass,False,True
 body_comp_trunk_total_mass,False,True
@@ -98,7 +98,7 @@ body_comp_total_left_total_mass,False,True
 body_comp_trunk_right_bone_mass,False,True
 body_comp_trunk_left_tissue_mass,False,True
 body_comp_total_left_lean_mass,False,True
-body_comp_legs_diff_fat_free_mass,False,True
+body_comp_legs_diff_fat_free_mass,True,True
 body_comp_legs_fat_free_mass,False,True
 body_comp_total_bone_mass,False,True
 body_comp_total_left_fat_free_mass,False,True
@@ -110,10 +110,10 @@ body_comp_leg_right_fat_free_mass,False,True
 body_comp_arms_total_mass,False,True
 body_comp_legs_fat_mass,False,True
 body_comp_trunk_diff_fat_mass,False,True
-body_comp_legs_diff_total_mass,True,True
+body_comp_legs_diff_total_mass,False,True
 body_comp_trunk_diff_bone_mass,False,True
-body_comp_legs_diff_bone_mass,False,True
-body_comp_legs_diff_tissue_mass,True,True
+body_comp_legs_diff_bone_mass,True,True
+body_comp_legs_diff_tissue_mass,False,True
 bmi,False,True
 waist,False,True
 height,False,True

@@ -1,4 +1,4 @@
-,Age & BMI,"Sleep Quality
+,"Age, BMI & VAT","Sleep Quality
 (average of nights)"
 body_arm_left_area,False,True
 body_arm_left_bmc,False,True
@@ -12,13 +12,13 @@ body_arms_bmd,False,True
 body_head_area,False,True
 body_head_bmc,False,True
 body_head_bmd,False,True
-body_leg_left_area,False,False
+body_leg_left_area,False,True
 body_leg_left_bmc,False,True
 body_leg_left_bmd,False,True
-body_leg_right_area,True,True
+body_leg_right_area,False,True
 body_leg_right_bmc,False,True
 body_leg_right_bmd,False,True
-body_legs_area,False,False
+body_legs_area,False,True
 body_legs_bmc,False,True
 body_legs_bmd,False,True
 body_pelvis_area,False,True
@@ -30,10 +30,10 @@ body_ribs_bmd,False,True
 body_spine_area,False,True
 body_spine_bmc,False,True
 body_spine_bmd,False,True
-body_total_area,False,False
+body_total_area,False,True
 body_total_bmc,False,True
 body_total_bmd,False,True
-body_total_left_area,False,False
+body_total_left_area,False,True
 body_total_left_bmc,False,True
 body_total_left_bmd,False,True
 body_total_right_area,False,True
@@ -77,7 +77,7 @@ femur_lower_neck_mean_bmc,False,True
 femur_lower_neck_mean_bmd,False,True
 femur_neck_diff_area,False,True
 femur_neck_diff_bmc,False,True
-femur_neck_diff_bmd,False,False
+femur_neck_diff_bmd,True,True
 femur_neck_mean_area,False,True
 femur_neck_mean_bmc,False,True
 femur_neck_mean_bmd,False,True
@@ -104,13 +104,13 @@ femur_right_wards_bmc,False,True
 femur_right_wards_bmd,False,True
 femur_shaft_diff_area,False,False
 femur_shaft_diff_bmc,False,True
-femur_shaft_diff_bmd,False,True
+femur_shaft_diff_bmd,True,True
 femur_shaft_mean_area,False,True
 femur_shaft_mean_bmc,False,True
 femur_shaft_mean_bmd,False,True
-femur_total_diff_area,True,True
+femur_total_diff_area,False,False
 femur_total_diff_bmc,False,True
-femur_total_diff_bmd,False,False
+femur_total_diff_bmd,True,True
 femur_total_mean_area,False,True
 femur_total_mean_bmc,False,True
 femur_total_mean_bmd,False,True
@@ -167,7 +167,7 @@ spine_l2_l4_average_height,False,True
 spine_l2_l4_average_width,False,True
 spine_l2_l4_bmc,False,True
 spine_l2_l4_bmd,False,True
-spine_l3_area,True,True
+spine_l3_area,False,True
 spine_l3_average_height,False,True
 spine_l3_average_width,False,True
 spine_l3_bmc,False,True

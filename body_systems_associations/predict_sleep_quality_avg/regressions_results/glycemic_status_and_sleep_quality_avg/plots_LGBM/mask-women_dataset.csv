@@ -1,4 +1,4 @@
-,Age & BMI,Insulin resistance
+,"Age, BMI & VAT",Insulin resistance
 AHI,False,True
 ahi_4_percent,False,True
 ahi_central,False,True
@@ -70,23 +70,23 @@ sleep_latency,False,True
 snore_above_40db,False,True
 snore_above_45db,False,True
 snore_above_50db,False,True
-snore_above_60db,False,False
+snore_above_60db,False,True
 snore_db_mean,False,True
 time_to_transition_nrem_to_rem,False,False
 time_to_transition_nrem_to_wake,False,True
 time_to_transition_rem_to_nrem,False,True
-time_to_transition_rem_to_wake,False,True
+time_to_transition_rem_to_wake,True,True
 time_to_transition_wake_to_nrem,False,True
 time_to_transition_wake_to_rem,True,True
-total_arousal_sleep_time,False,False
+total_arousal_sleep_time,False,True
 total_deep_sleep_time,False,True
-total_left_sleep_time,False,True
+total_left_sleep_time,False,False
 total_light_sleep_time,False,True
 total_non_supine_sleep_time,False,True
 total_prone_sleep_time,False,True
 total_rem_sleep_time,True,True
 total_right_sleep_time,False,True
-total_sleep_time,False,False
+total_sleep_time,False,True
 total_supine_sleep_time,False,True
 total_time_in_bed,False,True
 total_valid_apnea_central_sleep_time,False,True

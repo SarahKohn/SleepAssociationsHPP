@@ -1,4 +1,4 @@
-,Age & BMI,"Sleep Quality
+,"Age, BMI & VAT","Sleep Quality
 (average of nights)"
 liver_viscosity,True,True
 liver_elasticity,True,True
@@ -7,7 +7,7 @@ liver_sound_speed,False,True
 bt__albumin,True,True
 bt__bilirubin_total,True,True
 bt__protein_total,True,True
-bt__alkaline_phosphatase,False,False
+bt__alkaline_phosphatase,False,True
 bt__alt_gpt,False,False
 bt__platelets,False,True
 bt__ast_got,False,True
