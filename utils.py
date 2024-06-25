@@ -18,6 +18,7 @@ def mkdirifnotexists(directory_path):
 
 def load_dataset_to_name() -> dict:
     return {'Age_Gender_BMI': 'Age & BMI',
+            'Age_Gender_BMI_VAT': 'Age, BMI & VAT',
             'hematopoietic': 'Hematopoietic system',
             'immune_system': 'Immune system',
             'glycemic_status': 'Insulin resistance',

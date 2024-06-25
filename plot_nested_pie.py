@@ -62,7 +62,8 @@ def plot_correlations_donut(body_systems: list):
                                                       'percent_of_supine_sleep',
                                                       'variability_between_sleep_stage_percents',
                                                       'hrv_time_rmssd_during_wake'])
-    print('Number of significant correlations found for the 6 key features:', all_associations.count().sum() / all_associations.size)
+    print(f'Number of significant correlations found for the 6 key features:{(all_associations.count().sum() / all_associations.size):.2f}')
+    print(f'{all_associations.count().sum()} / {all_associations.size}')
 
     ## Create the nested pie chart:
     df = pd.DataFrame()
@@ -79,8 +80,8 @@ def plot_correlations_donut(body_systems: list):
     group_sizes.pop()
     group_sizes.extend([blank_len])
     df = df.drop(columns=['body_system',
-                          # 'saturation_mean',
-                          'desaturations_mean_nadir',
+                          'saturation_mean',
+                          # 'desaturations_mean_nadir',
                           'percent_of_supine_sleep',
                           'variability_between_sleep_stage_percents',
                           'hrv_time_rmssd_during_wake'])
@@ -157,10 +158,9 @@ def plot_correlations_donut(body_systems: list):
     legend_names = {
         'AHI': 'pAHI',
         'snore_db_mean': 'Mean snoring level',
-        # 'desaturations_mean_nadir': 'SpO2 nadir',
-        ''
+        'desaturations_mean_nadir': 'Mean nadir SpO2',
         'saturation_mean': 'Mean SpO2',
-        'total_sleep_time': 'Sleep time',
+        'total_sleep_time': 'Sleep duration',
         'sleep_efficiency': 'Sleep efficiency',
         'hrv_time_rmssd_during_night': 'PRV (during night)'
     }
