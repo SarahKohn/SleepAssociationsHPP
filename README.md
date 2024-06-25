@@ -1,5 +1,5 @@
 # SleepAssociationsHPP
-This project holds source code used to generate figures and analyses in the manuscript titled: "Phenome Wide Associations of Sleep Monitoring Features in the Human Phenotype project"
+This project holds source code used to generate figures and analyses in the manuscript titled: **"Phenome Wide Associations of Sleep Monitoring Features in the Human Phenotype project"**
 
 # Repo Contents
 - [body_systems_associations](./body_systems_associations): Tables with all predictive models results for associations between sleep and other body systems data (pearson R scores), and corresponding figures.
@@ -15,8 +15,8 @@ This project holds source code used to generate figures and analyses in the manu
 # System Requirements
 ## OS Requirements
 The version of this source code has been tested on the following systems:   
-Linux: CentOS 7(core)  
-Mac OS: Monterey 12.5.1   
+- Linux: CentOS 7(core)  
+- Mac OS: Monterey 12.5.1   
 
 ## Python Dependencies
 Make sure your interpreter is set to Python 3.9 and include the packages specified in the [requirements.txt](./requirements.txt) file.    
