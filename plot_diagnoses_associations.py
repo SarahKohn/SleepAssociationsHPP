@@ -13,31 +13,55 @@ def create_figure_for_paper(path: str, target: str):
     for dir in dir_list:
         tmp = pd.read_csv(os.path.join(path, dir, 'regressions_results',
                                        dir.replace('from_', '') + f'_and_{target}',
-                                       f'plots_LR_lasso/median_scores_filtered-men_dataset.csv'), index_col=0)
+                                       f'plots_Logit/median_scores_filtered-men_dataset.csv'), index_col=0)
         diff = tmp.iloc[:, 1] - tmp.iloc[:, 0]
         diffs_men = pd.concat([diffs_men, diff], axis=1)
         men_result = tmp.iloc[:, 1]
         all_results_men = pd.concat([all_results_men, men_result], axis=1)
         tmp = pd.read_csv(os.path.join(path, dir, 'regressions_results',
                                        dir.replace('from_', '') + f'_and_{target}',
-                                       f'plots_LR_lasso/median_scores_filtered-women_dataset.csv'), index_col=0)
+                                       f'plots_Logit/median_scores_filtered-women_dataset.csv'), index_col=0)
         diff = tmp.iloc[:, 1] - tmp.iloc[:, 0]
         diffs_women = pd.concat([diffs_women, diff], axis=1)
         women_result = tmp.iloc[:, 1]
         all_results_women = pd.concat([all_results_women, women_result], axis=1)
     diffs_men['max'] = diffs_men.max(axis=1)
     all_results_men = pd.concat([all_results_men, diffs_men['max']], axis=1).sort_values(by='max', ascending=False)
-    all_results_men.rename(index={'Attention Deficit Disorder (ADHD)': 'ADHD',
-                                  'Irritable Bowel Syndrome (IBS)': 'IBS'}, inplace=True)
-    all_results_men.rename(columns={'Sleep Quality at baseline\n': 'Sleep test measures at baseline',
-                                    'HRV at baseline\n': 'PRV at baseline'}, inplace=True)
+    all_results_men.rename(index={'AttentionDeficitDisorderADHD': 'ADHD',
+                                  'IrritableBowelSyndromeIBS': 'IBS',
+                                  'Hearingloss': 'Hearing loss',
+                                  'BasalCellCarcinoma': 'Basal cell carcinoma',
+                                  'Oralaphthae': 'Oral aphthae',
+                                  'Heartvalvedisease': 'Heart valve disease',
+                                  'Gallstonedisease': 'Gallstone disease',
+                                  'B12deficiency': 'B12 deficiency',
+                                  'Urinarytractinfection': 'Urinary tract infection',
+                                  'PepticDis': 'Peptic disease',
+                                  'Urinarytractstones': 'Urinary tract stones',
+                                  'SleepApnea': 'Sleep apnea',
+                                    'Analfissure': 'Anal fissure',
+                                    'Atopicdermatitis': 'Atopic dermatitis'},
+                             columns={'HRV at baseline\n': 'PRV measures\nat baseline',
+                                      'Sleep Quality at baseline\n': 'Sleep test measures\nat baseline'}, inplace=True)
     diffs_women['max'] = diffs_women.max(axis=1)
     all_results_women = pd.concat([all_results_women, diffs_women['max']], axis=1).sort_values(by='max',
                                                                                                ascending=False)
-    all_results_women.rename(index={'Attention Deficit Disorder (ADHD)': 'ADHD',
-                                    'G6PD': 'G6PD deficiency'}, inplace=True)
-    all_results_women.rename(columns={'Sleep Quality at baseline\n': 'Sleep test measures at baseline',
-                                      'HRV at baseline\n': 'PRV at baseline'}, inplace=True)
+    all_results_women.rename(index={'AttentionDeficitDisorderADHD': 'ADHD',
+                                  'IrritableBowelSyndromeIBS': 'IBS',
+                                  'Hearingloss': 'Hearing loss',
+                                  'BasalCellCarcinoma': 'Basal cell carcinoma',
+                                  'Oralaphthae': 'Oral aphthae',
+                                  'Heartvalvedisease': 'Heart valve disease',
+                                  'Gallstonedisease': 'Gallstone disease',
+                                  'B12deficiency': 'B12 deficiency',
+                                  'Urinarytractinfection': 'Urinary tract infection',
+                                  'PepticDis': 'Peptic disease',
+                                  'Urinarytractstones': 'Urinary tract stones',
+                                  'SleepApnea': 'Sleep apnea',
+                                    'Analfissure': 'Anal fissure',
+                                    'Atopicdermatitis': 'Atopic dermatitis'},
+                             columns={'HRV at baseline\n': 'PRV measures\nat baseline',
+                                      'Sleep Quality at baseline\n': 'Sleep test measures\nat baseline'}, inplace=True)
 
     # Figure
     title = f'AUCs for predicting medical diagnoses'
@@ -53,8 +77,11 @@ def create_figure_for_paper(path: str, target: str):
                 xticklabels=True,
                 # annot= True,
                 cbar=True,
-                cbar_kws={'label': 'Median AUC'},
+                # cbar_kws={'label': 'Median AUC'},
                 ax=ax1)
+    cbar = ax1.collections[0].colorbar
+    cbar.ax.tick_params(labelsize=12)
+    cbar.set_label("Median AUC", size=12)
     ax1.set_title('Male')
     ax1.set_xticklabels(ax1.get_xticklabels(), rotation=45, ha='right', fontsize=12)
     ax1.set_yticklabels(ax1.get_yticklabels(), rotation=0, ha='right', fontsize=12)
@@ -68,9 +95,12 @@ def create_figure_for_paper(path: str, target: str):
                 xticklabels=True,
                 # annot= True,
                 cbar=True,
-                cbar_kws={'label': 'Median AUC'},
+                # cbar_kws={'label': 'Median AUC'},
                 ax=ax2)
     ax2.set_title('Female')
+    cbar = ax2.collections[0].colorbar
+    cbar.ax.tick_params(labelsize=12)
+    cbar.set_label("Median AUC", size=12)
     ax2.set_xticklabels(ax2.get_xticklabels(), rotation=45, ha='right', fontsize=12)
     ax2.set_yticklabels(ax2.get_yticklabels(), rotation=0, ha='right', fontsize=12)
     plt.suptitle(title)
@@ -104,8 +134,13 @@ if __name__ == '__main__':
         dir_path = os.path.join(my_dir + special_folder, f'from_{body_system_feature}',
                                 'regressions_results',
                                 f'{body_system_feature}_and_{body_system_target}')
-        tmp_dict = {f'Age_Gender_BMI_and_{body_system_target}': dataset_to_name['Age_Gender_BMI'],
-                    f'{body_system_feature}_and_{body_system_target}': dataset_to_name[body_system_feature]}
+        if 'sleep' in body_system_feature:
+            tmp_dict = {f'Age_Gender_BMI_VAT_and_{body_system_target}': dataset_to_name['Age_Gender_BMI_VAT'],
+                        f'{body_system_feature}_and_{body_system_target}': dataset_to_name[body_system_feature]}
+        else:
+            tmp_dict = {f'Age_Gender_BMI_and_{body_system_target}': dataset_to_name['Age_Gender_BMI'],
+                        f'{body_system_feature}_and_{body_system_target}': dataset_to_name[body_system_feature]}
+
         for name, file in model_score_files.items():
             find_significant_predictions(name, dir_path, file, tmp_dict, target_group, f'from_{body_system_feature}')
 

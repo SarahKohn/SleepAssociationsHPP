@@ -54,7 +54,10 @@ def plot_correlations_donut(body_systems: list):
         dfs = pd.concat([dfs, df])
     category_order = top_corr_values.abs().sort_values(ascending=False).index.to_list()[::-1]
     dfs['body_system'] = pd.Categorical(dfs['body_system'], categories=category_order, ordered=True)
-    dfs = dfs.sort_values(by=['body_system', 'AHI', 'saturation_mean'], ascending=False)
+    dfs = dfs.sort_values(by=['body_system',
+                              'AHI',
+                              'saturation_mean'
+                              ], ascending=False)
     dfs.to_csv(os.path.join(RESULTS_PATH, 'top10_results.csv'))
     all_associations.to_csv(os.path.join(RESULTS_PATH, 'all_results.csv'))
     all_associations = all_associations.drop(columns=[# 'saturation_mean',
@@ -81,10 +84,13 @@ def plot_correlations_donut(body_systems: list):
     group_sizes.extend([blank_len])
     df = df.drop(columns=['body_system',
                           'saturation_mean',
+                          'saturation_below_90',
                           # 'desaturations_mean_nadir',
                           'percent_of_supine_sleep',
                           'variability_between_sleep_stage_percents',
                           'hrv_time_rmssd_during_wake'])
+    df = df[['AHI', 'snore_db_mean', 'desaturations_mean_nadir',
+            'total_sleep_time', 'sleep_efficiency', 'hrv_time_rmssd_during_night']]
     colors = get_qualitative_colors_without_reds_and_blues()
     bs_colors = []
     for color in colors:

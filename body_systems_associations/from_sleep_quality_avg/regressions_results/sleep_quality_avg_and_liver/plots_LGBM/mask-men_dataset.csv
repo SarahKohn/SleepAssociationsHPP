@@ -1,7 +1,7 @@
-,Age & BMI,"Sleep Quality
+,"Age, BMI & VAT","Sleep Quality
 (average of nights)"
 liver_viscosity,False,True
-liver_elasticity,False,False
+liver_elasticity,False,True
 liver_attenuation,False,True
 liver_sound_speed,False,True
 bt__albumin,False,True

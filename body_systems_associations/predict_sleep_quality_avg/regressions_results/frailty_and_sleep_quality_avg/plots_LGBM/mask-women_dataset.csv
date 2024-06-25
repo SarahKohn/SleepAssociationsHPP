@@ -1,4 +1,4 @@
-,Age & BMI,Frailty
+,"Age, BMI & VAT",Frailty
 AHI,False,True
 ahi_4_percent,False,True
 ahi_central,False,True
@@ -16,7 +16,7 @@ ahi_obstructive_during_nrem,False,True
 ahi_obstructive_during_rem,False,True
 desaturations_above_20,False,True
 desaturations_mean_nadir,False,True
-desaturations_of_10_20,False,False
+desaturations_of_10_20,False,True
 desaturations_of_4_9,False,True
 number_of_4_percent_desaturation_apnea_hypopnea_events,False,True
 number_of_all_respiratory_events,False,True
@@ -27,12 +27,12 @@ number_of_obstructive_apnea_hypopnea_events,False,True
 number_of_transitions_nrem_to_rem,False,True
 number_of_transitions_nrem_to_wake,False,True
 number_of_transitions_rem_to_nrem,False,True
-number_of_transitions_rem_to_wake,False,True
-number_of_transitions_wake_to_nrem,False,True
-number_of_transitions_wake_to_rem,False,True
-number_of_wakes,False,True
+number_of_transitions_rem_to_wake,False,False
+number_of_transitions_wake_to_nrem,False,False
+number_of_transitions_wake_to_rem,False,False
+number_of_wakes,False,False
 odi,False,True
-odi_during_left,False,False
+odi_during_left,False,True
 odi_during_non_supine,False,True
 odi_during_nrem,False,True
 odi_during_prone,False,True
@@ -43,7 +43,7 @@ percent_of_deep_sleep_time,False,True
 percent_of_left_sleep,False,True
 percent_of_light_sleep_time,False,True
 percent_of_non_supine_sleep,False,True
-percent_of_prone_sleep,False,True
+percent_of_prone_sleep,True,True
 percent_of_rem_sleep_time,False,True
 percent_of_right_sleep,False,True
 percent_of_sleep_time,False,False
@@ -61,7 +61,7 @@ rem_latency,False,True
 saturation_below_80,False,False
 saturation_below_85,False,False
 saturation_below_90,False,True
-saturation_below_or_equal_88,False,False
+saturation_below_or_equal_88,False,True
 saturation_max_value,False,True
 saturation_mean,False,True
 saturation_min_value,False,True
@@ -75,7 +75,7 @@ snore_db_mean,False,True
 time_to_transition_nrem_to_rem,False,False
 time_to_transition_nrem_to_wake,False,False
 time_to_transition_rem_to_nrem,False,True
-time_to_transition_rem_to_wake,False,True
+time_to_transition_rem_to_wake,False,False
 time_to_transition_wake_to_nrem,False,True
 time_to_transition_wake_to_rem,True,True
 total_arousal_sleep_time,False,True
@@ -90,7 +90,7 @@ total_sleep_time,False,True
 total_supine_sleep_time,False,True
 total_time_in_bed,False,True
 total_valid_apnea_central_sleep_time,False,False
-total_valid_apnea_sleep_time,False,False
+total_valid_apnea_sleep_time,False,True
 total_wake_time,False,False
 total_wake_time_after_sleep_onset,False,False
 variability_between_sleep_stage_percents,False,True

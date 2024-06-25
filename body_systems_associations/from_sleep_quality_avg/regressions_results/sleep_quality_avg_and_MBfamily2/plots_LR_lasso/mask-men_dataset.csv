@@ -1,16 +1,14 @@
-,Age & BMI,"Sleep Quality
+,"Age, BMI & VAT","Sleep Quality
 (average of nights)"
 fBin__100,True,True
-fBin__102,False,False
+fBin__102,False,True
 fBin__103,True,True
 fBin__104,True,True
-fBin__106,True,True
 fBin__108,True,True
 fBin__121,True,True
 fBin__14,True,True
 fBin__145,True,True
 fBin__149,True,True
-fBin__152,True,True
 fBin__159,True,True
 fBin__17,True,True
 fBin__181,True,True
@@ -31,15 +29,12 @@ fBin__263,False,True
 fBin__27,True,True
 fBin__270,False,False
 fBin__273,True,True
-fBin__274,True,True
+fBin__274,False,False
 fBin__275,True,True
 fBin__28,True,True
-fBin__280,True,True
 fBin__281,True,True
 fBin__283,True,True
-fBin__287,True,True
 fBin__296,True,True
-fBin__3,True,True
 fBin__305,True,True
 fBin__307,True,True
 fBin__309,True,True
@@ -74,7 +69,6 @@ fBin__367,True,True
 fBin__369,True,True
 fBin__37,True,True
 fBin__371,True,True
-fBin__372,True,True
 fBin__373,True,True
 fBin__374,True,True
 fBin__375,True,True
@@ -89,7 +83,6 @@ fBin__387,True,True
 fBin__388,True,True
 fBin__393,True,True
 fBin__395,True,True
-fBin__416,True,True
 fBin__418,True,True
 fBin__423,True,True
 fBin__424,True,True
@@ -98,7 +91,6 @@ fBin__441,True,True
 fBin__45,True,True
 fBin__451,True,True
 fBin__452,True,True
-fBin__453,True,True
 fBin__454,True,True
 fBin__455,True,True
 fBin__456,True,True
@@ -108,9 +100,7 @@ fBin__466,True,True
 fBin__468,True,True
 fBin__469,True,True
 fBin__470,True,True
-fBin__472,True,True
-fBin__477,True,True
-fBin__479,True,True
+fBin__477,False,True
 fBin__480,True,True
 fBin__482,True,True
 fBin__483,True,True
@@ -122,7 +112,7 @@ fBin__490,True,True
 fBin__491,True,True
 fBin__497,True,True
 fBin__503,True,True
-fBin__504,True,True
+fBin__504,False,False
 fBin__508,True,True
 fBin__513,True,True
 fBin__515,True,True
@@ -138,21 +128,18 @@ fBin__527,True,True
 fBin__528,True,True
 fBin__529,True,True
 fBin__53,True,True
-fBin__530,True,True
+fBin__530,False,False
 fBin__531,True,True
 fBin__532,True,True
 fBin__533,True,True
 fBin__534,True,True
 fBin__535,True,True
 fBin__536,True,True
-fBin__537,True,True
+fBin__537,False,False
 fBin__538,True,True
 fBin__539,True,True
-fBin__54,True,True
 fBin__541,True,True
-fBin__546,True,True
 fBin__549,True,True
-fBin__55,True,True
 fBin__555,True,True
 fBin__56,True,True
 fBin__565,True,True
@@ -176,9 +163,9 @@ fBin__598,True,True
 fBin__600,True,True
 fBin__601,True,True
 fBin__602,True,True
-fBin__605,True,True
+fBin__605,False,False
 fBin__606,True,True
-fBin__611,True,True
+fBin__611,False,True
 fBin__613,True,True
 fBin__614,True,True
 fBin__616,True,True

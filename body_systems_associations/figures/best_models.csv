@@ -1,0 +1,17 @@
+,from_sleep_quality_avg_men,from_sleep_quality_avg_women,predict_sleep_quality_avg_men,predict_sleep_quality_avg_women
+hematopoietic,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+immune_system,LGBM,LR_lasso,LR_lasso,LR_lasso
+glycemic_status,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+lifestyle,LGBM,LGBM,LR_lasso,LR_lasso
+mental,LGBM,LGBM,LGBM,LR_lasso
+frailty,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+liver,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+renal_function,LGBM,LGBM,LR_lasso,LR_lasso
+cardiovascular,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+body_composition,LR_lasso,LR_lasso,LR_lasso,LR_lasso
+bone_density,LR_lasso,LR_lasso,LR_lasso,LGBM
+blood_lipids,LGBM,LGBM,LGBM,LGBM
+MBfamily2,LGBM,LGBM,LGBM,LGBM
+MBpathways,LGBM,LGBM,LR_lasso,LR_lasso
+diet,LGBM,LGBM,LR_lasso,LR_lasso
+medications,LGBM,LGBM,LR_lasso,LGBM

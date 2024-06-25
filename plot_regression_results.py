@@ -10,7 +10,7 @@ from scipy.stats import ttest_rel
 
 # Define directories path:
 TAG = ''  # '_low_BMI', '_high_AHIvariability', '_low_AHIvariability'
-MODEL_TYPE = 'LR_Lasso' #  or 'LGBM'
+MODEL_TYPE = 'Logit' # 'LR_Lasso' or 'LGBM'
 CHOOSE_BEST_MODEL_TYPE = True
 DATASET_TO_NAME = load_dataset_to_name()
 DICT_FOR_BARPLOT = DATASET_TO_NAME.copy()
@@ -62,7 +62,7 @@ def plot_regression_scores_heatmap(name: str,
         annot = special_annot.loc[target_list]  # special_annot.transpose()[target_list]
         fmt = ""
     for col_name in list(scores):
-        if col_name != 'Age & BMI':
+        if col_name != 'Age, BMI & VAT':
             scores.rename(columns={col_name: 'Age, BMI + \n' + col_name}, inplace=True)
     plt.figure(constrained_layout=True, figsize=(8, 8))
     sns.heatmap(data=scores.loc[target_list],  # scores.transpose()[target_list],
@@ -117,25 +117,25 @@ def find_significant_predictions(name: str, path: str, file: str, datasets_dict:
         if 0:  # Boxplot of the scores distribution per target:
             tmp = scores_per_target.copy()
             for col_name in list(tmp):
-                if col_name != 'Age & BMI':
+                if col_name != 'Age, BMI & VAT':
                     tmp.rename(columns={col_name: 'Age, BMI + ' + col_name}, inplace=True)
             plt.figure(constrained_layout=True)
             sns.boxplot(data=tmp, palette='Set2', orient='h')
-            plt.axvline(x=median_scores.loc[target, 'Age & BMI'], color='black', linestyle='--')
+            plt.axvline(x=median_scores.loc[target, 'Age, BMI & VAT'], color='black', linestyle='--')
             plt.xlabel('pearson correlation prediction vs actual')
             plt.title(f'Ability to predict {target} - {name} dataset')
             plt.savefig(os.path.join(fig_dir, f'Regressions_scores_for_{target}-{name}_dataset.png'), dpi=DPI)
             plt.close()  # plt.show()
         # Perform a t-test to the body systems with significantly better results:
         for i in scores_per_target.columns:
-            if i == 'Age & BMI':
+            if i == 'Age, BMI & VAT':
                 mask.loc[target, i] = (median_scores.loc[target, i] < 0)
             else:
-                t_stat, p_val = ttest_rel(scores_per_target['Age & BMI'], scores_per_target[i])
+                t_stat, p_val = ttest_rel(scores_per_target['Age, BMI & VAT'], scores_per_target[i])
                 mask.loc[target, i] = (p_val > 0.001) or \
-                                      (median_scores.loc[target, i] < median_scores.loc[target, 'Age & BMI']) or \
+                                      (median_scores.loc[target, i] < median_scores.loc[target, 'Age, BMI & VAT']) or \
                                       (median_scores.loc[target, i] < 0) or \
-                                      (median_scores.loc[target, 'Age & BMI'] < 0)
+                                      (median_scores.loc[target, 'Age, BMI & VAT'] < 0)
     mask.to_csv(os.path.join(fig_dir, f'mask-{name}_dataset.csv'))
     # Remove the masked rows and reorder:
     median_scores = median_scores.mask(mask)
@@ -179,11 +179,11 @@ def check_significance_for_all_datasets_per_model_type(datasets: list, task_path
                 targets = target_group
             else:
                 raise ValueError('Please define the features and target datasets')
-            if predict_dataset != 'Age_Gender_BMI' and from_dataset != 'Age_Gender_BMI' and \
+            if predict_dataset != 'Age_Gender_BMI_VAT' and from_dataset != 'Age_Gender_BMI_VAT' and \
                     predict_dataset != from_dataset:
                 print(f'{from_dataset}_and_{predict_dataset}')
                 dir_path = os.path.join(task_path_dict[task], f'{from_dataset}_and_{predict_dataset}')
-                tmp_dict = {f'Age_Gender_BMI_and_{predict_dataset}': DATASET_TO_NAME['Age_Gender_BMI'],
+                tmp_dict = {f'Age_Gender_BMI_VAT_and_{predict_dataset}': DATASET_TO_NAME['Age_Gender_BMI_VAT'],
                             f'{from_dataset}_and_{predict_dataset}': DATASET_TO_NAME[from_dataset]}
                 for name, file in model_score_files.items():
                     find_significant_predictions(name, dir_path, file, tmp_dict, target_group, task)
@@ -262,11 +262,11 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
             markers_size = 4
             palette = 'tab10'
             colors = plt.get_cmap('tab20')
-            custom_palette = {col: sns.color_palette([colors((idx % 10) * 2 + 1), colors((idx % 10) * 2)])
-                              for idx, col in enumerate(body_systems)}
-            width = 15
+            custom_palette = {col: sns.color_palette([colors((idx % 10) * 2 + 1), colors((idx % 10) * 2)]) for idx, col in
+                              enumerate(body_systems)}
+            width = 17
             fig = plt.figure(figsize=(width, 12))
-            mid_section = width-7
+            mid_section = width-8
             gs = GridSpec(2 * NO_OF_DS_SELECTION, width, wspace=10., hspace=2.)
 
             # Figure A:
@@ -330,7 +330,7 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
                     if picked_dataset == 'glycemic_status' and ('Min' in target):
                         target = df.sort_values(by='diff', ascending=False).index[2]
 
-                tmp_dict = {f'Age_Gender_BMI_and_{predict_dataset}': DICT_FOR_BARPLOT['Age_Gender_BMI'],
+                tmp_dict = {f'Age_Gender_BMI_VAT_and_{predict_dataset}': DICT_FOR_BARPLOT['Age_Gender_BMI_VAT'],
                             f'{from_dataset}_and_{predict_dataset}': DICT_FOR_BARPLOT[from_dataset]}
                 file = f'{model_type}_{sex}scores_df.csv'
                 scores_per_target = pd.concat([pd.read_csv(os.path.join(path, f'{df_prefix}_{file}'),
@@ -339,10 +339,10 @@ def plot_figures_for_paper(body_systems: list, task_path_dict: dict):
                 scores_per_target.columns = tmp_dict.values()
                 tmp = scores_per_target.copy()
                 for col_name in list(tmp):
-                    if col_name != 'Age & BMI':
+                    if col_name != 'Age, BMI & VAT':
                         # in col_name: Change 'Quality' to 'Test', and 'HRV' to 'PRV'
                         renamed_col_name = col_name.replace('Quality', 'Test').replace('HRV', 'PRV')
-                        tmp.rename(columns={col_name: f'Age, BMI \n& {renamed_col_name}'}, inplace=True)
+                        tmp.rename(columns={col_name: f'Age, BMI, VAT \n& {renamed_col_name}'}, inplace=True)
                 sns.barplot(tmp, orient='h', errorbar='sd', palette=custom_palette[picked_dataset], ax=axs[i])
                 sns.despine()
                 axs[i].bar_label(axs[i].containers[0], fmt='%.3f', color=custom_palette[picked_dataset][0],
@@ -487,9 +487,9 @@ def plot_age_bmi_predictions(tasks: list):
         scores = pd.DataFrame()
         for s, sex in enumerate(['men', 'women']):
             file = f'{MODEL_TYPE}_{sex}scores_df.csv'
-            tmp_dict = {f'{ds}_and_Age_Gender_BMI': DICT_FOR_BARPLOT[ds] for ds in tasks}
+            tmp_dict = {f'{ds}_and_Age_Gender_BMI_VAT': DICT_FOR_BARPLOT[ds] for ds in tasks}
             path = [os.path.join(MY_DIR, 'body_systems_associations', f'from_{ds}', 'regressions_results' + TAG,
-                                 f'{ds}_and_Age_Gender_BMI') for ds in tasks]
+                                 f'{ds}_and_Age_Gender_BMI_VAT') for ds in tasks]
             scores_per_target = pd.concat([pd.read_csv(os.path.join(p, f'{df_prefix}_{file}'),
                                                        index_col=0)[target] for p, df_prefix in
                                            zip(path, tmp_dict.keys())],

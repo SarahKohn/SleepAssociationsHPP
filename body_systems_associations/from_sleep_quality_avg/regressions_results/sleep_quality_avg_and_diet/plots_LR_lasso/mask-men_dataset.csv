@@ -1,309 +1,292 @@
-,Age & BMI,"Sleep Quality
+,"Age, BMI & VAT","Sleep Quality
 (average of nights)"
 Almonds,False,True
-Apple,False,False
-Apple Cake,False,True
-Apple juice,False,True
+Apple,False,True
+AppleCake,False,True
+Applejuice,False,True
 Apricot,True,True
 Artichoke,True,True
 Arugula,True,True
-Avocado,False,False
+Avocado,False,True
 Bagel,True,True
 Baguette,False,True
-Balsamic vinegar,True,True
+Balsamicvinegar,True,True
 Bamba,False,True
 Banana,False,False
 Beans,True,True
-Beans black-eyed peas,True,True
+Beansblackeyedpeas,True,True
 Beef,False,True
 Beer,False,True
-Beet,True,True
-Beet Salad,True,True
+Beet,False,True
+BeetSalad,True,True
 Biscuit,True,True
 Bissli,False,True
 Blueberries,False,True
-Boiled corn,False,True
+Boiledcorn,True,True
 Bolognese,False,True
-Brazil nuts,True,True
+Brazilnuts,False,True
 Bread,False,True
 Broccoli,False,False
-Brown Sugar,True,True
+BrownSugar,True,True
 Brownies,True,True
 Bulgur,True,True
 Burekas,False,False
 Butter,True,True
-Butter Cookies,True,True
-Caesar Salad,True,True
-Camembert or Brie,True,True
+ButterCookies,False,True
+CaesarSalad,True,True
+CamembertorBrie,True,True
 Candies,True,True
-Canned Tuna Fish,False,True
-Canned corn,True,True
+CannedTunaFish,False,True
+Cannedcorn,True,True
 Cappuccino,True,True
-Carrot Cake,True,True
-Carrot Salad,True,True
-Carrots,False,False
+CarrotCake,True,True
+Carrots,False,True
 Cashew,False,True
 Cauliflower,True,True
-Cereal Bar,True,True
+CerealBar,True,True
 Cereals,True,True
 Ceviche,True,True
 Challah,True,True
 Cheesecake,False,True
-Cherries,True,True
-Cherry tomatoes,False,True
+Cherrytomatoes,False,True
 Chestnuts,True,True
-Chia seeds,False,True
+Chiaseeds,False,True
 Chicken,False,True
-Chicken Liver,True,True
-Chicken Meatballs,False,True
-Chicken Steak,False,True
-Chicken breast,False,True
-Chicken drumstick,True,True
-Chicken legs,False,True
-Chicken soup,True,True
-Chili pepper,True,True
+ChickenLiver,True,True
+ChickenMeatballs,False,True
+ChickenSteak,False,True
+Chickenbreast,False,True
+Chickendrumstick,True,True
+Chickenlegs,False,True
+Chickensoup,True,True
+Chilipepper,True,True
 Chocolate,False,True
-Chocolate Cookies,True,True
-Chocolate cake,True,True
-Chocolate spread,False,True
+ChocolateCookies,True,True
+Chocolatecake,True,True
+Chocolatespread,False,True
 Ciabatta,True,True
 Cinnamon,True,True
-Coated Wafers,True,True
-Coated peanuts,True,True
-Cocoa Powder,True,True
+CoatedWafers,True,True
+Coatedpeanuts,False,True
+CocoaPowder,True,True
 Coconut,True,True
-Coconut milk,False,False
-Coconut water,True,True
-Coffee,True,True
+Coconutmilk,False,True
+Coconutwater,True,True
+Coffee,False,True
 Coke,False,True
-Cold cut,False,True
+Coldcut,False,True
 Coleslaw,False,True
-Cooked cabbage,True,True
-Cooked green beans,False,True
-Cooked vegetables,False,True
-Cooked zucchini,True,True
-Cookies,True,True
-Cooking cream,True,True
+Cookedcabbage,True,True
+Cookedgreenbeans,True,True
+Cookedvegetables,False,True
+Cookedzucchini,True,True
+Cookies,False,False
+Cookingcream,True,True
 Coriander,True,True
 Corn,True,True
-Cottage cheese,False,True
-Couscous,False,True
+Cottagecheese,False,True
+Couscous,True,True
 Cracker,True,True
 Cranberries,True,True
-Cream Cheese,True,True
+CreamCheese,True,True
 Croissant,False,False
 Croutons,True,True
 Cuba,True,True
-Cucumber,True,True
-Danish,False,True
-Dark Chocolate,False,True
-Date honey,True,True
-Dates,False,False
-Diet Coke,False,True
-Dried cranberries,True,True
+Cucumber,False,True
+Danish,True,True
+DarkChocolate,False,True
+Datehoney,False,True
+Dates,False,True
+DietCoke,False,True
+Driedcranberries,True,True
 Edamame,True,True
-Egg,True,True
-Egg Salad,True,True
-Egg yolk,True,True
+Egg,False,True
+EggSalad,True,True
+Eggyolk,True,True
 Eggplant,True,True
-Eggplant Salad,False,False
-English cake,True,True
+EggplantSalad,False,False
+Englishcake,True,True
 Entrecote,False,True
 Falafel,True,True
 Fennel,True,True
 Fig,False,True
-Flavored Yogurt,True,True
-French fries,False,True
-Fried eggplant,True,True
-Fried onions,True,True
-Fruit Drink,False,True
-Fruit salad,False,True
+FlavoredYogurt,True,True
+Frenchfries,False,True
+Friedeggplant,False,True
+Friedonions,True,True
+FruitDrink,True,True
 Garlic,True,True
-Gilthead Bream,False,True
-Goat Cheese,True,True
-Gouda Cheese,False,True
+GoatCheese,True,True
+GoudaCheese,True,True
 Granola,False,True
 Grapes,True,True
-Green Salad,True,True
-Green Tea,False,True
-Green beans,True,True
-Green cabbage,True,True
-Green onions,True,True
-Grilled vegetables,True,True
+GreenSalad,True,True
+GreenTea,True,True
+Greenbeans,True,True
+Greencabbage,True,True
+Greenonions,True,True
+Grilledvegetables,True,True
 Guacamole,True,True
 Halva,True,True
 Hamburger,False,True
-Hazelnuts,True,True
-Heavy cream,True,True
+Heavycream,True,True
 Honey,True,True
-Hummus,True,True
-Hummus Salad,False,True
-Ice cream,True,True
-Ice cream bar,False,True
-Israeli couscous,True,True
+Hummus,False,True
+HummusSalad,False,True
+Icecream,True,True
+Icecreambar,True,True
+Israelicouscous,True,True
 Jachnun,False,True
 Jam,True,True
-Jewish donut,True,True
+Jewishdonut,True,True
 Kebab,False,True
 Ketchup,False,True
-Kiwi,False,False
 Knafeh,True,True
 Kohlrabi,True,True
-Labneh Cheese,True,True
+LabnehCheese,True,True
 Lasagna,False,True
 Lemon,True,True
-Lemon juice,False,True
+Lemonjuice,False,True
 Lemonade,True,True
-Lentil Soup,True,True
-Lentils,True,True
+LentilSoup,True,True
+Lentils,False,True
 Lettuce,True,True
-Lettuce Salad,False,False
-Light Beer,True,True
-Light Bread,False,True
-Light Cream Cheese,True,True
-Light Yellow Cheese,False,True
-Low fat Milk,True,True
+LettuceSalad,False,True
+LightBeer,True,True
+LightBread,False,True
+LightCreamCheese,True,True
+LightYellowCheese,False,True
+LowfatMilk,True,True
 Majadra,False,True
-Mandarin,False,False
+Mandarin,False,True
 Mango,True,True
-Maple syrup,True,True
+Maplesyrup,True,True
 Matbucha,True,True
 Mayonnaise,False,True
 Meatballs,False,True
 Melon,False,True
-Milk,False,True
-Mixed nuts,False,True
-Mozzarella Cheese,True,True
+Milk,True,True
+Mixednuts,True,True
+MozzarellaCheese,True,True
 Mushrooms,False,True
 Mustard,True,True
-Natural Yogurt,True,True
+NaturalYogurt,False,True
 Nectarine,True,True
 Noodles,True,True
 Oatmeal,False,True
-Oatmeal Cereal,False,True
-Olive oil,False,True
+Oliveoil,False,False
 Olives,False,True
-Omelette,True,True
-Onion,False,True
-Onion Pie,True,True
-Orange,True,True
-Orange juice,True,True
+Omelette,False,True
+Onion,True,True
+OnionPie,True,True
+Orange,False,True
+Orangejuice,False,True
 Pancake,False,True
-Parmesan cheese,True,True
+Parmesancheese,True,True
 Parsley,True,True
 Pasta,False,True
-Pasta Bolognese,False,True
-Pasta with tomato sauce,True,True
+PastaBolognese,False,True
+Pastawithtomatosauce,True,True
 Pastrami,False,True
-Pea soup,False,True
 Peach,False,False
-Peanut Butter,False,True
+PeanutButter,False,True
 Peanuts,False,True
 Pear,False,True
-Peas,False,False
+Peas,True,True
 Pecan,False,True
-Pepper,True,True
-Persimmon,False,True
+Pepper,False,True
+Persimmon,False,False
 Pesto,True,True
-Pickled cucumber,False,True
-Pickled vegetables,True,True
+Pickledcucumber,True,True
+Pickledvegetables,True,True
 Pineapple,True,True
 Pistachio,True,True
 Pita,False,True
 Pizza,False,True
-Plum,False,False
+Plum,False,True
 Pomegranate,False,True
 Pomelo,True,True
-Popcorn,False,True
+Popcorn,True,True
 Popsicle,True,True
-Potato chips,False,False
-Potato salad,True,True
-Potatoes,True,True
+Potatochips,False,False
+Potatosalad,True,True
+Potatoes,False,True
 Pretzels,True,True
 Prune,True,True
 Pullet,False,True
 Pumpkin,True,True
-Pumpkin seeds,True,True
+Pumpkinseeds,False,True
 Quinoa,False,True
 Raisins,True,True
 Ravioli,True,True
-Red Cabbage Salad,False,True
+RedCabbageSalad,False,True
 Rice,True,True
-Rice Noodles,True,True
-Rice crackers,True,True
-Roasted eggplant,True,True
+RiceNoodles,True,True
+Ricecrackers,True,True
+Roastedeggplant,True,True
 Roll,False,True
-Rugelach,True,True
-Rye Bread,True,True
+Rugelach,False,False
+RyeBread,True,True
 Salmon,True,True
 Salt,True,True
-Salty Cheese,True,True
-Salty Cookies,True,True
+SaltyCheese,True,True
+SaltyCookies,True,True
 Sauerkraut,True,True
-Sausages,False,False
-Sauteed vegetables,True,True
+Sausages,False,True
+Sauteedvegetables,True,True
 Schnitzel,False,True
 Schug,True,True
-Seabass Fish,True,True
 Shakshouka,False,True
 Shrimp,True,True
-Small radish,True,True
-Smoked Salmon,False,True
+SmokedSalmon,False,True
 Smoothies,False,True
-Soda water,False,True
-Soup mandels,True,True
-Soy sauce,True,True
-Soymilk,False,True
-Spelled,True,True
-Spinach,True,True
-Spinach Quiche,True,True
+Sodawater,False,True
+Soupmandels,False,True
+SpinachQuiche,True,True
 Sprouts,False,True
 Steak,False,True
 Strawberry,True,True
-Stuffed Cabbage,False,True
-Stuffed Vine leaves,True,True
+StuffedVineleaves,True,True
 Sugar,True,True
-Sugar Free Gum,True,True
-Sugar substitute,True,True
-Sunflower seeds,False,True
+SugarFreeGum,True,True
+Sugarsubstitute,True,True
+Sunflowerseeds,True,True
 Sushi,False,True
-Sweet Challah,True,True
-Sweet Potato Soup,True,True
-Sweet Roll,True,True
-Sweet potato,False,True
-Tabbouleh Salad,True,True
+SweetPotatoSoup,True,True
+SweetRoll,True,True
+Sweetpotato,False,True
+TabboulehSalad,True,True
 Tahini,False,True
-Tea,False,False
-Teriyaki Sauce,True,True
+Tea,False,True
+TeriyakiSauce,True,True
 Tilapia,True,True
 Tofu,False,True
-Tomato paste,False,True
-Tomato sauce,False,True
-Tomatoes,True,True
-Tomatoes Salad,True,True
+Tomatopaste,False,True
+Tomatosauce,False,True
+Tomatoes,False,True
 Tortilla,True,True
-Tuna Salad,False,True
-Tuna Sandwich,True,True
-Turkey Shawarma,False,True
-Tzfatit Cheese,False,True
-Vegetable Salad,False,True
-Vegetable Soup,False,True
-Vodka or Arak,True,True
+TunaSalad,False,True
+TunaSandwich,True,True
+TurkeyShawarma,False,True
+TzfatitCheese,False,True
+VegetableSalad,False,True
+VegetableSoup,False,True
+VodkaorArak,True,True
 Wafers,False,True
 Walnuts,False,True
 Water,True,True
 Watermelon,True,True
-Whipped cream,True,True
+Whippedcream,False,True
 Whiskey,True,True
-White Cheese,False,True
-White beans,True,True
-Wholemeal Bread,False,True
-Wholemeal Crackers,True,True
-Wholemeal Roll,False,True
+WhiteCheese,False,True
+Whitebeans,True,True
+WholemealBread,False,True
+WholemealCrackers,True,True
+WholemealRoll,False,True
 Wine,False,True
-Yellow Cheese,False,True
-Yellow pepper,True,True
+YellowCheese,False,True
+Yellowpepper,True,True
 Yogurt,False,True
-Zucchini,True,True
-emmer wheat bread,False,True
+Zucchini,False,True
+emmerwheatbread,True,True
 ginger,True,True

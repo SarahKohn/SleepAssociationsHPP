@@ -1,8 +1,8 @@
-,Age & BMI,Gut MB metabolic pathways
+,"Age, BMI & VAT",Gut MB metabolic pathways
 AHI,False,False
 ahi_4_percent,False,True
-ahi_central,False,False
-ahi_central_during_nrem,False,False
+ahi_central,False,True
+ahi_central_during_nrem,False,True
 ahi_central_during_rem,False,True
 ahi_during_left,False,True
 ahi_during_non_supine,False,True
@@ -62,7 +62,7 @@ saturation_below_80,True,True
 saturation_below_85,False,True
 saturation_below_90,False,True
 saturation_below_or_equal_88,False,True
-saturation_max_value,False,True
+saturation_max_value,False,False
 saturation_mean,False,True
 saturation_min_value,False,True
 sleep_efficiency,False,True
