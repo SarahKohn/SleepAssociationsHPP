@@ -14,20 +14,20 @@ This project holds source code used to generate figures and analyses in the manu
 
 # System Requirements
 ## OS Requirements
-The version of this source code has been tested on the following systems:
-Linux: CentOS 7(core)
-Mac OS: Monterey 12.5.1  
+The version of this source code has been tested on the following systems:   
+Linux: CentOS 7(core)  
+Mac OS: Monterey 12.5.1   
 
 ## Python Dependencies
-Make sure your interpreter is set to Python 3.9 and include the packages specified in the [requirements.txt](./requirements.txt) file.
-The code may work properly on other python and packages versions but tested only on these ones.
+Make sure your interpreter is set to Python 3.9 and include the packages specified in the [requirements.txt](./requirements.txt) file.    
+The code may work properly on other python and packages versions but tested only on these ones.   
 
 # Instructions for use
-All associations analyses done as part of this work are available in the respective directories, i.e. Spearman correlations, predictive models scores etc..
-The source code used to evaluate significance (e.g. FDR correction or applying T-test to compare distribution from a simple models) and generate the figures in the paper are available in the root directory. 
-The run may take few seconds up to few minutes depending on the number of features and samples in the dataset.
+All associations analyses done as part of this work are available in the respective directories, i.e. Spearman correlations, predictive models scores etc..    
+The source code used to evaluate significance (e.g. FDR correction or applying T-test to compare distribution from a simple models) and generate the figures in the paper are available in the root directory.     
+The run may take few seconds up to few minutes depending on the number of features and samples in the dataset.   
 
 ## Demo
-Run file plot_nested_pie.py as it is.
-You'll get the following picture as an output:
+Run file [plot_nested_pie.py](./plot_nested_pie.py) as it is.   
+You'll get the following picture as an output:   
 ![Alt text](./correlations_results/nested_pie-correlations.png)
