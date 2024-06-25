@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     my_dir = MY_DIR
     os.chdir(mkdirifnotexists(os.path.join(my_dir, 'Logs')))
-    special_folder = '/clinical_OSA_associations_AHI15_EDS'
+    special_folder = '/clinical_OSA_associations'
     datasets_to_run = ['_men', '_women']  # choose from : '_women', '_men', '_all'
     models_to_run = ['Logit']
     body_systems = [
@@ -100,7 +100,7 @@ if __name__ == '__main__':
     # Create the forest plot
     stats = combined_df.groupby(['body system', 'sex'])['AUC'].apply(mean_ci_95).unstack()
     stats = stats.loc[ordered_labels]
-    stast.to_csv(os.path.join(MY_DIR + special_folder, 'AUC_stats.csv'))
+    stats.to_csv(os.path.join(MY_DIR + special_folder, 'AUC_stats.csv'))
     fig, ax = plt.subplots(figsize=(7, 10))
     systems = stats.index.get_level_values('body system').unique()
     y_positions = np.arange(len(systems))

@@ -561,8 +561,8 @@ if __name__ == '__main__':
     ]
     tasks = [
         'from_sleep_quality_avg',
-        'from_hrv_avg',
         'predict_sleep_quality_avg'
+        # 'from_hrv_avg',  # update covariates to not include VAT
     ]
     task_path_dict = {dir_name: os.path.join(MY_DIR, 'body_systems_associations', dir_name, 'regressions_results' + TAG)
                             for dir_name in tasks}

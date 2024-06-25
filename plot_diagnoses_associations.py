@@ -122,27 +122,28 @@ if __name__ == '__main__':
     body_system_target = 'baseline_diagnoses_nastya'
 
     # Analyse results
-    for from_dataset in body_systems:
-        print('>>> Regression score distribution Vs baseline')
-        body_system_feature = f'baseline_{from_dataset}'
-        suffixes = [dataset.replace('_', '') for dataset in datasets_to_run]
-        ticket_list = []
-        model_type = models_to_run[0]
-        model_score_files = {suffix: f'{model_type}_{suffix}scores_df.csv' for suffix in suffixes}
-        target_group = None
-        dataset_to_name = load_dataset_to_name()
-        dir_path = os.path.join(my_dir + special_folder, f'from_{body_system_feature}',
-                                'regressions_results',
-                                f'{body_system_feature}_and_{body_system_target}')
-        if 'sleep' in body_system_feature:
-            tmp_dict = {f'Age_Gender_BMI_VAT_and_{body_system_target}': dataset_to_name['Age_Gender_BMI_VAT'],
-                        f'{body_system_feature}_and_{body_system_target}': dataset_to_name[body_system_feature]}
-        else:
-            tmp_dict = {f'Age_Gender_BMI_and_{body_system_target}': dataset_to_name['Age_Gender_BMI'],
-                        f'{body_system_feature}_and_{body_system_target}': dataset_to_name[body_system_feature]}
+    if 0:
+        for from_dataset in body_systems:
+            print('>>> Regression score distribution Vs baseline')
+            body_system_feature = f'baseline_{from_dataset}'
+            suffixes = [dataset.replace('_', '') for dataset in datasets_to_run]
+            ticket_list = []
+            model_type = models_to_run[0]
+            model_score_files = {suffix: f'{model_type}_{suffix}scores_df.csv' for suffix in suffixes}
+            target_group = None
+            dataset_to_name = load_dataset_to_name()
+            dir_path = os.path.join(my_dir + special_folder, f'from_{body_system_feature}',
+                                    'regressions_results',
+                                    f'{body_system_feature}_and_{body_system_target}')
+            if 'sleep' in body_system_feature:
+                tmp_dict = {f'Age_Gender_BMI_VAT_and_{body_system_target}': dataset_to_name['Age_Gender_BMI_VAT'],
+                            f'{body_system_feature}_and_{body_system_target}': dataset_to_name[body_system_feature]}
+            else:
+                tmp_dict = {f'Age_Gender_BMI_and_{body_system_target}': dataset_to_name['Age_Gender_BMI'],
+                            f'{body_system_feature}_and_{body_system_target}': dataset_to_name[body_system_feature]}
 
-        for name, file in model_score_files.items():
-            find_significant_predictions(name, dir_path, file, tmp_dict, target_group, f'from_{body_system_feature}')
+            for name, file in model_score_files.items():
+                find_significant_predictions(name, dir_path, file, tmp_dict, target_group, f'from_{body_system_feature}')
 
     create_figure_for_paper(my_dir + special_folder, body_system_target)
     print('<<< Done')

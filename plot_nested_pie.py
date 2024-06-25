@@ -84,7 +84,7 @@ def plot_correlations_donut(body_systems: list):
     group_sizes.extend([blank_len])
     df = df.drop(columns=['body_system',
                           'saturation_mean',
-                          'saturation_below_90',
+                          # 'saturation_below_90',
                           # 'desaturations_mean_nadir',
                           'percent_of_supine_sleep',
                           'variability_between_sleep_stage_percents',
